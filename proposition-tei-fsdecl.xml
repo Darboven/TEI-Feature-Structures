@@ -1,0 +1,113 @@
+<fsdDecl>
+  <fsdLink type="proposition"
+   target="proposition-tei-fsdecl#PROP"/>
+  <fsDecl type="proposition" xml:id="PROP">
+    <fsDescr>Includes (some) types of complex propositions.</fsDescr>
+    <fDecl name="Proposition-Feature">
+      <vRange>
+        <vAlt>
+          <fs type="implication"/>
+          <fs type="biimplication"/>
+          <fs type="negation"/>
+          <fs type="conjunction"/>
+          <fs type="disjunction"/>
+          <fs type="all-quantification"/>
+          <fs type="exists-quantification"/>
+          <symbol value="string"/>
+          <!-- needs work -->
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+  <fsDecl type="implication">
+    <fDecl name="Antecedent">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </f>
+    <f name="Consequent">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+  <fsDecl type="biimplication">
+    <!-- question: Darstellung durch Konjunktion von zwei implications? -->
+    <fDecl name="BI-Feature-1">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </f>
+    <fDecl name="BI-Feature-2">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="negation">
+    <fDecl name="Negation-Feature">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="conjunction">
+    <fDecl name="CON-LHS">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="CON-RHS">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="disjunction">
+    <fDecl name="DIS-LHS">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </f>
+    <fDecl name="DIS-RHS">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="all-quantification"/>
+    <fsDescr>All-Quantification.</fsDescr>
+    <fDecl name="Quantified-Variable">
+      <vRange>
+        <symbol value="string"/>
+        <!-- needs work -->
+      </vRange>
+    </fDecl>
+    <fDecl name="Quantified-Proposition">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="exists-quantification"/>
+    <fsDescr>Exists-Quantification.</fsDescr>
+    <fDecl name="Quantified-Variable">
+      <vRange>
+        <symbol value="string"/>
+        <!-- needs work -->
+      </vRange>
+    </fDecl>
+    <fDecl name="Quantified-Proposition">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+</fsdDecl>
