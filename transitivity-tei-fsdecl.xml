@@ -1,0 +1,56 @@
+<fsdDecl>
+  <fsdLink type="proposition"
+   target="proposition-tei-fsdecl#PROP"/>
+  <fsdLink type="list"
+   target="list-tei-fsdecl.xml#LIST"/>
+  <fsdLink type="proved-under-hypotheses"
+   target="proved-under-hypotheses-tei-fsdecl.xml#PUH"/>
+  <fsDecl type="transitivity" baseTypes="proved-under-hypotheses">
+    <fsDescr>Allows to transitively concatenate and proof propositions.</fsDescr>
+    <fDecl name="Hypotheses">
+      <vRange>
+        <vLabel name="Ps">
+          <fs type="list"/>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <vLabel name="R">
+          <fs name="proposition"/>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+        <vColl>
+          <fs type="proved-under-hypotheses">
+            <f name="Hypotheses">
+              <vLabel name="Ps"/>
+            </f>
+            <f name="Conclusion">
+              <vLabel name="Q"/>
+            </f>
+            <f name="Proof">
+              <!-- ... -->
+            </f>
+          </fs>
+          <fs type="proved-under-hypotheses">
+            <f name="Hypotheses">
+              <vColl org="list">
+                <vLabel name="Q"/>
+                <vLabel name="Ps"/>
+              </vColl>
+            </f>
+            <f name="Conclusion">
+              <vLabel name="R"/>
+            </f>
+            <f name="Proof">
+              <!-- ... -->
+            </f>
+          </fs>
+        </vColl>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
