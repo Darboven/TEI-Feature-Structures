@@ -1,0 +1,20 @@
+<fsdDecl>
+  <fsdLink type="proposition"
+   target="proposition-tei-fsdecl#PROP"/>
+  <fsDecl type="list" xml:id="LIST">
+    <fsDescr>List structure.</fsDescr>
+    <fDecl name="List-Feature">
+      <fDescr>List content</fDescr>
+      <vRange>
+        <vAlt>
+          <vColl org="list">
+            <fs type="proposition"/>
+            <!-- needs work: lists should be able to contain all types of content -->
+            <fs type="list"/>
+          </vColl>
+          <symbol value="emptylist"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
