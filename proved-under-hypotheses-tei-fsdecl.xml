@@ -1,0 +1,22 @@
+<fsdDecl>
+  <fsdLink type="list"
+   target="list-tei-fsdecl.xml#LIST"/>
+  <fsdLink type="proposition"
+   target="proposition-tei-fsdecl.xml#PROP"/>
+  <fsDecl type="proved-under-hypotheses" xml:id="PUH">
+    <fsDescr>Most general proof.</fsDescr>
+    <fDecl name="Hypotheses">
+      <vRange>
+        <fs type="list"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <fs name="proposition"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <!-- ... -->
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
