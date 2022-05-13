@@ -1,0 +1,57 @@
+<fsdDecl>
+  <fsdLink type="proposition"
+   target="proposition-tei-fsdecl.xml#PROP"/>
+  <fsDecl type="contrapositive-proof" baseTypes="proved-under-hypotheses">
+    <!--
+      Idee:
+        H: P|Ps
+        C: Q
+        P:  H: ~Q (aber als Liste?)
+            C: ~P|Ps
+    -->
+    <fDecl name="Hypotheses">
+      <vRange>
+        <vLabel name="Ps">
+          <fs type="list-with-spec-element">
+            <f name="Element">
+              <vLabel name="P">
+                <fs type="proposition"/>
+              </vLabel>
+            </f>
+          </fs>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <vLabel name="Q">
+          <fs name="proposition"/>
+        </vLAbel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+        <fs type="proved-under-hypotheses">
+          <f name="Hypotheses">
+            <!-- Liste hier? -->
+            <fs type="negation">
+              <f name="Negation-Feature">
+                <vLabel name="Q"/>
+              </f>
+            </fs>
+          </f>
+          <f name="Conclusion">
+            <fs type="negation">
+              <f name="Negation-Feature">
+                <vLabel name="P"/>
+              </f>
+            </fs>
+          </f>
+          <f name="Proof">
+            <symbol value="proved-under-hypotheses"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+<fsdDecl>
