@@ -1,0 +1,43 @@
+<fsdDecl>
+  <fsdLink type="proposition"
+   target="proposition-tei-fsdecl#PROP"/>
+  <fsdLink type="list"
+   target="list-tei-fsdecl.xml#LIST"/>
+  <fsDecl type="modus-ponens" baseTypes="proved-under-hypotheses">
+    <fDecl name="Hypotheses">
+      <vRange>
+        <fs type="list-with-spec-element">
+          <f name="Element">
+            <vLabel name="A">
+              <!-- ... -->
+            </vLabel>
+          </f>
+        </fs>
+        <fs type="list-with-spec-element">
+          <f name="Element">
+            <fs type="implication">
+              <f name="Antecedent">
+                <vLabel name="A"/>
+              </f>
+              <f name="Consequent">
+                <vLabel name="B">
+                  <fs type="proposition"/>
+                </vLabel>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <vLabel name="B"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+        <symbol value="modus-ponens"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
