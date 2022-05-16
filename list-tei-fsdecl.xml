@@ -1,20 +1,141 @@
 <fsdDecl>
-  <fsdLink type="proposition"
-   target="proposition-tei-fsdecl#PROP"/>
+
   <fsDecl type="list" xml:id="LIST">
-    <fsDescr>List structure.</fsDescr>
-    <fDecl name="List-Feature">
-      <fDescr>List content</fDescr>
+    <fsDescr>General list structure (defined by its subtypes empty-list and nonempty-list)</fsDescr>
+  </fsDecl>
+
+  <fsDecl type="empty-list" baseTypes="list">
+    <fsDescr>Empty list</fsDescr>
+  </fsDecl>
+
+  <fsDecl type="nonempty-list" baseTypes="list">
+    <fsDescr>Non-empty list</fsDescr>
+    <fDecl name="Head"/>
+    <fDecl name="Tail">
       <vRange>
-        <vAlt>
-          <vColl org="list">
-            <fs type="proposition"/>
-            <!-- needs work: lists should be able to contain all types of content -->
-            <fs type="list"/>
-          </vColl>
-          <symbol value="emptylist"/>
-        </vAlt>
+        <fs type="list"/>
       </vRange>
     </fDecl>
   </fsDecl>
+
+
+  <fsDecl type="proposition-list" baseTypes="list">
+    <fsDescr>List of proposition (defined by its subtype nonempty-proposition-list)</fsDescr>
+  </fsDecl>
+
+  <fsDecl type="nonempty-proposition-list" baseTypes="proposition-list nonempty-list">
+    <fsDescr>Non-empty list of propositions</fsDescr>
+    <fDecl name="Head">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="proposition-list"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="list-with-spec-element" baseTypes="list">
+    <fsDescr>List that contains a specific element (defined by its subtypes list-with-spec-element-initially and list-with-spec-element-non-initially)</fsDescr>
+    <fDecl name="Element"/>
+  </fsDecl>
+
+  <fsDecl type="list-with-spec-element-initially" baseTypes="list-with-spec-element" xml:id="LWSE">
+    <fsDescr>Part of the List with the specific Element</fsDescr>
+    <fDecl name="Element">
+      <vRange>
+        <vLabel name="element"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Head">
+      <vRange>
+        <vLabel name="element"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="list-with-spec-element-non-initially" baseTypes="list-with-spec-element">
+    <fDecl name="Element">
+      <vRange>
+        <vLabel name="element"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="list-with-spec-element">
+          <f name="Element">
+            <vLabel name="element"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="sublist" baseTypes="list">
+    <fsDescr>List that is a sublist of a specific other list named Superlist (defined by its subtypes empty-sublist and nonempty-sublist)</fsDescr>
+    <fDecl name="Superlist"/>
+  </fsDecl>
+
+  <fsDecl type="empty-sublist" baseTypes="sublist empty-list">
+  </fsDecl>
+
+  <fsDecl type="nonempty-sublist" baseTypes="sublist nonempty-list">
+    <fDecl name="SuperList">
+      <vRange>
+        <vLabel name="superlist">
+          <fs type="list-with-spec-element">
+            <f name="Element">
+              <vLabel name="head"/>
+            </f>
+          </fs>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Head">
+      <vRange>
+        <vLabel name="head"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="sublist">
+          <f name="Superlist">
+            <vLabel name="superlist"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="equivalent-list-constraint">
+    <fsDescr>The constraint that List1 and List2 contain the same elements</fsDescr>
+    <fDecl name="List1">
+      <vRange>
+        <vLabel name="list1">
+          <fs type="sublist">
+            <f name="Superlist">
+              <vLabel name="list2"/>
+            </f>
+          </fs>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="List2">
+      <vRange>
+        <vLabel name="list2">
+          <fs type="sublist">
+            <f name="Superlist">
+              <vLabel name="list1"/>
+            </f>
+          </fs>
+        </vLabel>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
 </fsdDecl>
