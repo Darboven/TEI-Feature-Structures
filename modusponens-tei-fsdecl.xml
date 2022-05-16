@@ -2,7 +2,7 @@
   <fsdLink type="proposition"
    target="proposition-tei-fsdecl#PROP"/>
   <fsdLink type="list"
-   target="list-tei-fsdecl.xml#LIST"/>
+   target="list-tei-fsdecl.xml#LWSE"/>
   <fsDecl type="modus-ponens" baseTypes="proved-under-hypotheses">
     <fDecl name="Hypotheses">
       <vRange>

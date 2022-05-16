@@ -1,17 +1,19 @@
 <fsdDecl>
   <fsdLink type="proposition"
    target="proposition-tei-fsdecl.xml#PROP"/>
+  <fsdLink type="list-with-spec-element"
+   target="list-tei-fsdecl.xml#LWSE"/>
   <fsDecl type="contrapositive-proof" baseTypes="proved-under-hypotheses">
     <!--
       Idee:
         H: P|Ps
         C: Q
-        P:  H: ~Q (aber als Liste?)
-            C: ~P|Ps
+        P:  H: ~Q|Ps (aber als Liste?)
+            C: ~P
     -->
     <fDecl name="Hypotheses">
       <vRange>
-        <vLabel name="Ps">
+        <vLabel name="Ps"> <!-- zu viel, brauchen nur Tail -->
           <fs type="list-with-spec-element">
             <f name="Element">
               <vLabel name="P">
