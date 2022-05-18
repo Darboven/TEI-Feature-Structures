@@ -19,7 +19,7 @@
   </fsDecl>
 
 
-  <fsDecl type="proposition-list" baseTypes="list">
+  <fsDecl type="proposition-list" baseTypes="list" xml:id="PLIST">
     <fsDescr>List of proposition (defined by its subtype nonempty-proposition-list)</fsDescr>
   </fsDecl>
 
