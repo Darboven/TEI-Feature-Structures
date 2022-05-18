@@ -3,7 +3,8 @@
    target="proposition-tei-fsdecl.xml#PROP"/>
   <fsdLink type="list-with-spec-element"
    target="list-tei-fsdecl.xml#LWSE"/>
-  <fsDecl type="contrapositive-proof" baseTypes="proved-under-hypotheses">
+  <fsDecl type="contrapositive-proof" baseTypes="proved-under-hypotheses"
+   xml:id="CONTRAPOSITIVE">
     <!--
       Idee:
         H: P|Ps
@@ -13,7 +14,7 @@
     -->
     <fDecl name="Hypotheses">
       <vRange>
-        <vLabel name="Ps"> <!-- zu viel, brauchen nur Tail -->
+        <vLabel name="Ps"> <!-- zu viel, brauchen nur Tail? -->
           <fs type="list-with-spec-element">
             <f name="Element">
               <vLabel name="P">
@@ -28,19 +29,24 @@
       <vRange>
         <vLabel name="Q">
           <fs name="proposition"/>
-        </vLAbel>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Proof">
       <vRange>
         <fs type="proved-under-hypotheses">
           <f name="Hypotheses">
-            <!-- Liste hier? -->
-            <fs type="negation">
-              <f name="Negation-Feature">
-                <vLabel name="Q"/>
-              </f>
-            </fs>
+            <vLabel name="Ps">
+              <fs type="list-with-spec-element">
+                <f name="Element">
+                  <fs type="negation">
+                    <f name="Negation-Feature">
+                      <vLabel name="Q"/>
+                    </f>
+                  </fs>
+                </f>
+              </fs>
+            </vLabel>
           </f>
           <f name="Conclusion">
             <fs type="negation">
