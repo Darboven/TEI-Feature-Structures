@@ -1,6 +1,6 @@
 <fsdDecl>
-  <fsdLink type="proposition"
-   target="proposition-tei-fsdecl#PROP"/>
+  <fsdLink type="proposition-list"
+   target="list-tei-fsdecl#PLIST"/>
   <fsDecl type="proposition" xml:id="PROP">
     <fsDescr>Includes (some) types of complex propositions.</fsDescr>
     <fDecl name="Proposition-Feature">
@@ -19,6 +19,7 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
   <fsDecl type="implication">
     <fDecl name="Antecedent">
       <vRange>
@@ -32,7 +33,6 @@
     </fDecl>
   </fsDecl>
   <fsDecl type="biimplication">
-    <!-- question: Darstellung durch Konjunktion von zwei implications? -->
     <fDecl name="BI-Feature-1">
       <vRange>
         <fs type="proposition"/>
@@ -53,7 +53,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="conjunction">
+  <fsDecl type="conjunction" xml:id="CON">
     <fDecl name="CON-LHS">
       <vRange>
         <fs type="proposition"/>
@@ -78,6 +78,35 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
+
+  <fsDecl type="conjunction-lists">
+    <fDecl name="CON-LHS">
+      <vRange>
+        <fs type="proposition-list"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="CON-RHS">
+      <vRange>
+        <fs type="proposition-list"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="disjunction-lists">
+    <fDecl name="DIS-LHS">
+      <vRange>
+        <fs type="proposition-list"/>
+      </vRange>
+    </f>
+    <fDecl name="DIS-RHS">
+      <vRange>
+        <fs type="proposition-list"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
 
   <fsDecl type="all-quantification"/>
     <fsDescr>All-Quantification.</fsDescr>
