@@ -1,0 +1,54 @@
+<fsdDecl>
+  <fsDecl type="proof-contradiction" baseTypes="proved-under-hypotheses">
+    <fDecl name="Hypotheses">
+      <vRange>
+        <fs type="list-with-spec-element">
+          <f name="Element">
+            <vLabel name="P">
+              <fs type="proposition"/>
+            </vLabel>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <vLabel name="C">
+          <fs type="proposition"/>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+        <fs type="proved-under-hypotheses">
+          <f name="Hypotheses">
+            <fs type="list-with-spec-element">
+              <f name="Element">
+                <fs type="negation">
+                  <vLabel name="P"/>
+                </fs>
+              </f>
+            </fs>
+          </f>
+          <f name="Conclusion">
+            <fs type="conjunction">
+              <f name="CON-LHS">
+                <vLabel name="C"/>
+              </f>
+              <f name="CON-RHS">
+                <fs type="negation">
+                  <f name="Negation-Feature">
+                    <vLabel name="C"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+          <f name="Proof">
+            <symbol value="proved-under-hypotheses"/>
+            <!-- ... -->
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+</fsdDecl>
