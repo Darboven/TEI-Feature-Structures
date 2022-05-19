@@ -2,18 +2,14 @@
   <fsDecl type="proof-contradiction" baseTypes="proved-under-hypotheses">
     <fDecl name="Hypotheses">
       <vRange>
-        <fs type="list-with-spec-element">
-          <f name="Element">
-            <vLabel name="P">
-              <fs type="proposition"/>
-            </vLabel>
-          </f>
-        </fs>
+        <vLabel name="T">
+          <fs type="list"/>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Conclusion">
       <vRange>
-        <vLabel name="C">
+        <vLabel name="P">
           <fs type="proposition"/>
         </vLabel>
       </vRange>
@@ -22,11 +18,16 @@
       <vRange>
         <fs type="proved-under-hypotheses">
           <f name="Hypotheses">
-            <fs type="list-with-spec-element">
-              <f name="Element">
+            <fs type="list">
+              <f name="Head">
                 <fs type="negation">
-                  <vLabel name="P"/>
+                  <f name="Negation-Feature">
+                    <vLabel name="P"/>
+                  </f>
                 </fs>
+              </f>
+              <f name="Tail">
+                <vLabel name="T"/>
               </f>
             </fs>
           </f>
@@ -44,11 +45,8 @@
               </f>
             </fs>
           </f>
-          <f name="Proof">
-            <symbol value="proved-under-hypotheses"/>
-            <!-- ... -->
-          </f>
         </fs>
       </vRange>
     </fDecl>
+  </fsDecl>
 </fsdDecl>
