@@ -38,12 +38,12 @@
   </fsDecl>
 
 
-  <fsDecl type="list-with-spec-element" baseTypes="list">
+  <fsDecl type="list-with-spec-element" baseTypes="nonempty-list">
     <fsDescr>List that contains a specific element (defined by its subtypes list-with-spec-element-initially and list-with-spec-element-non-initially)</fsDescr>
     <fDecl name="Element"/>
   </fsDecl>
 
-  <fsDecl type="list-with-spec-element-initially" baseTypes="list-with-spec-element" xml:id="LWSE">
+  <fsDecl type="list-with-spec-element-initially" baseTypes="list-with-spec-element">
     <fsDescr>Part of the List with the specific Element</fsDescr>
     <fDecl name="Element">
       <vRange>
