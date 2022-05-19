@@ -32,18 +32,29 @@
             </fs>
           </f>
           <f name="Conclusion">
-            <fs type="conjunction">
-              <f name="CON-LHS">
-                <vLabel name="C"/>
-              </f>
-              <f name="CON-RHS">
-                <fs type="negation">
-                  <f name="Negation-Feature">
+            <fs type="conclusion-lists">
+              <f name="CON">
+                <fs type="list">
+                  <f name="Head">
                     <vLabel name="C"/>
+                  </f>
+                  <f name="Tail">
+                    <fs type="list">
+                      <f name="Head">
+                        <fs type="negation">
+                          <f name="Negation-Feature">
+                            <vLabel name="C"/>
+                          </f>
+                        </fs>
+                      </f>
+                      <f name="Tail">
+                        <fs type="list"/>
+                      </f>
+                    </fs>
                   </f>
                 </fs>
               </f>
-            </fs>
+            </fs>                
           </f>
         </fs>
       </vRange>

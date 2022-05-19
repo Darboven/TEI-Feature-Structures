@@ -53,40 +53,8 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="conjunction" xml:id="CON">
-    <fDecl name="CON-LHS">
-      <vRange>
-        <fs type="proposition"/>
-      </vRange>
-    </fDecl>
-    <fDecl name="CON-RHS">
-      <vRange>
-        <fs type="proposition"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-  <fsDecl type="disjunction">
-    <fDecl name="DIS-LHS">
-      <vRange>
-        <fs type="proposition"/>
-      </vRange>
-    </f>
-    <fDecl name="DIS-RHS">
-      <vRange>
-        <fs type="proposition"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-
   <fsDecl type="conjunction-lists">
-    <fDecl name="CON-LHS">
-      <vRange>
-        <fs type="proposition-list"/>
-      </vRange>
-    </fDecl>
-    <fDecl name="CON-RHS">
+    <fDecl name="CON">
       <vRange>
         <fs type="proposition-list"/>
       </vRange>
@@ -94,19 +62,12 @@
   </fsDecl>
 
   <fsDecl type="disjunction-lists">
-    <fDecl name="DIS-LHS">
-      <vRange>
-        <fs type="proposition-list"/>
-      </vRange>
-    </f>
-    <fDecl name="DIS-RHS">
+    <fDecl name="DIS">
       <vRange>
         <fs type="proposition-list"/>
       </vRange>
     </fDecl>
   </fsDecl>
-
-
 
   <fsDecl type="all-quantification"/>
     <fsDescr>All-Quantification.</fsDescr>
