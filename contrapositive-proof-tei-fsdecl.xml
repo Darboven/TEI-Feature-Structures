@@ -5,48 +5,45 @@
    target="list-tei-fsdecl.xml#LWSE"/>
   <fsDecl type="contrapositive-proof" baseTypes="proved-under-hypotheses"
    xml:id="CONTRAPOSITIVE">
-    <!--
-      Idee:
-        H: P|Ps
-        C: Q
-        P:  H: ~Q|Ps (aber als Liste?)
-            C: ~P
-    -->
     <fDecl name="Hypotheses">
       <vRange>
-        <vLabel name="Ps"> <!-- zu viel, brauchen nur Tail? -->
-          <fs type="list-with-spec-element">
-            <f name="Element">
-              <vLabel name="P">
-                <fs type="proposition"/>
-              </vLabel>
-            </f>
-          </fs>
+        <vLabel name="Ps">
+          <fs type="list"/>
         </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Conclusion">
       <vRange>
-        <vLabel name="Q">
-          <fs name="proposition"/>
-        </vLabel>
+        <fs type="implication">
+          <f name="Antecedent">
+            <vLabel name="P">
+              <fs type="proposition"/>
+            </vLabel>
+          </f>
+          <f name="Consequent">
+            <vLabel name="Q">
+              <fs name="proposition"/>
+            </vLabel>
+          </f>
+        </fs>
       </vRange>
     </fDecl>
     <fDecl name="Proof">
       <vRange>
         <fs type="proved-under-hypotheses">
           <f name="Hypotheses">
-            <vLabel name="Ps">
-              <fs type="list-with-spec-element">
-                <f name="Element">
-                  <fs type="negation">
-                    <f name="Negation-Feature">
-                      <vLabel name="Q"/>
-                    </f>
-                  </fs>
-                </f>
-              </fs>
-            </vLabel>
+            <fs type="list">
+              <f name="Head">
+                <fs type="negation">
+                  <f name="Negation-Feature">
+                    <vLabel name="Q"/>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <vLabel name="Ps">
+              </f>
+            </fs>
           </f>
           <f name="Conclusion">
             <fs type="negation">
