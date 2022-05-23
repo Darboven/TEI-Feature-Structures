@@ -1,0 +1,79 @@
+<fsdDecl>
+  <fsDecl type="proof-contradiction" baseTypes="proved-under-hypotheses">
+    <fDecl name="Hypotheses">
+      <vRange>
+        <vLabel name="T">
+          <fs type="list"/>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <fs type="implication">
+          <f name="Antecedent">
+            <vLabel name="P">
+              <fs type="proposition"/>
+            </vLabel>
+          </f>
+          <f name="Consequent">
+            <vLabel name="Q">
+              <fs type="proposition"/>
+            </vLabel>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+        <fs type="proved-under-hypotheses">
+          <f name="Hypotheses">
+            <fs type="list">
+              <f name="Head">
+                <fs type="implication">
+                  <f name="Antecedent">
+                    <vLabel name="P"/>
+                  </f>
+                  <f name="Consequent">
+                    <fs type="negation">
+                      <f name="Negation-Feature">
+                        <vLabel name="Q"/>
+                      </f>
+                    </fs>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <vLabel name="T"/>
+              </f>
+            </fs>
+          </f>
+          <f name="Conclusion">
+            <fs type="conclusion-lists">
+              <f name="CON">
+                <fs type="list">
+                  <f name="Head">
+                    <vLabel name="C"/>
+                  </f>
+                  <f name="Tail">
+                    <fs type="list">
+                      <f name="Head">
+                        <fs type="negation">
+                          <f name="Negation-Feature">
+                            <vLabel name="C"/>
+                          </f>
+                        </fs>
+                      </f>
+                      <f name="Tail">
+                        <fs type="list"/>
+                      </f>
+                    </fs>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
