@@ -2,25 +2,14 @@
   <fsdLink type="proposition-list"
    target="list-tei-fsdecl#PLIST"/>
   <fsDecl type="proposition" xml:id="PROP">
-    <fsDescr>Includes (some) types of complex propositions.</fsDescr>
-    <fDecl name="Proposition-Feature">
-      <vRange>
-        <vAlt>
-          <fs type="implication"/>
-          <fs type="biimplication"/>
-          <fs type="negation"/>
-          <fs type="conjunction"/>
-          <fs type="disjunction"/>
-          <fs type="all-quantification"/>
-          <fs type="exists-quantification"/>
-          <symbol value="string"/>
-          <!-- needs work -->
-        </vAlt>
-      </vRange>
-    </fDecl>
+    <fsDescr>General proposition structure (defined by its subtypes)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="implication">
+  <fsDecl type="string" baseTypes="proposition">
+    <fDecl name="Content"/>
+  </fsDecl>
+
+  <fsDecl type="implication" baseTypes="proposition">
     <fDecl name="Antecedent">
       <vRange>
         <fs type="proposition"/>
@@ -32,7 +21,8 @@
       </vRange>
     </fDecl>
   </fsDecl>
-  <fsDecl type="biimplication">
+
+  <fsDecl type="biimplication" baseTypes="proposition">
     <fDecl name="BI-Feature-1">
       <vRange>
         <fs type="proposition"/>
@@ -45,7 +35,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="negation">
+  <fsDecl type="negation" baseTypes="proposition">
     <fDecl name="Negation-Feature">
       <vRange>
         <fs type="proposition"/>
@@ -53,7 +43,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="conjunction-lists">
+  <fsDecl type="conjunction-lists" baseTypes="proposition">
     <fDecl name="CON">
       <vRange>
         <fs type="proposition-list"/>
@@ -61,7 +51,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="disjunction-lists">
+  <fsDecl type="disjunction-lists" baseTypes="proposition">
     <fDecl name="DIS">
       <vRange>
         <fs type="proposition-list"/>
@@ -69,7 +59,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="all-quantification"/>
+  <fsDecl type="all-quantification" baseTypes="proposition">
     <fsDescr>All-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
       <vRange>
@@ -84,7 +74,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="exists-quantification"/>
+  <fsDecl type="exists-quantification" baseTypes="proposition">
     <fsDescr>Exists-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
       <vRange>
@@ -98,6 +88,5 @@
       </vRange>
     </fDecl>
   </fsDecl>
-
 
 </fsdDecl>
