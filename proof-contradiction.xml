@@ -32,7 +32,7 @@
             </fs>
           </f>
           <f name="Conclusion">
-            <fs type="conclusion-lists">
+            <fs type="conjunction-lists">
               <f name="CON">
                 <fs type="list">
                   <f name="Head">
@@ -48,13 +48,13 @@
                         </fs>
                       </f>
                       <f name="Tail">
-                        <fs type="list"/>
+                        <fs type="empty-list"/>
                       </f>
                     </fs>
                   </f>
                 </fs>
               </f>
-            </fs>                
+            </fs>
           </f>
         </fs>
       </vRange>

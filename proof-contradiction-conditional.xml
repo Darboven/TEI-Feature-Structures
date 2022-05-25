@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="proof-contradiction" baseTypes="proved-under-hypotheses">
+  <fsDecl type="proof-contradiction-conditional" baseTypes="proved-under-hypotheses">
     <fDecl name="Hypotheses">
       <vRange>
         <vLabel name="T">
@@ -29,26 +29,26 @@
           <f name="Hypotheses">
             <fs type="list">
               <f name="Head">
-                <fs type="implication">
-                  <f name="Antecedent">
-                    <vLabel name="P"/>
-                  </f>
-                  <f name="Consequent">
+                <vLabel name="P"/>
+              </f>
+              <f name="Tail">
+                <fs type="list">
+                  <f name="Head">
                     <fs type="negation">
                       <f name="Negation-Feature">
                         <vLabel name="Q"/>
                       </f>
                     </fs>
                   </f>
+                  <f name="Tail">
+                    <vLabel name="T"/>
+                  </f>
                 </fs>
-              </f>
-              <f name="Tail">
-                <vLabel name="T"/>
               </f>
             </fs>
           </f>
           <f name="Conclusion">
-            <fs type="conclusion-lists">
+            <fs type="conjunction-lists">
               <f name="CON">
                 <fs type="list">
                   <f name="Head">
@@ -64,7 +64,7 @@
                         </fs>
                       </f>
                       <f name="Tail">
-                        <fs type="list"/>
+                        <fs type="empty-list"/>
                       </f>
                     </fs>
                   </f>

@@ -3,7 +3,7 @@
    target="list-tei-fsdecl.xml#LIST"/>
   <fsdLink type="proposition"
    target="proposition-tei-fsdecl.xml#PROP"/>
-  <fsDecl type="proved-under-hypotheses" xml:id="PUH">
+  <fsDecl type="proved-under-hypotheses">
     <fsDescr>Most general proof.</fsDescr>
     <fDecl name="Hypotheses">
       <vRange>

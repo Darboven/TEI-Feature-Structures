@@ -5,8 +5,12 @@
     <fsDescr>General proposition structure (defined by its subtypes)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="string" baseTypes="proposition">
-    <fDecl name="Content"/>
+  <fsDecl type="atomic" baseTypes="proposition">
+    <fDecl name="Content">
+      <vRange>
+        <symbol value="string"/>
+      </vRange>
+    </fDecl>
   </fsDecl>
 
   <fsDecl type="implication" baseTypes="proposition">
