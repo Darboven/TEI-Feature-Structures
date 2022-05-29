@@ -1,5 +1,29 @@
 <fsdDecl>
   <fsDecl type="proof-contradiction" baseTypes="proved-under-hypotheses">
+    <fDecl name="Initial-Linguistic-Marker">
+      <vRange>
+        <fs type="sentence">
+          <f name="Linguistic-Indicator">
+            <vAlt>
+              <string>suppose for the sake of contradiction that it is not true that</string>
+              <string>for the sake of contradiction, suppose</string>
+              <string></string>
+              <!-- ... -->
+            </vAlt>
+          </f>
+          <!--
+            Problem:
+            bei manchen Formulierungen wird eine negierte Form der Proposition
+            benötigt, bei anderen jedoch nicht
+          -->
+          <f name="Linguistic-Realisation">
+            <vLabel name="P">
+              <fs type="proposition"/>
+            </vLabel>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
         <vLabel name="T">
@@ -9,9 +33,7 @@
     </fDecl>
     <fDecl name="Conclusion">
       <vRange>
-        <vLabel name="P">
-          <fs type="proposition"/>
-        </vLabel>
+        <vLabel name="P"/>
       </vRange>
     </fDecl>
     <fDecl name="Proof">
