@@ -5,20 +5,21 @@
         <fs type="sentence">
           <f name="Linguistic-Indicator">
             <vAlt>
-              <string>suppose for the sake of contradiction that it is not true that</string>
+              <string>suppose for the sake of contradiction that</string>
               <string>for the sake of contradiction, suppose</string>
               <string></string>
               <!-- ... -->
             </vAlt>
           </f>
-          <!--
-            Problem:
-            bei manchen Formulierungen wird eine negierte Form der Proposition
-            benötigt, bei anderen jedoch nicht
-          -->
           <f name="Linguistic-Realisation">
-            <vLabel name="P">
-              <fs type="proposition"/>
+            <vLabel name="negP">
+              <fs type="negation">
+                <f name="Negation-Feature">
+                  <vLabel name="P">
+                    <fs type="proposition"/>
+                  </vLabel>
+                </f>
+              </fs>
             </vLabel>
           </f>
         </fs>
@@ -42,11 +43,7 @@
           <f name="Hypotheses">
             <fs type="list">
               <f name="Head">
-                <fs type="negation">
-                  <f name="Negation-Feature">
-                    <vLabel name="P"/>
-                  </f>
-                </fs>
+                <vLabel name="negP"/>
               </f>
               <f name="Tail">
                 <vLabel name="T"/>

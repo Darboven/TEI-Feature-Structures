@@ -5,6 +5,29 @@
    target="list-tei-fsdecl.xml#LWSE"/>
   <fsDecl type="contrapositive-proof" baseTypes="proved-under-hypotheses"
    xml:id="CONTRAPOSITIVE">
+    <fDecl name="Initial-Linguistic-Marker">
+     <vRange>
+       <fs type="sentence">
+         <f name="Linguistic-Indicator">
+           <vAlt>
+             <string>suppose</string>
+             <string>(contrapositive) suppose</string>
+           </vAlt>
+         </f>
+         <f name="Linguistic-Realisation">
+           <vLabel name="negQ">
+             <fs type="negation">
+               <f name="Negation-Feature">
+                 <vLabel name="Q">
+                   <fs type="proposition"/>
+                 </vLabel>
+               </f>
+             </fs>
+           </vLabel>
+         </f>
+       </fs>
+     </vRange>
+    </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
         <vLabel name="Ps">
@@ -21,9 +44,7 @@
             </vLabel>
           </f>
           <f name="Consequent">
-            <vLabel name="Q">
-              <fs name="proposition"/>
-            </vLabel>
+            <vLabel name="Q"/>
           </f>
         </fs>
       </vRange>
@@ -34,11 +55,7 @@
           <f name="Hypotheses">
             <fs type="list">
               <f name="Head">
-                <fs type="negation">
-                  <f name="Negation-Feature">
-                    <vLabel name="Q"/>
-                  </f>
-                </fs>
+                <vLabel name="negQ"/>
               </f>
               <f name="Tail">
                 <vLabel name="Ps">
