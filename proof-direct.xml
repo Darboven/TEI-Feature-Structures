@@ -21,7 +21,7 @@
     <fDecl name="Hypotheses">
       <vRange>
         <vLabel name="T">
-          <fs type="list"/>
+          <fs type="proposition-list"/>
         </vLabel>
       </vRange>
     </fDecl>
