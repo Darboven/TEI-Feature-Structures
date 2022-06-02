@@ -9,7 +9,7 @@
         <fs type="list-with-spec-element">
           <f name="Element">
             <vLabel name="A">
-              <!-- ... -->
+              <fs type="proposition"/>
             </vLabel>
           </f>
         </fs>
