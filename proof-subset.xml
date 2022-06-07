@@ -1,0 +1,30 @@
+<fsdDecl>
+  
+  <fsDecl type="proof-subset" baseTypes="proved-under-hypotheses">
+    <fDecl name="Hypotheses">
+      <vRange>
+        <vRange>
+          <fs type="list"/>
+        </vRange>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <vLabel name="A">
+          <fs type="set"/>
+          <!-- ... -->
+        </vLabel>
+        <vLabel name="B">
+          <fs type="set"/>
+          <!-- ... -->
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+        <fs type="">
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>

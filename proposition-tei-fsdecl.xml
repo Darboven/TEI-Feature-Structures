@@ -93,4 +93,50 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="subset" baseTypes="proposition">
+    <fDecl name="Subset">
+      <vRange>
+        <fs type="set"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Superset">
+      <vRange>
+        <fs type="set"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="element" baseTypes="proposition">
+    <fDecl name="Variable">
+      <vRange>
+        <fs type="atomic"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Set">
+      <vRange>
+        <fs type="set"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="expression" baseTypes="proposition">
+    <fsDescr>General expression structure</fsDescr>
+  </fsDecl>
+
+  <fsDecl type="equality" baseTypes="expression">
+    <fDecl name="LHS">
+      <vRange>
+        <fs type="atomic"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="RHS">
+      <vRange>
+        <fs type="atomic"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <!-- ... -->
+
 </fsdDecl>

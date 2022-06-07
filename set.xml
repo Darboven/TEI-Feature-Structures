@@ -1,0 +1,41 @@
+<fsdDecl>
+  <fsDecl type="set">
+    <fDecl name="Variable">
+      <vRange>
+        <fs type="atomic"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Definition">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
+
+
+
+
+
+<fs type="disjunction-lists" baseTypes="proposition">
+  <f name="DIS">
+    <fs type="proposition-list">
+      <f name="Head">
+        <fs type="equality">
+          <f name="LHS">
+            <vLabel name="a">
+              <fs type="atomic"/>
+            </vLabel>
+          </f>
+          <f name="RHS">
+            <!-- element of the set A -->
+          </f>
+        </fs>
+      </f>
+      <f name="Tail">
+        <fs type="proposition-list"/>
+        <!-- for every element a in the set -->
+      </f>
+    </fs>
+  </f>
+</fs>
