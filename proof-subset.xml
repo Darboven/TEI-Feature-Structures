@@ -5,7 +5,9 @@
     <fDecl name="Hypotheses">
       <vRange>
         <vRange>
-          <fs type="proposition-list"/>
+          <vLabel name="T">
+            <fs type="proposition-list"/>
+          </vLabel>
         </vRange>
       </vRange>
     </fDecl>
@@ -31,14 +33,21 @@
       <vRange>
         <fs type="proved-under-hypotheses">
           <f name="Hypotheses">
-            <fs type="element">
-              <f name="Element">
-                <vLabel name="a">
-                  <fs type="mathobj"/>
-                </vLabel>
+            <fs type="proposition-list">
+              <f name="Head">
+                <fs type="element">
+                  <f name="Element">
+                    <vLabel name="a">
+                      <fs type="mathobj"/>
+                    </vLabel>
+                  </f>
+                  <f name="Set">
+                    <vLabel name="A"/>
+                  </f>
+                </fs>
               </f>
-              <f name="Set">
-                <vLabel name="A"/>
+              <f name="Tail">
+                <vLabel name="T"/>
               </f>
             </fs>
           </f>
