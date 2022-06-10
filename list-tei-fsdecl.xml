@@ -75,6 +75,69 @@
   </fsDecl>
 
 
+  <fsDecl type="comma-list" baseTypes="list">
+    <fsDescr>General comma-list structure</fsDescr>
+  </fsDecl>
+
+  <fsDecl type="comma-list-start" baseTypes="comma-list">
+    <fDecl name="Head">
+      <vRange>
+        <string>{</string>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <vAlt>
+          <fs type="comma-list-element"/>
+          <fs type="comma-list-end"/><!-- for empty set -->
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="comma-list-element" baseTypes="comma-list">
+    <fDecl name="Head">
+      <vRange>
+        <fs type="atomic"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <vAlt>
+          <fs type="comma-list-comma"/>
+          <fs type="comma-list-end"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="comma-list-comma" baseTypes="comma-list">
+    <fDecl name="Head">
+      <vRange>
+        <string>,</string>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="comma-list-element"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="comma-list-end" baseTypes="comma-list">
+    <fDecl name="Head">
+      <vRange>
+        <string>}</string>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="empty-list"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
   <fsDecl type="sublist" baseTypes="list">
     <fsDescr>List that is a sublist of a specific other list named Superlist (defined by its subtypes empty-sublist and nonempty-sublist)</fsDescr>
     <fDecl name="Superlist"/>

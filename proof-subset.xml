@@ -1,28 +1,60 @@
 <fsdDecl>
-  
   <fsDecl type="proof-subset" baseTypes="proved-under-hypotheses">
+    <fDecl name="Initial-Linguistic-Marker">
+    </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
         <vRange>
-          <fs type="list"/>
+          <fs type="proposition-list"/>
         </vRange>
       </vRange>
     </fDecl>
     <fDecl name="Conclusion">
       <vRange>
-        <vLabel name="A">
-          <fs type="set"/>
-          <!-- ... -->
-        </vLabel>
-        <vLabel name="B">
-          <fs type="set"/>
-          <!-- ... -->
-        </vLabel>
+        <fs type="subset">
+          <f name="Subset">
+            <vLabel name="A">
+              <fs type="set"/>
+              <!-- ... -->
+            </vLabel>
+          </f>
+          <f name="Superset">
+            <vLabel name="B">
+              <fs type="set"/>
+              <!-- ... -->
+            </vLabel>
+          </f>
+        </fs>
       </vRange>
     </fDecl>
     <fDecl name="Proof">
       <vRange>
-        <fs type="">
+        <fs type="proved-under-hypotheses">
+          <f name="Hypotheses">
+            <fs type="element">
+              <f name="Element">
+                <vLabel name="a">
+                  <fs type="mathobj"/>
+                </vLabel>
+              </f>
+              <f name="Set">
+                <vLabel name="A"/>
+              </f>
+            </fs>
+          </f>
+          <f name="Conclusion">
+            <fs type="element">
+              <f name="Element">
+                <vLabel name="a">
+                  <fs type="mathobj"/>
+                </vLabel>
+              </f>
+              <f name="Set">
+                <vLabel name="B"/>
+              </f>
+            </fs>
+            <!-- for every a ∈ A -->
+          </f>
         </fs>
       </vRange>
     </fDecl>

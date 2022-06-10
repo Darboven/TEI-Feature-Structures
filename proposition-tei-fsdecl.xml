@@ -5,14 +5,6 @@
     <fsDescr>General proposition structure (defined by its subtypes)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="atomic" baseTypes="proposition">
-    <fDecl name="Content">
-      <vRange>
-        <symbol value="string"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
   <fsDecl type="implication" baseTypes="proposition">
     <fDecl name="Antecedent">
       <vRange>
@@ -93,7 +85,35 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="subset" baseTypes="proposition">
+
+  <fsDecl type="atomic" baseTypes="proposition">
+    <fsDescr>General atomic structure</fsDescr>
+  </fsDecl>
+
+  <fsDecl type="string" baseTypes="atomic">
+    <fDecl name="Content">
+      <vRange>
+        <symbol value="string"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="equality" baseTypes="atomic">
+    <fDecl name="LHS">
+      <vRange>
+        <fs type="mathobj"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="RHS">
+      <vRange>
+        <fs type="mathobj"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <!-- ... -->
+
+  <fsDecl type="subset" baseTypes="atomic">
     <fDecl name="Subset">
       <vRange>
         <fs type="set"/>
@@ -106,10 +126,11 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="element" baseTypes="proposition">
-    <fDecl name="Variable">
+  <fsDecl type="element" baseTypes="atomic">
+    <fDecl name="Element">
       <vRange>
-        <fs type="atomic"/>
+        <fs type="mathobj"/>
+        <!-- most general ontological frame -->
       </vRange>
     </fDecl>
     <fDecl name="Set">
@@ -118,25 +139,5 @@
       </vRange>
     </fDecl>
   </fsDecl>
-
-
-  <fsDecl type="expression" baseTypes="proposition">
-    <fsDescr>General expression structure</fsDescr>
-  </fsDecl>
-
-  <fsDecl type="equality" baseTypes="expression">
-    <fDecl name="LHS">
-      <vRange>
-        <fs type="atomic"/>
-      </vRange>
-    </fDecl>
-    <fDecl name="RHS">
-      <vRange>
-        <fs type="atomic"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-  <!-- ... -->
 
 </fsdDecl>

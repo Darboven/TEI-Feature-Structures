@@ -1,41 +1,71 @@
 <fsdDecl>
-  <fsDecl type="set">
-    <fDecl name="Variable">
+  <fsDecl type="set" baseTypes="mathobj"><!-- mathobj needs to be defined -->
+    <fsDescr>General set structure (defined by its subtypes)</fsDescr>
+  </fsDecl>
+
+
+  <fsDecl type="set-predicate" baseTypes="set">
+    <fDecl name="Notation">
       <vRange>
-        <fs type="atomic"/>
+        <!-- vColl? -->
+        <string>{</string>
+        <vLabel name="variable"/>
+        <vAlt>
+          <string>:</string>
+          <string>|</string>
+        </vAlt>
+        <vLabel name="predicate"/>
+        <string>}</string>
       </vRange>
     </fDecl>
-    <fDecl name="Definition">
+    <fDecl name="Variable">
       <vRange>
-        <fs type="proposition"/>
+        <vLabel name="variable">
+          <fs type="atomic"/>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Predicate">
+      <vRange>
+        <vLabel name="predicate">
+          <fs type="proposition"/>
+        </vLabel>
       </vRange>
     </fDecl>
   </fsDecl>
-</fsdDecl>
 
-
-
-
-
-<fs type="disjunction-lists" baseTypes="proposition">
-  <f name="DIS">
-    <fs type="proposition-list">
-      <f name="Head">
-        <fs type="equality">
-          <f name="LHS">
-            <vLabel name="a">
-              <fs type="atomic"/>
-            </vLabel>
-          </f>
-          <f name="RHS">
-            <!-- element of the set A -->
+  <fsDecl type="set-enumeration" baseTypes="set">
+    <fDecl name="Notation">
+      <vRange>
+        <fs type="comma-list">
+      </vRange>
+    </fDecl>
+    <fDecl name="Enumeration">
+      <vRange>
+        <fs type="disjunction-lists">
+          <f name="DIS">
+            <fs type="proposition-list">
+              <f name="Head">
+                <fs type="equality">
+                  <f name="LHS">
+                    <vLabel name="a">
+                      <fs type="mathobj"/>
+                    </vLabel>
+                  </f>
+                  <f name="RHS">
+                    <fs type="mathobj">
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <fs type="proposition-list"/>
+                <!-- for every element a in the set -->
+              </f>
+            </fs>
           </f>
         </fs>
-      </f>
-      <f name="Tail">
-        <fs type="proposition-list"/>
-        <!-- for every element a in the set -->
-      </f>
-    </fs>
-  </f>
-</fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+</fsdDecl>
