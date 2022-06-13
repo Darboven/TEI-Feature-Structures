@@ -21,7 +21,7 @@
     <fDecl name="Variable">
       <vRange>
         <vLabel name="variable">
-          <fs type="atomic"/>
+          <fs type="mathobj"/>
         </vLabel>
       </vRange>
     </fDecl>

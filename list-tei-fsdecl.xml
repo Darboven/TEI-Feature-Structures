@@ -4,7 +4,7 @@
     <fsDescr>General list structure (defined by its subtypes empty-list and nonempty-list)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="empty-list" baseTypes="list">
+  <fsDecl type="empty-list" baseTypes="list comma-list">
     <fsDescr>Empty list</fsDescr>
   </fsDecl>
 
@@ -74,6 +74,9 @@
     </fDecl>
   </fsDecl>
 
+<!--
+
+-->
 
   <fsDecl type="comma-list" baseTypes="list">
     <fsDescr>General comma-list structure</fsDescr>
@@ -98,7 +101,7 @@
   <fsDecl type="comma-list-element" baseTypes="comma-list">
     <fDecl name="Head">
       <vRange>
-        <fs type="atomic"/>
+        <fs type="mathobj"/>
       </vRange>
     </fDecl>
     <fDecl name="Tail">

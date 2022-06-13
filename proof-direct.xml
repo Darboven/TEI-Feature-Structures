@@ -1,22 +1,22 @@
 <fsdDecl>
   <fsDecl type="proof-direct" baseTypes="proved-under-hypotheses">
     <fDecl name="Initial-Linguistic-Marker">
-     <vRange>
-       <fs type="sentence">
-         <f name="Linguistic-Indicator">
-           <vAlt>
-             <string>suppose</string>
-             <string>assume</string>
-             <string>assume that</string>
-           </vAlt>
-         </f>
-         <f name="Linguistic-Realisation">
-           <vLabel name="P">
-             <fs type="proposition"/>
-           </vLabel>
-         </f>
-       </fs>
-     </vRange>
+      <vRange>
+        <fs type="sentence">
+          <f name="Linguistic-Indicator">
+            <vAlt>
+              <string>suppose</string>
+              <string>assume</string>
+              <string>assume that</string>
+            </vAlt>
+          </f>
+          <f name="Linguistic-Realisation">
+            <vLabel name="P">
+              <fs type="proposition"/>
+            </vLabel>
+          </f>
+        </fs>
+      </vRange>
     </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
