@@ -1,0 +1,107 @@
+<fsdDecl>
+
+  <fsDecl type="mathobj-list" baseTypes="list">
+      <fsDescr>List of mathematical objects (defined by its subtype nonempty-mathematical-object-list)</fsDescr>
+  </fsDecl>
+
+  TODO: empty-mathematical-object-list
+  TODO: one-element-mathematical-object-list
+  <fsDecl type="empty-mathobj-list" baseTypes="mathobj-list">
+  </fsDecl>
+
+  <fsDecl type="one-element-mathobj-list" baseTypes="mathobj-list">
+    <fDecl name="Head">
+      <vRange>
+        <fs type="mathobj">
+          <vLabel name="Head-TR"/>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="empty-mathobj-list"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Textual-Realization">
+      <vRange>
+        <fs type="text-phrase">
+          ...
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="more-than-one-element-mathobj-list" baseTypes="mathobj-list nonempty-list">
+    <fsDescr>Non-empty list of mathematical objects</fsDescr>
+    <fDecl name="Head">
+      <vRange>
+        <fs type="mathobj">
+          <vLabel name="Head-TR">
+            <f name="Textual-Realization"/>
+          </vLabel>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="mathobj-list">
+          <vLabel name="Tail-TR">
+            <f name="Textual-Realization"/>
+          </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Textual-Realization">
+      <vRange>
+        <fs name="text-phrase">
+          <f name="Text">
+            <!-- !!! -->
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase">
+                  <f name="Text">
+                    <vLabel name="Head-TR">
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <fs type="text-phrase">
+                      <f name="Text">
+                        <string>,</string>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="nonempty-text-phrase-list">
+                      <f name="Head">
+                        <fs type="text-phrase">
+                          <f name="Text">
+                            <vLabel name="Tail-TR"/>
+                          </f>
+                        </fs>
+                      </f>
+                      <f name="Tail">
+                        <fs type="empty-text-phrase-list"/>
+                      </f>
+                    </fs>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+            text-phrase-list mit drei Elementen:
+             - <vLabel name="Head-TR">
+             - <f name="Text">: <string>,</string>
+             - <vLabel name="Tail-TR">
+          </f>
+          
+          <f name="Semantics">
+            ...
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+</fsdDecl>

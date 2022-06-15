@@ -1,0 +1,44 @@
+<fsdDecl>
+
+  <fsDecl type="text-phrase">
+    <fDecl type="Text">
+      <vRange>
+        <vAlt>
+          <symbol value="string"/>
+          <fs type="text-phrase-list"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="text-phrase-with-semantics" base-type="text-phrase">
+    <fDecl type="Semantics">
+      <vRange>
+        <vAlt>
+          <fs type="proposition">
+          <fs type="mathematical-object">
+          <fs type="mathematical-object-list">
+        </vAlt>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="text-phrase-list" baseTypes="list">
+    <fsDescr>List of text phrases (defined by its subtype nonempty-text-phrase-list)</fsDescr>
+  </fsDecl>
+
+  <fsDecl type="nonempty-text-phrase-list" baseTypes="text-phrase-list nonempty-list">
+    <fsDescr>Non-empty list of text phrases</fsDescr>
+    <fDecl name="Head">
+      <vRange>
+        <fs type="text-phrase"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="text-phrase-list"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+</fsdDecl>
