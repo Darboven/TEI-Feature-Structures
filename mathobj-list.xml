@@ -1,20 +1,34 @@
 <fsdDecl>
 
   <fsDecl type="mathobj-list" baseTypes="list">
-      <fsDescr>List of mathematical objects (defined by its subtype nonempty-mathematical-object-list)</fsDescr>
+    <fsDescr>List of mathematical objects (defined by its subtype nonempty-mathematical-object-list)</fsDescr>
   </fsDecl>
 
-  TODO: empty-mathematical-object-list
-  TODO: one-element-mathematical-object-list
-  <fsDecl type="empty-mathobj-list" baseTypes="mathobj-list">
+  <fsDecl type="empty-mathobj-list" baseTypes="mathobj-list empty-list">
+    <fDecl name="Textual-Realization">
+      <vRange>
+        <fs name="text-phrase">
+          <f name="Text">
+            <string/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
   </fsDecl>
 
-  <fsDecl type="one-element-mathobj-list" baseTypes="mathobj-list">
+  <fsDecl type="nonempty-mathobj-list" baseTypes="mathobj-list nonempty-list">
+  </fsDecl>
+
+  <fsDecl type="one-element-mathobj-list" baseTypes="nonempty-mathobj-list">
     <fDecl name="Head">
       <vRange>
-        <fs type="mathobj">
-          <vLabel name="Head-TR"/>
-        </fs>
+        <vLabel name="Head">
+          <fs type="mathobj">
+            <f name="Textual-Realization">
+              <vLabel name="Head-TR"/>
+            </f>
+          </fs>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Tail">
@@ -24,84 +38,112 @@
     </fDecl>
     <fDecl name="Textual-Realization">
       <vRange>
-        <fs type="text-phrase">
-          ...
-        </fs>
+        <vLabel name="Head-TR"/>
       </vRange>
     </fDecl>
   </fsDecl>
 
-
-  <fsDecl type="more-than-one-element-mathobj-list" baseTypes="mathobj-list nonempty-list">
+  <fsDecl type="more-than-one-element-mathobj-list" baseTypes="nonempty-mathobj-list">
     <fsDescr>Non-empty list of mathematical objects</fsDescr>
     <fDecl name="Head">
       <vRange>
-        <fs type="mathobj">
-          <vLabel name="Head-TR">
-            <f name="Textual-Realization"/>
-          </vLabel>
-        </fs>
+        <vLabel name="Head">
+          <fs type="mathobj">
+            <f name="Textual-Realization">
+              <vLabel name="Head-TR"/>
+            </f>
+          </fs>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Tail">
       <vRange>
-        <fs type="mathobj-list">
-          <vLabel name="Tail-TR">
-            <f name="Textual-Realization"/>
-          </vLabel>
+      TODO: vLabels anpassen (wie Head)[done]
+        <vLabel name="Tail">
+          <fs type="nonempty-mathobj-list">
+            <vLabel name="Tail-TR">
+              <f name="Textual-Realization"/>
+            </vLabel>
+          </fs>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Textual-Realization">
       <vRange>
-        <fs name="text-phrase">
-          <f name="Text">
-            <!-- !!! -->
-            <fs type="nonempty-text-phrase-list">
-              <f name="Head">
-                <fs type="text-phrase">
-                  <f name="Text">
-                    <vLabel name="Head-TR">
-                  </f>
-                </fs>
-              </f>
-              <f name="Tail">
-                <fs type="nonempty-text-phrase-list">
-                  <f name="Head">
-                    <fs type="text-phrase">
-                      <f name="Text">
-                        <string>,</string>
-                      </f>
-                    </fs>
-                  </f>
-                  <f name="Tail">
-                    <fs type="nonempty-text-phrase-list">
-                      <f name="Head">
-                        <fs type="text-phrase">
-                          <f name="Text">
-                            <vLabel name="Tail-TR"/>
-                          </f>
-                        </fs>
-                      </f>
-                      <f name="Tail">
-                        <fs type="empty-text-phrase-list"/>
-                      </f>
-                    </fs>
-                  </f>
-                </fs>
-              </f>
-            </fs>
-            text-phrase-list mit drei Elementen:
-             - <vLabel name="Head-TR">
-             - <f name="Text">: <string>,</string>
-             - <vLabel name="Tail-TR">
-          </f>
-          
-          <f name="Semantics">
-            ...
+        <vLabel name="TR">
+          <fs name="text-phrase">
+            <f name="Text">
+              <fs type="nonempty-text-phrase-list">
+                <f name="Head">
+                  <vLabel name="Head-TR"/>
+                </f>
+                <f name="Tail">
+                  <fs type="nonempty-text-phrase-list">
+                    <f name="Head">
+                      <fs type="text-phrase">
+                        <f name="Text">
+                          <string>,</string>
+                        </f>
+                      </fs>
+                    </f>
+                    <f name="Tail">
+                      <fs type="nonempty-text-phrase-list">
+                        <f name="Head">
+                          <vLabel name="Tail-TR"/>
+                        </f>
+                        <f name="Tail">
+                          <fs type="empty-list"/>
+                        </f>
+                      </fs>
+                    </f>
+                  </fs>
+                </f>
+              </fs>
+            </f>
+            <f name="Semantics">
+              <fs type="mathobj-list">
+  						  <f name="Head">
+  								<vLabel name="Head"/>
+  							</f>
+  							<f name="Tail">
+  								<vLabel name="Tail"/>
+  							</f>
+  							<f name="Textual-Realization">
+  								<vLabel name="TR"/>
+  							</f>
+              </fs>
+            </f>
+          </fs>
+        </vLabel>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <!-- !!! -->
+  <fsDecl type="var-equals-object-disjunction-list" baseTypes="disjunction-list">
+    <fsDescr></fsDescr>
+    <fDecl name="Variable">
+      <vRange>
+        <fs type="mathobj"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Mathobj-List">
+      <vRange>
+        <fs type="mathobj-list">
+          <f name="Textual-Realization">
+            <vLabel name="TR"/>
+            <!-- ? -->
           </f>
         </fs>
       </vRange>
     </fDecl>
   </fsDecl>
+
+  - Definiere neue fs "var-equals-object-disjunction-list" baseTypes="disjunction-list" mit features "Variable" und "Mathematical-Object-List"
+  - var-equals-object-disjunction-list:
+    - Mathematical-Object-List:
+      - Textual-Realization: <vLabel name="TR">
+</fsDecl>
 
 </fsdDecl>

@@ -1,22 +1,5 @@
 <fsdDecl>
-
-  <fsDecl type="comma-list" baseTypes="text-fragment-with-semantics">
-    <fsDescr>General comma-list structure</fsDescr>
-  </fsDecl>
-
-  <fsDecl type="empty-comma-list" baseTypes="comma-list">
-    <fDecl name="Text">
-      <fs type="empty-list">
-    </fDecl>
-    <fDecl name="Semantics">
-      <fs type="empty-list">
-    </fDecl>
-  </fsDecl>
-
-  <fsDecl type="non-empty-comma-list" baseTypes="comma-list">
-  </fsDecl>
-
-  <fsDecl type="one-element-comma-list" baseTypes="non-empty-comma-list">
+  <fsDecl type="comma-list" baseTypes="text-phrase-with-semantics">
     <fDecl name="Text">
       <vRange>
         <vLabel name="TR"/>
@@ -24,108 +7,11 @@
     </fDecl>
     <fDecl name="Semantics">
       <vRange>
-        <fs type="mathobj">
-          <vLabel name="TR">
-            <f name="Textual-Realisation"/>
-          </vLabel>
-        </fs>
-      </vRange>
-    </fDecl>
-    <fDecl name="Head">
-      <vRange>
-        <vLabel name="Object">
-          <fs type="mathobj"/>
-        </vLabel>
-      </vRange>
-    </fDecl>
-    <fDecl name="Tail">
-      <vRange>
-        <vAlt>
-          <fs type="empty-list"/>
-        </vAlt>
-      </vRange>
-    </fDecl>
-    <fDecl name="Linguistic-Realization">
-      <vRange>
-        <vLabel name="Object"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-
-  <fsDecl type="more-than-one-element-comma-list" baseTypes="non-empty-comma-list">
-    <fDecl name="Text">
-      <vRange>
-        <!-- !!! -->
-        <fs type="nonempty-text-phrase-list">
-          <f name="Head">
-            <fs type="text-phrase">
-              <f name="Text">
-                <vLabel name="TR"/>
-              </f>
-            </fs>
-          </f>
-          <f name="Tail">
-            <fs type="nonempty-text-phrase-list">
-              <f name="Head">
-                <fs type="text-phrase">
-                  <f name="Text">
-                    <string>,<string>
-                  </f>
-                </fs>
-              </f>
-              <f name="Tail">
-                <fs type="nonempty-text-phrase-list">
-                  <f name="Head">
-                    ...
-                  </f>
-                  <f name="Tail">
-                    <fs type="text-phrase-list"/>
-                  </f>
-                </fs>
-              </f>
-            </fs>
-          </f>
-
-      text-phrase-list mit drei Elementen:
-       - <vLabel name="TR"/>
-       - <f name="Text">: <string>,</string>
-       -
-
-     </vRange>
-    </fDecl>
-    <fDecl name="Semantics">
-      <vRange>
         <fs type="mathobj-list">
-          <vLabel name="TR">
-            <f name="Textual-Realisation"/>
-          </vLabel>
+          <f name="Textual-Realisation">
+            <vLabel name="TR"/>
+          </f>
         </fs>
       </vRange>
     </fDecl>
-
-    <fDecl name="Head">
-      <vRange>
-        <vLabel name="Object">
-          <fs type="mathobj"/>
-        </vLabel>
-      </vRange>
-    </fDecl>
-    <fDecl name="Tail">
-      <vRange>
-        <vAlt>
-          <fs type="non-empty-comma-list"/>
-        </vAlt>
-      </vRange>
-    </fDecl>
-    <fDecl name="Linguistic-Realization">
-      <vLabel name="Object"/>
-    </fDecl>
-    <fDecl name="Comma-List-Comma">
-      <vRange>
-        <string>,</string>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
 </fsdDecl>

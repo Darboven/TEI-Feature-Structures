@@ -1,71 +1,168 @@
 <fsdDecl>
   <fsDecl type="set" baseTypes="mathobj"><!-- mathobj needs to be defined -->
     <fsDescr>General set structure (defined by its subtypes)</fsDescr>
-  </fsDecl>
-
-
-  <fsDecl type="set-predicate" baseTypes="set">
-    <fDecl name="Notation">
-      <vRange>
-        <!-- vColl? -->
-        <string>{</string>
-        <vLabel name="variable"/>
-        <vAlt>
-          <string>:</string>
-          <string>|</string>
-        </vAlt>
-        <vLabel name="predicate"/>
-        <string>}</string>
-      </vRange>
-    </fDecl>
+    TODO: vLabels löschen
     <fDecl name="Variable">
       <vRange>
-        <vLabel name="variable">
-          <fs type="mathobj"/>
-        </vLabel>
+        <fs type="mathobj"/>
       </vRange>
     </fDecl>
     <fDecl name="Predicate">
       <vRange>
-        <vLabel name="predicate">
-          <fs type="proposition"/>
-        </vLabel>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Textual-Realisation">
+      <vRange>
+        <vAlt>
+          <fs name="set-comprehension"/>
+          <fs name="set-enumeration"/>
+        </vAlt>
       </vRange>
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="set-enumeration" baseTypes="set">
-    <fDecl name="Notation">
+  <fsDecl type="set-comprehension" baseTypes="text-phrase-with-semantics">
+    <fDecl name="Text">
       <vRange>
-        <fs type="comma-list">
+        <vLabel name="TR">
+		      <fs type="nonempty-text-phrase-list">
+		        <f name="Head">
+		          <fs type="text-phrase">
+		            <f name="Text">
+		              <string>{</string>
+		            </f>
+		          </fs>
+		        </f>
+		        <f name="Tail">
+		          <fs type="nonempty-text-phrase-list">
+		            <f name="Head">
+		              <fs type="variable-text-phrase">
+                    <f name="Semantics">
+                      <vLabel name="Variable">
+                        <fs type="mathobj"/>
+                      </vLabel>
+                    </f>
+		              </fs>
+		            </f>
+		            <f name="Tail">
+		              <fs type="nonempty-text-phrase-list">
+		                <f name="Head">
+		                  <fs type="text-phrase">
+		                    <f name="Text">
+		                      <vAlt>
+		                        <string>:</string>
+		                        <string>|</string>
+		                      </vAlt>
+		                    </f>
+		                  </fs>
+		                </f>
+		                <f name="Tail">
+		                  <fs type="nonempty-text-phrase-list">
+		                    <f name="Head">
+		                      <fs type="text-phrase-with-semantics">
+		                        <f name="Semantics">
+		                          <vLabel name="Predicate">
+		                            <fs type="proposition"/>
+		                          </vLabel>
+		                        </f>
+		                      </fs>
+		                    </f>
+		                    <f name="Tail">
+		                      <fs type="nonempty-text-phrase-list">
+		                        <f name="Head">
+		                          <fs type="text-phrase">
+		                            <f name="Text">
+		                              <string>}</string>
+		                            </f>
+		                          </fs>
+		                        </f>
+		                        <f name="Tail">
+		                          <fs type="empty-list"/>
+		                        </f>
+		                      </fs>
+		                    </f>
+		                  </fs>
+		                </f>
+		              </fs>
+		            </f>
+		          </fs>
+		        </f>
+		      </fs>
+		    <vLabel/>
       </vRange>
     </fDecl>
-    <fDecl name="Enumeration">
+    <fDecl name="Semantics">
+      <fs type="set">
+        <f name="Variable">
+          <vLabel name="Variable"/>
+        </f>
+        <f name="Predicate">
+          <vLabel name="Predicate"/>
+        </f>
+        <f name="Textual-Realization">
+          <vLabel name="TR">
+        </f>
+      </fs>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="set-enumeration" baseTypes="text-phrase-with-semantics">
+    <!-- !!! -->
+    <fDecl name="Text">
+      <fs type="nonempty-text-phrase-list">
+        <f name="Head">
+          <fs type="text-phrase">
+            <f name="Text">
+              <string>{</string>
+            </f>
+          </fs>
+        </f>
+        <f name="Tail">
+          <fs type="nonempty-text-phrase-list">
+            <f name="Head">
+              <fs type="text-phrase">
+                <f name="Text">
+                  <vLabel name="TR"/>
+                </f>
+              </fs>
+            </f>
+            <f name="Tail">
+              <fs type="nonempty-text-phrase-list">
+                <f name="Head">
+                  <fs type="text-phrase">
+                    <f name="Text">
+                      <string>}</string>
+                    </f>
+                  </fs>
+                </f>
+                <f name="Tail">
+                  <fs type="empty-list"/>
+                </f>
+              </fs>
+            </f>
+          </fs>
+        </f>
+      </fs>
+    </fDecl>
+    <fDecl name="Semantics">
       <vRange>
-        <fs type="disjunction-lists">
-          <f name="DIS">
-            <fs type="proposition-list">
-              <f name="Head">
-                <fs type="equality">
-                  <f name="LHS">
-                    <vLabel name="a">
-                      <fs type="mathobj"/>
-                    </vLabel>
-                  </f>
-                  <f name="RHS">
-                    <fs type="mathobj">
-                  </f>
-                </fs>
-              </f>
-              <f name="Tail">
-                <fs type="proposition-list"/>
-                <!-- for every element a in the set -->
-              </f>
-            </fs>
-          </f>
+        <fs type="var-equals-object-disjunction-list">
         </fs>
       </vRange>
     </fDecl>
-  </fsDecl>
 
-</fsdDecl>
+    TODO:
+    text-phrase:
+     - Text:
+       - 3-elementige text-phrase-list:
+         - {
+         - <vLabel name="TR">
+         - }
+     - Semantics:
+         - Definiere neue fs "var-equals-object-disjunction-list" baseType="disjunction-list" mit features "Variable" und "Mathematical-Object-List"
+         - var-equals-object-disjunction-list:
+           - Mathematical-Object-List:
+             - Textual-Realization: <vLabel name="TR">
+  </fsDecl>
