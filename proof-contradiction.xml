@@ -2,25 +2,43 @@
   <fsDecl type="proof-contradiction" baseTypes="proved-under-hypotheses">
     <fDecl name="Initial-Linguistic-Marker">
       <vRange>
-        <fs type="sentence">
-          <f name="Linguistic-Indicator">
-            <vAlt>
-              <string>suppose for the sake of contradiction that</string>
-              <string>for the sake of contradiction, suppose</string>
-              <string></string>
-              <!-- ... -->
-            </vAlt>
-          </f>
-          <f name="Linguistic-Realisation">
-            <vLabel name="negP">
-              <fs type="negation">
-                <f name="Negation-Feature">
-                  <vLabel name="P">
-                    <fs type="proposition"/>
-                  </vLabel>
-                </f>
-              </fs>
-            </vLabel>
+        <fs type="text-phrase">
+          <f name="Text">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase">
+                  <f name="Text">
+                    <vAlt>
+                      <string>suppose for the sake of contradiction that </string>
+                      <string>for the sake of contradiction, suppose </string>
+                    </vAlt>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <fs type="text-phrase-with-semantics">
+                      <f name="Semantics">
+                        <!-- ??? -->
+                        <vLabel name="negP">
+                          <fs type="negation">
+                            <f name="Negation-Feature">
+                              <vLabel name="P">
+                                <fs type="proposition"/>
+                              </vLabel>
+                            </f>
+                          </fs>
+                        </vLabel>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-list"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
           </f>
         </fs>
       </vRange>

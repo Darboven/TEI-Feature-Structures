@@ -2,18 +2,37 @@
   <fsDecl type="proof-direct" baseTypes="proved-under-hypotheses">
     <fDecl name="Initial-Linguistic-Marker">
       <vRange>
-        <fs type="sentence">
-          <f name="Linguistic-Indicator">
-            <vAlt>
-              <string>suppose</string>
-              <string>assume</string>
-              <string>assume that</string>
-            </vAlt>
-          </f>
-          <f name="Linguistic-Realisation">
-            <vLabel name="P">
-              <fs type="proposition"/>
-            </vLabel>
+        <fs type="text-phrase">
+          <f name="Text">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase">
+                  <f name="Text">
+                    <vAlt>
+                      <string>suppose </string>
+                      <string>assume </string>
+                      <string>assume that </string>
+                    </vAlt>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <fs type="text-phrase-with-semantics">
+                      <f name="Semantics">
+                        <vLabel name="P">
+                          <fs type="proposition"/>
+                        </vLabel>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-list"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
           </f>
         </fs>
       </vRange>
