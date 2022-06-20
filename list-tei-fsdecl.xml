@@ -4,7 +4,7 @@
     <fsDescr>General list structure (defined by its subtypes empty-list and nonempty-list)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="empty-list" baseTypes="list comma-list">
+  <fsDecl type="empty-list" baseTypes="list comma-list text-phrase-list">
     <fsDescr>Empty list</fsDescr>
   </fsDecl>
 

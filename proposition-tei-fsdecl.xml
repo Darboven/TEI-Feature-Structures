@@ -39,7 +39,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="conjunction-lists" baseTypes="proposition">
+  <fsDecl type="conjunction-list" baseTypes="proposition">
     <fDecl name="CON">
       <vRange>
         <fs type="proposition-list"/>
@@ -47,7 +47,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="disjunction-lists" baseTypes="proposition">
+  <fsDecl type="disjunction-list" baseTypes="proposition">
     <fDecl name="DIS">
       <vRange>
         <fs type="proposition-list"/>

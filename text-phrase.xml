@@ -16,8 +16,8 @@
       <vRange>
         <vAlt>
           <fs type="proposition">
-          <fs type="mathematical-object">
-          <fs type="mathematical-object-list">
+          <fs type="mathobj">
+          <fs type="mathobj-list">
         </vAlt>
     </fDecl>
   </fsDecl>
@@ -38,6 +38,20 @@
       <vRange>
         <fs type="text-phrase-list"/>
       </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="variable-text-phrase" baseTypes="text-phrase-with-semantics">
+    <fDecl type="Text">
+      <vRange>
+        <vAlt>
+          <symbol value="string"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+    <fDecl name="Semantics">
+      <fs type="mathobj"/>
     </fDecl>
   </fsDecl>
 
