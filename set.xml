@@ -1,7 +1,6 @@
 <fsdDecl>
   <fsDecl type="set" baseTypes="mathobj"><!-- mathobj needs to be defined -->
     <fsDescr>General set structure (defined by its subtypes)</fsDescr>
-    TODO: vLabels löschen
     <fDecl name="Variable">
       <vRange>
         <fs type="mathobj"/>
@@ -111,58 +110,99 @@
   <fsDecl type="set-enumeration" baseTypes="text-phrase-with-semantics">
     <!-- !!! -->
     <fDecl name="Text">
-      <fs type="nonempty-text-phrase-list">
-        <f name="Head">
-          <fs type="text-phrase">
-            <f name="Text">
-              <string>{</string>
-            </f>
-          </fs>
-        </f>
-        <f name="Tail">
+      <vRange>
+        <vLabel name="TR">
           <fs type="nonempty-text-phrase-list">
             <f name="Head">
               <fs type="text-phrase">
                 <f name="Text">
-                  <vLabel name="TR"/>
+                  <string>{</string>
                 </f>
               </fs>
             </f>
             <f name="Tail">
               <fs type="nonempty-text-phrase-list">
                 <f name="Head">
-                  <fs type="text-phrase">
+                  <fs type="comma-list">
                     <f name="Text">
-                      <string>}</string>
+                    </f>
+                    <f name="Semantics">
                     </f>
                   </fs>
                 </f>
                 <f name="Tail">
-                  <fs type="empty-list"/>
+                  <fs type="nonempty-text-phrase-list">
+                    <f name="Head">
+                      <fs type="text-phrase">
+                        <f name="Text">
+                          <string>}</string>
+                        </f>
+                      </fs>
+                    </f>
+                    <f name="Tail">
+                      <fs type="empty-list"/>
+                    </f>
+                  </fs>
                 </f>
               </fs>
             </f>
           </fs>
-        </f>
-      </fs>
+        </vLabel>
+      </vRange>
     </fDecl>
     <fDecl name="Semantics">
       <vRange>
-        <fs type="var-equals-object-disjunction-list">
+        <fs type="set">
+          <f name="Variable">
+            <vLabel name="Variable"/>
+          </f>
+          <f name="Predicate">
+            <fs type="disjunction-list">
+              <f name="DIS">
+                <fs type="var-equals-proposition-list">
+                  <f name="Variable">
+                    <vLabel name="Variable"/>
+                  </f>
+                  <f name="Mathobj-List">
+                    <fs type="mathobj-list">
+                      <f name="Head">
+                        <vLabel name="Head-Mathobj"/>
+                      </f>
+                      <f name="Tail">
+                        <vLabel name="Tail-Mathobj-List"/>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Head">
+                    <fs type="equality">
+                      <f name="LHS">
+                        <vLabel name="Variable"/>
+                      </f>
+                      <f name="LHS">
+                        <vLabel name="Head-Mathobj"/>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="var-equals-object-proposition-list">
+                      <f name="Variable">
+                        <vLabel name="Variable"/>
+                      </f>
+                      <f name="Mathobj-List">
+                        <vLabel name="Tail-Mathobj-List"/>
+                      </f>
+                    </fs>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+          <f name="Textual-Realization">
+            <vLabel name="TR">
+          </f>
         </fs>
       </vRange>
     </fDecl>
-
-    TODO:
-    text-phrase:
-     - Text:
-       - 3-elementige text-phrase-list:
-         - {
-         - <vLabel name="TR">
-         - }
-     - Semantics:
-         - Definiere neue fs "var-equals-object-disjunction-list" baseType="disjunction-list" mit features "Variable" und "Mathematical-Object-List"
-         - var-equals-object-disjunction-list:
-           - Mathematical-Object-List:
-             - Textual-Realization: <vLabel name="TR">
   </fsDecl>
+
+</fsdDecl>

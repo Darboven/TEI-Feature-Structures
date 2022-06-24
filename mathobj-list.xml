@@ -58,7 +58,6 @@
     </fDecl>
     <fDecl name="Tail">
       <vRange>
-      TODO: vLabels anpassen (wie Head)[done]
         <vLabel name="Tail">
           <fs type="nonempty-mathobj-list">
             <vLabel name="Tail-TR">
@@ -102,15 +101,15 @@
             </f>
             <f name="Semantics">
               <fs type="mathobj-list">
-  						  <f name="Head">
-  								<vLabel name="Head"/>
-  							</f>
-  							<f name="Tail">
-  								<vLabel name="Tail"/>
-  							</f>
-  							<f name="Textual-Realization">
-  								<vLabel name="TR"/>
-  							</f>
+                <f name="Head">
+  	              <vLabel name="Head"/>
+            		</f>
+            		<f name="Tail">
+            		  <vLabel name="Tail"/>
+            		</f>
+            		<f name="Textual-Realization">
+            		  <vLabel name="TR"/>
+            		</f>
               </fs>
             </f>
           </fs>
@@ -118,32 +117,5 @@
       </vRange>
     </fDecl>
   </fsDecl>
-
-
-  <!-- !!! -->
-  <fsDecl type="var-equals-object-disjunction-list" baseTypes="disjunction-list">
-    <fsDescr></fsDescr>
-    <fDecl name="Variable">
-      <vRange>
-        <fs type="mathobj"/>
-      </vRange>
-    </fDecl>
-    <fDecl name="Mathobj-List">
-      <vRange>
-        <fs type="mathobj-list">
-          <f name="Textual-Realization">
-            <vLabel name="TR"/>
-            <!-- ? -->
-          </f>
-        </fs>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-  - Definiere neue fs "var-equals-object-disjunction-list" baseTypes="disjunction-list" mit features "Variable" und "Mathematical-Object-List"
-  - var-equals-object-disjunction-list:
-    - Mathematical-Object-List:
-      - Textual-Realization: <vLabel name="TR">
-</fsDecl>
 
 </fsdDecl>
