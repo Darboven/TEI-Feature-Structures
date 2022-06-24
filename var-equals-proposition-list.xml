@@ -1,0 +1,65 @@
+<fsdDecl>
+
+  <fsDecl type="var-equals-object-proposition-list" baseTypes="proposition-list">
+    <fsDescr></fsDescr>
+  </fsDecl>
+
+
+  <fsDecl type="empty-var-equals-object-proposition-list" baseTypes="var-equals-object-proposition-list empty-list">
+    <fsDescr></fsDescr>
+    <fDecl name="Variable"/>
+    <fDecl name="Mathobj-List">
+      <vRange>
+        <fs type="empty-mathobj-list"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="nonempty-var-equals-object-proposition-list" baseTypes="var-equals-object-proposition-list">
+    <fsDescr></fsDescr>
+    <fDecl name="Variable">
+      <vRange>
+        <vLabel name="Var">
+          <fs type="mathobj"/>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Mathobj-List">
+      <vRange>
+        <fs type="mathobj-list">
+          <f name="Head">
+            <vLabel name="Head-Mathobj"/>
+          </f>
+          <f name="Tail">
+            <vLabel name="Tail-Mathobj-List"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Head">
+      <vRange>
+        <fs type="equality">
+          <f name="LHS">
+            <vLabel name="Var"/>
+          </f>
+          <f name="LHS">
+            <vLabel name="Head-Mathobj"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="var-equals-object-proposition-list">
+          <f name="Variable">
+            <vLabel name="Var"/>
+          </f>
+          <f name="Mathobj-List">
+            <vLabel name="Tail-Mathobj-List"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
