@@ -1,6 +1,13 @@
 <fsdDecl>
   <fsDecl type="proof-subset" baseTypes="proved-under-hypotheses">
     <fDecl name="Initial-Linguistic-Marker">
+      <vRange>
+        <fs type="text-phrase">
+          <f name="Text">
+            <!-- TODO -->
+          </f>
+        </fs>
+      </vRange>
     </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
@@ -37,7 +44,7 @@
               <f name="Head">
                 <fs type="element">
                   <f name="Element">
-                    <vLabel name="a">
+                    <vLabel name="x">
                       <fs type="mathobj"/>
                     </vLabel>
                   </f>
@@ -54,7 +61,7 @@
           <f name="Conclusion">
             <fs type="element">
               <f name="Element">
-                <vLabel name="a">
+                <vLabel name="x">
                   <fs type="mathobj"/>
                 </vLabel>
               </f>
@@ -62,7 +69,7 @@
                 <vLabel name="B"/>
               </f>
             </fs>
-            <!-- for every a ∈ A -->
+            <!-- ? for every a ∈ A -->
           </f>
         </fs>
       </vRange>

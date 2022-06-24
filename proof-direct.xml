@@ -1,5 +1,6 @@
 <fsdDecl>
   <fsDecl type="proof-direct" baseTypes="proved-under-hypotheses">
+    
     <fDecl name="Initial-Linguistic-Marker">
       <vRange>
         <fs type="text-phrase">
@@ -37,6 +38,7 @@
         </fs>
       </vRange>
     </fDecl>
+
     <fDecl name="Hypotheses">
       <vRange>
         <vLabel name="T">
@@ -44,6 +46,7 @@
         </vLabel>
       </vRange>
     </fDecl>
+
     <fDecl name="Conclusion">
       <vRange>
         <fs type="implication">
@@ -58,6 +61,7 @@
         </fs>
       </vRange>
     </fDecl>
+
     <fDecl name="Proof">
       <vRange>
         <fs type="proved-under-hypotheses">
@@ -77,5 +81,6 @@
         </fs>
       </vRange>
     </fDecl>
+
   </fsDecl>
 </fsdDecl>
