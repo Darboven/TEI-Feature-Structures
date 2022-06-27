@@ -27,6 +27,9 @@ def allowed(test_predecessor, test_element, line_nr):
                     permitted = True
     if permitted:
         print("  TEI Rules apply, moving on...")
+    else:
+        print("Line {}: {} is not allowed after {}".format(line_nr, test_element, test_predecessor))
+        #raise SystemExit(0)
 
     # Maybe raise an exception / throw an error
 
