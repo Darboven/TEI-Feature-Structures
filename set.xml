@@ -3,7 +3,7 @@
     <fsDescr>General set structure (defined by its subtypes)</fsDescr>
     <fDecl name="Variable">
       <vRange>
-        <fs type="mathobj"/>
+        <fs type="arbitrary-mathobj"/>
       </vRange>
     </fDecl>
     <fDecl name="Predicate">

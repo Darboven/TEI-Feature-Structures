@@ -24,13 +24,11 @@
           <f name="Subset">
             <vLabel name="A">
               <fs type="set"/>
-              <!-- ... -->
             </vLabel>
           </f>
           <f name="Superset">
             <vLabel name="B">
               <fs type="set"/>
-              <!-- ... -->
             </vLabel>
           </f>
         </fs>
@@ -45,7 +43,7 @@
                 <fs type="element">
                   <f name="Element">
                     <vLabel name="x">
-                      <fs type="mathobj"/>
+                      <fs type="arbitrary-mathobj"/>
                     </vLabel>
                   </f>
                   <f name="Set">
@@ -61,15 +59,12 @@
           <f name="Conclusion">
             <fs type="element">
               <f name="Element">
-                <vLabel name="x">
-                  <fs type="mathobj"/>
-                </vLabel>
+                <vLabel name="x"/>
               </f>
               <f name="Set">
                 <vLabel name="B"/>
               </f>
             </fs>
-            <!-- ? for every a ∈ A -->
           </f>
         </fs>
       </vRange>
