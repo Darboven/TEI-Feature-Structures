@@ -12,6 +12,7 @@ TODO
     [ ] Permitted-List vervollständigen
     [ ] Grammatik in einem Element checken
     [ ] ERROR-Handling
+    [ ] open file through some input (written / dialogue)
 """
 
 
