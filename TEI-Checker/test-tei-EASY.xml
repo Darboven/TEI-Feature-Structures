@@ -1,0 +1,20 @@
+<fsdDecl>
+
+  <fsDecl type="comma-list" baseTypes="text-phrase-with-semantics">
+    <fDecl name="Text">
+      <vRange>
+	<vLabel name="TR">
+	</vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Semantics">
+      <vRange>
+        <fs type="mathobj-list">
+          <f name="Textual-Realisation">
+            <vLabel name="TR"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
