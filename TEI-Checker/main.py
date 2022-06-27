@@ -1,4 +1,5 @@
-import tei_rules as rules
+import tei_rules as grammar_rules
+import element_rules as element_rules
 
 check_file = open('test-tei.xml', 'r')
 line_count = 0
@@ -9,7 +10,7 @@ TODO
     [x] mehrere Elemente in einer Line
     [x] Line Count korrekt anzeigen
     [?] Strings
-    [ ] Permitted-List vervollständigen
+    [...] Permitted-List vervollständigen
     [ ] Grammatik in einem Element checken
     [ ] ERROR-Handling
     [ ] open file through some input (written / dialogue)
@@ -28,19 +29,23 @@ def file_grammar(t, line_nr):
     # print("splitting into:", head, sep, tail)
     if tail.endswith('/'):  # checking tei grammar here
         if len(parse) >= 1:
-            rules.allowed(parse[-1], head, line_nr)
+            grammar_rules.allowed(parse[-1], head, line_nr)
         print("no need to worry about ", t, " closing itself")
     else:
         if head.startswith('/'):
-            if head.replace('/', '') == parse[-1]:
-                print("  Closing ", parse[-1], "with ", t)
-                del parse[-1]
+            if len(parse) >= 1:
+                if head.replace('/', '') == parse[-1]:
+                    print("  Closing ", parse[-1], "with ", t)
+                    del parse[-1]
+                else:
+                    print("something went wrong by closing argument: ", head, "at line ", line_nr)
+                    print(head, "and ", parse[-1], " are different")
+                    raise SystemExit(0)
             else:
-                print("something went wrong by closing argument: ", head, "at line ", line_nr)
-                print(head, "and ", parse[-1], " are different")
+                print("There is nothing to close!")
         else:  # checking tei grammar here
             if len(parse) >= 1:
-                rules.allowed(parse[-1], head, line_nr)
+                grammar_rules.allowed(parse[-1], head, line_nr)
 
             parse.append(head)
 
@@ -59,15 +64,18 @@ if __name__ == '__main__':
             # print("without brackets: ", tempclean)
             temptail = tempelem.partition("<")[2].partition(">")[2]  # multiple elements in same line
 
-            # check line syntax here
-            file_grammar(tempclean, line_count)
+            element_rules.allowed(tempclean, line_count)  # checking line syntax here
 
-            while temptail:
-                print("Line ", line_count, ": Another Object here: ", temptail)
+            file_grammar(tempclean, line_count)  # checking xml grammar here
+
+            while temptail:  # for multiple elements in same line CHECK IF CORRECT
+                # line syntax in tail?
+                print("Line {}: Another Object here: {}".format(line_count, temptail))
                 tempclean = temptail.partition("<")[2].partition(">")[0]
-                file_grammar(tempclean, line_count)
+                file_grammar(tempclean, line_count)  # checking xml grammar here
                 temptail = temptail.partition("<")[2].partition(">")[2]
 
     if not parse:
         # print("File is corresponding to TEI-Guidelines.")
         pass
+
