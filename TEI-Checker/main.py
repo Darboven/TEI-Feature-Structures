@@ -14,6 +14,7 @@ TODO
     [ ] Grammatik in einem Element checken
     [ ] ERROR-Handling
     [ ] open file through some input (written / dialogue)
+    <then/> macht Probleme
 """
 
 
@@ -28,6 +29,7 @@ def file_grammar(t, line_nr):
     head, sep, tail = t.partition(' ')
     # print("splitting into:", head, sep, tail)
     if tail.endswith('/'):  # checking tei grammar here
+        element_rules.allowed(t, line_nr)
         if len(parse) >= 1:
             grammar_rules.allowed(parse[-1], head, line_nr)
         print("no need to worry about ", t, " closing itself")
@@ -35,7 +37,7 @@ def file_grammar(t, line_nr):
         if head.startswith('/'):
             if len(parse) >= 1:
                 if head.replace('/', '') == parse[-1]:
-                    print("  Closing ", parse[-1], "with ", t)
+                    print("  Closing {} with {}".format(parse[-1], t))
                     del parse[-1]
                 else:
                     print("something went wrong by closing argument: ", head, "at line ", line_nr)
@@ -44,6 +46,7 @@ def file_grammar(t, line_nr):
             else:
                 print("There is nothing to close!")
         else:  # checking tei grammar here
+            element_rules.allowed(t, line_nr)
             if len(parse) >= 1:
                 grammar_rules.allowed(parse[-1], head, line_nr)
 
@@ -64,7 +67,7 @@ if __name__ == '__main__':
             # print("without brackets: ", tempclean)
             temptail = tempelem.partition("<")[2].partition(">")[2]  # multiple elements in same line
 
-            element_rules.allowed(tempclean, line_count)  # checking line syntax here
+            #element_rules.allowed(tempclean, line_count)
 
             file_grammar(tempclean, line_count)  # checking xml grammar here
 
@@ -78,4 +81,3 @@ if __name__ == '__main__':
     if not parse:
         # print("File is corresponding to TEI-Guidelines.")
         pass
-
