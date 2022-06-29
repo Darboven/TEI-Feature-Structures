@@ -11,10 +11,10 @@ TODO
     [x] Line Count korrekt anzeigen
     [?] Strings
     [...] Permitted-List vervollständigen
-    [ ] Grammatik in einem Element checken
-    [ ] ERROR-Handling
+    [...] Grammatik in einem Element checken
+    [...] ERROR-Handling
     [ ] open file through some input (written / dialogue)
-    <then/> macht Probleme
+    <then/> macht Probleme?
 """
 
 
