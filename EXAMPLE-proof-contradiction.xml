@@ -1,0 +1,91 @@
+<!-- 6.1 (p.139): The number {\sqrt {2}} is irrational. -->
+<fs type="proof-contradiction">
+  <f name="Initial-Linguistic-Marker">
+    <fs type="text-phrase">
+      <f name="Text">
+        <fs type="nonempty-text-phrase-list">
+          <f name="Head">
+            <fs type="text-phrase">
+              <f name="Text">
+                <string>suppose for the sake of contradiction that </string>
+              </f>
+            </fs>
+          </f>
+          <f name="Tail">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase-with-semantics">
+                  <f name="Semantics">
+                    <vLabel name="negP">
+                      <fs type="negation">
+                        <f name="Negation-Feature">
+                          <vLabel name="P">
+                            <!-- {\sqrt {2}} is irrational, fs type="proposition"-->
+                          </vLabel>
+                        </f>
+                      </fs>
+                    </vLabel>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <fs type="empty-list"/>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </f>
+    </fs>
+  </f>
+
+  <f name="Hypotheses">
+    <vLabel name="T">
+      <fs type="empty-list"/>
+      <!-- evtl. Informationen über: rationale Zahlen, ... -->
+    </vLabel>
+  </f>
+
+  <f name="Conclusion">
+    <vLabel name="P"/>
+  </f>
+
+  <f name="Proof">
+    <fs type="proved-under-hypotheses">
+      <f name="Hypotheses">
+        <fs type="list">
+          <f name="Head">
+            <vLabel name="negP"/>
+          </f>
+          <f name="Tail">
+            <vLabel name="T"/>
+          </f>
+        </fs>
+      </f>
+      <f name="Conclusion">
+        <fs type="conjunction-lists">
+          <f name="CON">
+            <fs type="list">
+              <f name="Head">
+                <vLabel name="C"/>
+              </f>
+              <f name="Tail">
+                <fs type="list">
+                  <f name="Head">
+                    <fs type="negation">
+                      <f name="Negation-Feature">
+                        <vLabel name="C"/>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-list"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </f>
+    </fs>
+  </f>
+</fsDecl>
