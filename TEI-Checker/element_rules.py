@@ -56,9 +56,9 @@ def checking(element, attribute, ignore):
         found_elem = True
         for rule in global_list:
             if rule == attribute:
-                print("{} is allowed with {}".format(rule, attribute))
+                print("    {} is allowed with {}".format(rule, attribute))
                 break
-        print("  {} needs no Attribute".format(element))  # ...
+        print("    {} needs no Attribute".format(element))  # ...
     else:
         for rule in attr_list:
             if rule[0] == element:
@@ -70,6 +70,7 @@ def checking(element, attribute, ignore):
                         break
                     else:
                         print("{} has unfulfilled required attributes. Possible attributes are {}".format(element, rule[1]))
+                        # raise error here?
                 if rule[2]:  # check if element hast optional attributes
                     if attribute in rule[2]:
                         #print("  matched optional attribute")
