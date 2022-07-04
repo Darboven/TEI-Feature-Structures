@@ -6,10 +6,13 @@ permission_list = [
     ['fDecl', ['fDescr', 'vRange', 'vDefault']],
     ['vDefault', ['binary', 'default', 'fs', 'if', 'numeric', 'string', 'symbol', 'vAlt', 'vColl', 'vLabel', 'vMerge', 'vNot']],
     ['vRange', ['binary', 'default', 'fs', 'numeric', 'string', 'symbol', 'vAlt', 'vColl', 'vLabel', 'vMerge', 'vNot']],
-    # ...
     ['fs', ['f']],
     ['f', ['binary', 'default', 'fs', 'numeric', 'string', 'symbol', 'vAlt', 'vColl', 'vLabel', 'vMerge', 'vNot']],
-    # ...
+    ['vAlt', ['binary', 'default', 'fs', 'numeric', 'string', 'symbol', 'vAlt', 'vColl', 'vLabel', 'vMerge', 'vNot']],
+    ['vColl', ['binary', 'default', 'fs', 'numeric', 'string', 'symbol', 'vAlt', 'vLabel']],
+    ['vLabel', ['binary', 'default', 'fs', 'numeric', 'string', 'symbol', 'vAlt', 'vColl', 'vLabel', 'vMerge', 'vNot']],
+    ['vMerge', ['binary', 'default', 'fs', 'numeric', 'string', 'symbol', 'vAlt', 'vColl', 'vLabel', 'vMerge', 'vNot']],
+    ['vNot', ['binary', 'default', 'fs', 'numeric', 'string', 'symbol', 'vAlt', 'vColl', 'vLabel', 'vMerge', 'vNot']]
 ]
 
 prohibition_list = []  # not sure if needed?
@@ -29,7 +32,6 @@ def allowed(test_predecessor, test_element, line_nr):
         print("  TEI Rules apply, moving on...")
     else:
         print("Line {}: {} is not allowed after {}".format(line_nr, test_element, test_predecessor))
-        #raise SystemExit(0)
+        raise SystemExit(0)
 
-    # Maybe raise an exception / throw an error
 
