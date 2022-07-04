@@ -1,3 +1,5 @@
+import re
+
 attr_list = [
     # attr      [required]          [optional]
     ['fsdLink', ['type', 'target'], []],
@@ -23,20 +25,22 @@ def allowed(element, line_nr):
     permitted = False
     ignore = 0  # used to ignore duplications
 
-    elem_to_comp = element.partition(" ")[0]  # element
-    temp_attribute = element.partition(" ")[2].partition(" ")[0]  # (first) attribute of element
+    elem_clean = re.sub(r'".*?"', '', element)  # ignores everything in quotation marks
+
+    elem_to_comp = elem_clean.partition(" ")[0]  # element
+    temp_attribute = elem_clean.partition(" ")[2].partition(" ")[0]  # (first) attribute of element
     temp_attribute_clean = temp_attribute.partition("=")[0]
 
-    temp_ignore = checking(elem_to_comp, temp_attribute_clean, ignore)
+    temp_ignore = checking(elem_to_comp, temp_attribute_clean, ignore, line_nr)
     ignore = temp_ignore
 
-    temp_attribute_tail = element.partition(" ")[2].partition(" ")[2]
+    temp_attribute_tail = elem_clean.partition(" ")[2].partition(" ")[2]
 
     while temp_attribute_tail:
         print("Line {}: Another Attribute here: {}".format(line_nr, temp_attribute_tail))
         temp_attribute = temp_attribute_tail.partition(" ")[0]
         temp_attribute_clean = temp_attribute.partition("=")[0]
-        temp_ignore = checking(elem_to_comp, temp_attribute_clean, ignore)
+        temp_ignore = checking(elem_to_comp, temp_attribute_clean, ignore, line_nr)
         ignore = temp_ignore
         temp_attribute_tail = temp_attribute_tail.partition(" ")[2]
 
@@ -49,7 +53,7 @@ def allowed(element, line_nr):
     """
 
 
-def checking(element, attribute, ignore):
+def checking(element, attribute, ignore, line_nr):
     print("  checking attribute {} for {}".format(attribute, element))
     found_elem = False  # make sure that element actually exists in TEI
     if element in no_attr_list:
@@ -79,7 +83,9 @@ def checking(element, attribute, ignore):
                 if attribute in global_list:
                     #print("  found global attribute")
                     break
-                print("raise error for attribute: ", attribute)
+                print("Line {}: Failure at attribute: {}"
+                      "\nReason: The attribute does not match allowed attributes.".format(line_nr, attribute))
+                raise SystemExit(0)
                 # raise Error here
 
     if not found_elem:
