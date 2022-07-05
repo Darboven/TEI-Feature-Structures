@@ -1,7 +1,14 @@
+import tkinter as tk
+from tkinter import filedialog
 import tei_rules as grammar_rules
 import element_rules as element_rules
 
-check_file = open('test-tei.xml', 'r')
+root = tk.Tk()
+root.withdraw()
+
+file_path = filedialog.askopenfilename()
+
+check_file = open(file_path, 'r')
 line_count = 0
 parse = []
 
@@ -10,12 +17,13 @@ TODO
     [x] mehrere Elemente in einer Line
     [x] Line Count korrekt anzeigen
     [?] Strings
+    [ ] Comments werden als Fehler ausgewertet
     [x] Permitted-List vervollständigen
     [x] Grammatik in einem Element checken
     [...] ERROR-Handling
     [x] baseTypes enthält Space
-    [ ] open file through some input (written / dialogue)
-    <then/> macht Probleme?
+    [x] open file through some input (written / dialogue)
+    [?] <then/> macht Probleme?
 """
 
 
