@@ -6,7 +6,7 @@ import element_rules as element_rules
 root = tk.Tk()
 root.withdraw()
 
-file_path = filedialog.askopenfilename()
+file_path = filedialog.askopenfilename(filetypes=[("XML Files", "*.xml")])
 
 check_file = open(file_path, 'r')
 line_count = 0
@@ -56,6 +56,7 @@ def file_grammar(t, line_nr):
 
 
 if __name__ == '__main__':
+    print("opening: {}".format(file_path))
     print("Using for loop")
     for line in check_file:
         line_count += 1
