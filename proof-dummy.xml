@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="unanalyzed-proof">
+  <fsDecl type="unanalyzed-proof" baseTypes="proved-under-hypotheses">
     <fDecl name="Initial-Linguistic-Marker">
       <vRange>
         <fs type="text-phrase">
@@ -19,7 +19,9 @@
                   <f name="Head">
                     <fs type="text-phrase-with-semantics">
                       <f name="Semantics">
-                        <!-- ? -->
+                        <vLabel name="P">
+                          <fs type="proposition"/>
+                        </vLabel>
                       </f>
                     </fs>
                   </f>
@@ -40,14 +42,7 @@
     </fDecl>
     <fDecl name="Conclusion">
       <vRange>
-        <fs name="implication">
-          <f name="Antecedent">
-            <fs type="proposition"/>
-          </f>
-          <f name="Consequent">
-            <fs type="proposition"/>
-          </f>
-        </fs>
+        <vLabel name="P"/>
       </vRange>
     </fDecl>
   </fsDecl>
