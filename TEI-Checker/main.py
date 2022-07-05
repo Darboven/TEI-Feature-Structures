@@ -10,19 +10,13 @@ TODO
     [x] mehrere Elemente in einer Line
     [x] Line Count korrekt anzeigen
     [?] Strings
-    [...] Permitted-List vervollständigen
-    [...] Grammatik in einem Element checken
+    [x] Permitted-List vervollständigen
+    [x] Grammatik in einem Element checken
     [...] ERROR-Handling
+    [x] baseTypes enthält Space
     [ ] open file through some input (written / dialogue)
     <then/> macht Probleme?
 """
-
-
-def nonblank_lines(file):  # messes up line count to actual file line count
-    for l in file:
-        line = l.rstrip()
-        if line:
-            yield line
 
 
 def file_grammar(t, line_nr):
@@ -79,5 +73,4 @@ if __name__ == '__main__':
                 temptail = temptail.partition("<")[2].partition(">")[2]
 
     if not parse:
-        # print("File is corresponding to TEI-Guidelines.")
-        pass
+        print("File is corresponding to TEI-Guidelines.")
