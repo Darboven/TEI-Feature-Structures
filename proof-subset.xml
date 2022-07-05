@@ -4,7 +4,38 @@
       <vRange>
         <fs type="text-phrase">
           <f name="Text">
-            <!-- TODO -->
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase">
+                  <f name="Text">
+                    <vAlt>
+                      <string>suppose </string>
+                    </vAlt>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <fs type="text-phrase-with-semantics">
+                      <f name="Semantics">
+                        <fs type="element">
+                          <f name="Element">
+                            <vLabel name="x"/>
+                          </f>
+                          <f name="Set">
+                            <vLabel name="A"/>
+                          </f>
+                        </fs>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-list"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
           </f>
         </fs>
       </vRange>
