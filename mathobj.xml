@@ -1,0 +1,32 @@
+<fsdDecl>
+  <fsDecl type="mathobj">
+    <fsDescr>General mathobj structure (defined by its subtypes)</fsDescr>
+  </fsDecl>
+  <fsDecl type="arbitrary-mathobj" baseTypes="mathobj"/>
+    <!-- ... -->
+  </fsDecl>
+
+  <fsDecl type="equal-mathobj">
+    <fDecl name="">
+      <vRange>
+        <fs type="function-application">
+          <f name="Function">
+            <vLabel name="F"/>
+          </f>
+          <f name="Argument">
+            <fs type="mathobj"/>
+          </f>
+        </fs>
+        <fs type="function-application">
+          <f name="Function">
+            <vLabel name="F"/>
+          </f>
+          <f name="Argument">
+            <fs type="mathobj"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+</fsdDecl>
