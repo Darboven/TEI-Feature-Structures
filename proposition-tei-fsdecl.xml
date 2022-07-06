@@ -140,4 +140,20 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="rational-element" baseTypes="atomic">
+    <fDecl name="Element">
+      <vRange>
+        <fs type="mathobj"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="irrational-element" baseTypes="atomic">
+    <fDecl name="Element">
+      <vRange>
+        <fs type="mathobj"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
 </fsdDecl>
