@@ -25,70 +25,70 @@
     <fDecl name="Text">
       <vRange>
         <vLabel name="TR">
-		      <fs type="nonempty-text-phrase-list">
-		        <f name="Head">
-		          <fs type="text-phrase">
-		            <f name="Text">
-		              <string>{</string>
-		            </f>
-		          </fs>
-		        </f>
-		        <f name="Tail">
-		          <fs type="nonempty-text-phrase-list">
-		            <f name="Head">
-		              <fs type="variable-text-phrase">
+          <fs type="nonempty-text-phrase-list">
+            <f name="Head">
+              <fs type="text-phrase">
+                <f name="Text">
+                  <string>{</string>
+                </f>
+              </fs>
+            </f>
+            <f name="Tail">
+              <fs type="nonempty-text-phrase-list">
+                <f name="Head">
+                  <fs type="variable-text-phrase">
                     <f name="Semantics">
                       <vLabel name="Variable">
                         <fs type="mathobj"/>
                       </vLabel>
                     </f>
-		              </fs>
-		            </f>
-		            <f name="Tail">
-		              <fs type="nonempty-text-phrase-list">
-		                <f name="Head">
-		                  <fs type="text-phrase">
-		                    <f name="Text">
-		                      <vAlt>
-		                        <string>:</string>
-		                        <string>|</string>
-		                      </vAlt>
-		                    </f>
-		                  </fs>
-		                </f>
-		                <f name="Tail">
-		                  <fs type="nonempty-text-phrase-list">
-		                    <f name="Head">
-		                      <fs type="text-phrase-with-semantics">
-		                        <f name="Semantics">
-		                          <vLabel name="Predicate">
-		                            <fs type="proposition"/>
-		                          </vLabel>
-		                        </f>
-		                      </fs>
-		                    </f>
-		                    <f name="Tail">
-		                      <fs type="nonempty-text-phrase-list">
-		                        <f name="Head">
-		                          <fs type="text-phrase">
-		                            <f name="Text">
-		                              <string>}</string>
-		                            </f>
-		                          </fs>
-		                        </f>
-		                        <f name="Tail">
-		                          <fs type="empty-list"/>
-		                        </f>
-		                      </fs>
-		                    </f>
-		                  </fs>
-		                </f>
-		              </fs>
-		            </f>
-		          </fs>
-		        </f>
-		      </fs>
-		    <vLabel/>
+                  </fs>
+                </f>
+                <f name="Tail">
+                  <fs type="nonempty-text-phrase-list">
+                    <f name="Head">
+                      <fs type="text-phrase">
+                        <f name="Text">
+                          <vAlt>
+                            <string>:</string>
+                            <string>|</string>
+                          </vAlt>
+                        </f>
+                      </fs>
+                    </f>
+                    <f name="Tail">
+                      <fs type="nonempty-text-phrase-list">
+                        <f name="Head">
+                          <fs type="text-phrase-with-semantics">
+                            <f name="Semantics">
+                              <vLabel name="Predicate">
+                                <fs type="proposition"/>
+                              </vLabel>
+                            </f>
+                          </fs>
+                        </f>
+                        <f name="Tail">
+                          <fs type="nonempty-text-phrase-list">
+                            <f name="Head">
+                              <fs type="text-phrase">
+                                <f name="Text">
+                                  <string>}</string>
+                                </f>
+                              </fs>
+                            </f>
+                            <f name="Tail">
+                              <fs type="empty-list"/>
+                            </f>
+                          </fs>
+                        </f>
+                      </fs>
+                    </f>
+                  </fs>
+                </f>
+              </fs>
+            </f>
+          </fs>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Semantics">
@@ -100,7 +100,7 @@
           <vLabel name="Predicate"/>
         </f>
         <f name="Textual-Realization">
-          <vLabel name="TR">
+          <vLabel name="TR"/>
         </f>
       </fs>
     </fDecl>
@@ -198,7 +198,7 @@
             </fs>
           </f>
           <f name="Textual-Realization">
-            <vLabel name="TR">
+            <vLabel name="TR"/>
           </f>
         </fs>
       </vRange>
