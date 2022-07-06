@@ -102,14 +102,14 @@
             <f name="Semantics">
               <fs type="mathobj-list">
                 <f name="Head">
-  	              <vLabel name="Head"/>
-            		</f>
-            		<f name="Tail">
-            		  <vLabel name="Tail"/>
-            		</f>
-            		<f name="Textual-Realization">
-            		  <vLabel name="TR"/>
-            		</f>
+                  <vLabel name="Head"/>
+                </f>
+                <f name="Tail">
+                  <vLabel name="Tail"/>
+                </f>
+                <f name="Textual-Realization">
+                  <vLabel name="TR"/>
+                </f>
               </fs>
             </f>
           </fs>
