@@ -29,8 +29,7 @@
     </fDecl>
   </fsDecl>
 
-
-  <fsDecl type="variable-text-phrase" baseTypes="text-phrase-with-semantics">
+  <fsDecl type="variable-text-phrase" baseTypes="text-phrase">
     <fDecl name="Text">
       <vRange>
         <vAlt>
