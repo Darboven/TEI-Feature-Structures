@@ -1,11 +1,11 @@
 <fsdDecl>
 
-  <fsDecl type="var-equals-object-proposition-list" baseTypes="proposition-list">
+  <fsDecl type="var-equals-object-proposition-list" baseTypes="proposition-list" xml:id="VEOPROPL">
     <fsDescr></fsDescr>
   </fsDecl>
 
 
-  <fsDecl type="empty-var-equals-object-proposition-list" baseTypes="var-equals-object-proposition-list empty-list">
+  <fsDecl type="empty-var-equals-object-proposition-list" baseTypes="var-equals-object-proposition-list empty-list" xml:id="EMPVEOPROPL">
     <fsDescr></fsDescr>
     <fDecl name="Variable"/>
     <fDecl name="Mathobj-List">
@@ -16,7 +16,7 @@
   </fsDecl>
 
 
-  <fsDecl type="nonempty-var-equals-object-proposition-list" baseTypes="var-equals-object-proposition-list">
+  <fsDecl type="nonempty-var-equals-object-proposition-list" baseTypes="var-equals-object-proposition-list" xml:id="NEMPVEOPROPL">
     <fsDescr></fsDescr>
     <fDecl name="Variable">
       <vRange>

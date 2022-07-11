@@ -1,11 +1,5 @@
 <fsdDecl>
-  <fsdLink type="proposition"
-   target="proposition-tei-fsdecl#PROP"/>
-  <fsdLink type="list"
-   target="list-tei-fsdecl.xml#LIST"/>
-  <fsdLink type="proved-under-hypotheses"
-   target="proved-under-hypotheses-tei-fsdecl.xml#PUH"/>
-  <fsDecl type="transitivity" baseTypes="proved-under-hypotheses">
+  <fsDecl type="transitivity" baseTypes="proved-under-hypotheses" xml:id="PTRANS">
     <fsDescr>Allows to transitively concatenate and proof propositions.</fsDescr>
     <fDecl name="Hypotheses">
       <vRange>

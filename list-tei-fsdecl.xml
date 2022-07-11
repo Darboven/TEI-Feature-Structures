@@ -1,14 +1,17 @@
 <fsdDecl>
 
   <fsDecl type="list" xml:id="LIST">
-    <fsDescr>General list structure (defined by its subtypes empty-list and nonempty-list)</fsDescr>
+    <fsDescr>
+      General list structure
+      (defined by its subtypes empty-list and nonempty-list)
+    </fsDescr>
   </fsDecl>
 
-  <fsDecl type="empty-list" baseTypes="list comma-list text-phrase-list">
+  <fsDecl type="empty-list" baseTypes="list comma-list text-phrase-list" xml:id="EMPL">
     <fsDescr>Empty list</fsDescr>
   </fsDecl>
 
-  <fsDecl type="nonempty-list" baseTypes="list">
+  <fsDecl type="nonempty-list" baseTypes="list" xml:id="NEMPL">
     <fsDescr>Non-empty list</fsDescr>
     <fDecl name="Head"/>
     <fDecl name="Tail">
@@ -20,10 +23,13 @@
 
 
   <fsDecl type="proposition-list" baseTypes="list" xml:id="PLIST">
-    <fsDescr>List of proposition (defined by its subtype nonempty-proposition-list)</fsDescr>
+    <fsDescr>
+      List of proposition
+      (defined by its subtype nonempty-proposition-list)
+    </fsDescr>
   </fsDecl>
 
-  <fsDecl type="nonempty-proposition-list" baseTypes="proposition-list nonempty-list">
+  <fsDecl type="nonempty-proposition-list" baseTypes="proposition-list nonempty-list" xml:id="NEMPPL">
     <fsDescr>Non-empty list of propositions</fsDescr>
     <fDecl name="Head">
       <vRange>
@@ -39,7 +45,11 @@
 
 
   <fsDecl type="list-with-spec-element" baseTypes="nonempty-list">
-    <fsDescr>List that contains a specific element (defined by its subtypes list-with-spec-element-initially and list-with-spec-element-non-initially)</fsDescr>
+    <fsDescr>
+      List that contains a specific element
+      (defined by its subtypes list-with-spec-element-initially and
+      list-with-spec-element-non-initially)
+    </fsDescr>
     <fDecl name="Element"/>
   </fsDecl>
 
@@ -74,72 +84,7 @@
     </fDecl>
   </fsDecl>
 
-<!--
-
--->
-
-  <fsDecl type="comma-list" baseTypes="list">
-    <fsDescr>General comma-list structure</fsDescr>
-  </fsDecl>
-
-  <fsDecl type="comma-list-start" baseTypes="comma-list">
-    <fDecl name="Head">
-      <vRange>
-        <string>{</string>
-      </vRange>
-    </fDecl>
-    <fDecl name="Tail">
-      <vRange>
-        <vAlt>
-          <fs type="comma-list-element"/>
-          <fs type="comma-list-end"/><!-- for empty set -->
-        </vAlt>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-  <fsDecl type="comma-list-element" baseTypes="comma-list">
-    <fDecl name="Head">
-      <vRange>
-        <fs type="mathobj"/>
-      </vRange>
-    </fDecl>
-    <fDecl name="Tail">
-      <vRange>
-        <vAlt>
-          <fs type="comma-list-comma"/>
-          <fs type="comma-list-end"/>
-        </vAlt>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-  <fsDecl type="comma-list-comma" baseTypes="comma-list">
-    <fDecl name="Head">
-      <vRange>
-        <string>,</string>
-      </vRange>
-    </fDecl>
-    <fDecl name="Tail">
-      <vRange>
-        <fs type="comma-list-element"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-  <fsDecl type="comma-list-end" baseTypes="comma-list">
-    <fDecl name="Head">
-      <vRange>
-        <string>}</string>
-      </vRange>
-    </fDecl>
-    <fDecl name="Tail">
-      <vRange>
-        <fs type="empty-list"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
+<!-- ? -->
 
   <fsDecl type="sublist" baseTypes="list">
     <fsDescr>List that is a sublist of a specific other list named Superlist (defined by its subtypes empty-sublist and nonempty-sublist)</fsDescr>
@@ -178,7 +123,7 @@
   </fsDecl>
 
 
-  <fsDecl type="equivalent-list-constraint">
+  <fsDecl type="equivalent-list-constraint" xml:id="EQLC">
     <fsDescr>The constraint that List1 and List2 contain the same elements</fsDescr>
     <fDecl name="List1">
       <vRange>

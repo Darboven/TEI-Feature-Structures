@@ -1,10 +1,10 @@
 <fsdDecl>
 
-  <fsDecl type="mathobj-list" baseTypes="list text-phrase">
+  <fsDecl type="mathobj-list" baseTypes="list text-phrase" xml:id="MAOL">
     <fsDescr>List of mathematical objects (defined by its subtype nonempty-mathematical-object-list)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="empty-mathobj-list" baseTypes="mathobj-list empty-list">
+  <fsDecl type="empty-mathobj-list" baseTypes="mathobj-list empty-list" xml:id="EMPMAOL">
     <fDecl name="Text">
       <vRange>
         <string/>
@@ -12,10 +12,10 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="nonempty-mathobj-list" baseTypes="mathobj-list nonempty-list">
+  <fsDecl type="nonempty-mathobj-list" baseTypes="mathobj-list nonempty-list" xml:id="NEMPMAOL">
   </fsDecl>
 
-  <fsDecl type="one-element-mathobj-list" baseTypes="nonempty-mathobj-list">
+  <fsDecl type="one-element-mathobj-list" baseTypes="nonempty-mathobj-list" xml:id="1EMPMAOL">
     <fDecl name="Head">
       <vRange>
         <vLabel name="Head">
@@ -39,7 +39,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="more-than-one-element-mathobj-list" baseTypes="nonempty-mathobj-list">
+  <fsDecl type="more-than-one-element-mathobj-list" baseTypes="nonempty-mathobj-list" xml:id="MEMPMAOL">
     <fsDescr>Non-empty list of mathematical objects</fsDescr>
     <fDecl name="Head">
       <vRange>

@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="set" baseTypes="mathobj"><!-- mathobj needs to be defined -->
+  <fsDecl type="set" baseTypes="mathobj" xml:id="SET"><!-- mathobj needs to be defined -->
     <fsDescr>General set structure (defined by its subtypes)</fsDescr>
     <fDecl name="Variable">
       <vRange>
@@ -21,7 +21,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="set-comprehension" baseTypes="text-phrase-with-semantics">
+  <fsDecl type="set-comprehension" baseTypes="text-phrase-with-semantics" xml:id="SETCOMP">
     <fDecl name="Text">
       <vRange>
         <vLabel name="TR">
@@ -107,7 +107,7 @@
   </fsDecl>
 
 
-  <fsDecl type="set-enumeration" baseTypes="text-phrase-with-semantics">
+  <fsDecl type="set-enumeration" baseTypes="text-phrase-with-semantics" xml:id="SETENUM">
     <!-- !!! -->
     <fDecl name="Text">
       <vRange>

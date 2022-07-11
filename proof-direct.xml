@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="proof-direct" baseTypes="proved-under-hypotheses">
+  <fsDecl type="proof-direct" baseTypes="proved-under-hypotheses" xml:id="PDIR">
 
     <fDecl name="Textual-Realization">
       <vRange>

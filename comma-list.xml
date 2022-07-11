@@ -1,17 +1,62 @@
 <fsdDecl>
-  <fsDecl type="comma-list" baseTypes="text-phrase-with-semantics">
-    <fDecl name="Text">
+  <fsDecl type="comma-list" baseTypes="list" xml:id="COML">
+    <fsDescr>General comma-list structure</fsDescr>
+  </fsDecl>
+
+  <fsDecl type="comma-list-start" baseTypes="comma-list" xml:id="COMLS">
+    <fDecl name="Head">
       <vRange>
-        <vLabel name="TR"/>
+        <string>{</string>
       </vRange>
     </fDecl>
-    <fDecl name="Semantics">
+    <fDecl name="Tail">
       <vRange>
-        <fs type="mathobj-list">
-          <f name="Textual-Realisation">
-            <vLabel name="TR"/>
-          </f>
-        </fs>
+        <vAlt>
+          <fs type="comma-list-element"/>
+          <fs type="comma-list-end"/><!-- for empty set -->
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="comma-list-element" baseTypes="comma-list" xml:id="COMLEL">
+    <fDecl name="Head">
+      <vRange>
+        <fs type="mathobj"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <vAlt>
+          <fs type="comma-list-comma"/>
+          <fs type="comma-list-end"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="comma-list-comma" baseTypes="comma-list" xml:id="COMLC">
+    <fDecl name="Head">
+      <vRange>
+        <string>,</string>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="comma-list-element"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="comma-list-end" baseTypes="comma-list" xml:id="COMLEND">
+    <fDecl name="Head">
+      <vRange>
+        <string>}</string>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="empty-list"/>
       </vRange>
     </fDecl>
   </fsDecl>

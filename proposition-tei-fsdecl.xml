@@ -1,10 +1,10 @@
 <fsdDecl>
 
-  <fsDecl type="proposition" baseTypes="text-phrase">
+  <fsDecl type="proposition" baseTypes="text-phrase" xml:id="PROP">
     <fsDescr>General proposition structure (defined by its subtypes)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="implication" baseTypes="proposition">
+  <fsDecl type="implication" baseTypes="proposition" xml:id="PROPIMPL">
     <fDecl name="Antecedent">
       <vRange>
         <fs type="proposition"/>
@@ -17,7 +17,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="biimplication" baseTypes="proposition">
+  <fsDecl type="biimplication" baseTypes="proposition" xml:id="PROPBIIMPL">
     <fDecl name="BI-Feature-1">
       <vRange>
         <fs type="proposition"/>
@@ -30,7 +30,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="negation" baseTypes="proposition">
+  <fsDecl type="negation" baseTypes="proposition" xml:id="PROPNEG">
     <fDecl name="Negation-Feature">
       <vRange>
         <fs type="proposition"/>
@@ -38,7 +38,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="conjunction-list" baseTypes="proposition">
+  <fsDecl type="conjunction-list" baseTypes="proposition" xml:id="PROPCONL">
     <fDecl name="CON">
       <vRange>
         <fs type="proposition-list"/>
@@ -46,7 +46,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="disjunction-list" baseTypes="proposition">
+  <fsDecl type="disjunction-list" baseTypes="proposition" xml:id="PROPDISL">
     <fDecl name="DIS">
       <vRange>
         <fs type="proposition-list"/>
@@ -54,7 +54,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="all-quantification" baseTypes="proposition">
+  <fsDecl type="all-quantification" baseTypes="proposition" xml:id="PROPALQ">
     <fsDescr>All-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
       <vRange>
@@ -69,7 +69,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="exists-quantification" baseTypes="proposition">
+  <fsDecl type="exists-quantification" baseTypes="proposition" xml:id="PROPEXQ">
     <fsDescr>Exists-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
       <vRange>
@@ -85,11 +85,11 @@
   </fsDecl>
 
 
-  <fsDecl type="atomic" baseTypes="proposition">
+  <fsDecl type="atomic" baseTypes="proposition" xml:id="PROPATOM">
     <fsDescr>General atomic structure</fsDescr>
   </fsDecl>
 
-  <fsDecl type="equality" baseTypes="atomic">
+  <fsDecl type="equality" baseTypes="atomic" xml:id="PROPEQUAL">
     <fDecl name="LHS">
       <vRange>
         <fs type="mathobj"/>
@@ -104,7 +104,7 @@
 
   <!-- ... -->
 
-  <fsDecl type="subset" baseTypes="atomic">
+  <fsDecl type="subset" baseTypes="atomic" xml:id="PROPSUB">
     <fDecl name="Subset">
       <vRange>
         <fs type="set"/>
@@ -117,7 +117,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="element" baseTypes="atomic">
+  <fsDecl type="element" baseTypes="atomic" xml:id="PROPELEM">
     <fDecl name="Element">
       <vRange>
         <fs type="mathobj"/>
@@ -131,7 +131,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="rational-element" baseTypes="atomic">
+  <fsDecl type="rational-element" baseTypes="atomic" xml:id="PROPRATELEM">
     <fDecl name="Argument">
       <vRange>
         <fs type="real-number"/>
@@ -139,7 +139,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="irrational-element" baseTypes="atomic">
+  <fsDecl type="irrational-element" baseTypes="atomic" xml:id="PROPIRRELEM">
     <fDecl name="Argument">
       <vRange>
         <fs type="real-number"/>
@@ -147,7 +147,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="even" baseTypes="atomic">
+  <fsDecl type="even" baseTypes="atomic" xml:id="PROPEVEN">
     <fDecl name="Argument">
       <vRange>
         <fs type="integer"/>
@@ -155,7 +155,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="odd" baseTypes="atomic">
+  <fsDecl type="odd" baseTypes="atomic" xml:id="PROPODD">
     <fDecl name="Argument">
       <vRange>
         <fs type="integer"/>

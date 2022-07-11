@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="proof-subset" baseTypes="proved-under-hypotheses">
+  <fsDecl type="proof-subset" baseTypes="proved-under-hypotheses" xml:id="PSUB">
     <fDecl name="Initial-Linguistic-Marker">
       <vRange>
         <fs type="text-phrase">

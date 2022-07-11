@@ -1,9 +1,5 @@
 <fsdDecl>
-  <fsdLink type="proposition"
-   target="proposition-tei-fsdecl#PROP"/>
-  <fsdLink type="list"
-   target="list-tei-fsdecl.xml#LWSE"/>
-  <fsDecl type="modus-ponens" baseTypes="proved-under-hypotheses">
+  <fsDecl type="modus-ponens" baseTypes="proved-under-hypotheses" xml:id="MP">
     <fDecl name="Hypotheses">
       <vRange>
         <fs type="list-with-spec-element">

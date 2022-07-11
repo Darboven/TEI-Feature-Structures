@@ -1,6 +1,6 @@
 <fsdDecl>
 
-  <fsDecl type="text-phrase">
+  <fsDecl type="text-phrase" xml:id="TP">
     <fDecl type="Text">
       <vRange>
         <vAlt>
@@ -11,11 +11,11 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="text-phrase-list" baseTypes="list">
+  <fsDecl type="text-phrase-list" baseTypes="list" xml:id="TPL">
     <fsDescr>List of text phrases (defined by its subtype nonempty-text-phrase-list)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="nonempty-text-phrase-list" baseTypes="text-phrase-list nonempty-list">
+  <fsDecl type="nonempty-text-phrase-list" baseTypes="text-phrase-list nonempty-list" xml:id="NEMPTPL">
     <fsDescr>Non-empty list of text phrases</fsDescr>
     <fDecl name="Head">
       <vRange>
@@ -29,7 +29,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="variable-text-phrase" baseTypes="text-phrase">
+  <fsDecl type="variable-text-phrase" baseTypes="text-phrase" xml:id="VARTP">
     <fDecl name="Text">
       <vRange>
         <vAlt>

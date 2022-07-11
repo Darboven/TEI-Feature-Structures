@@ -1,23 +1,23 @@
 <fsdDecl>
-  <fsDecl type="mathobj">
+  <fsDecl type="mathobj" xml:id="MAO">
     <fsDescr>General mathobj structure (defined by its subtypes)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="mathobj-with-textual-realization" baseTypes="mathobj text-phrase">
+  <fsDecl type="mathobj-with-textual-realization" baseTypes="mathobj text-phrase" xml:id="MAOTR">
     <fDecl name="Text">
       <!-- ... -->
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="arbitrary-mathobj" baseTypes="mathobj-with-textual-realization">
+  <fsDecl type="arbitrary-mathobj" baseTypes="mathobj-with-textual-realization" xml:id="ARMAO">
     <!-- Variablencharakter, keine interne Struktur -->
   </fsDecl>
 
-  <fsDecl type="integer" baseTypes="mathobj">
+  <fsDecl type="integer" baseTypes="mathobj" xml:id="INTMAO">
     <!-- ... -->
   </fsDecl>
 
-  <fsDecl type="equal-mathobj">
+  <fsDecl type="equal-mathobj" xml:id="EQMAO">
     <fDecl name="">
       <vRange>
         <fs type="function-application">

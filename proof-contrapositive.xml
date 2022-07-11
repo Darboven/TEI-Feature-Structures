@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="contrapositive-proof" baseTypes="proved-under-hypotheses">
+  <fsDecl type="proof-contrapositive" baseTypes="proved-under-hypotheses" xml:id="PCTRP">
     <fDecl name="Textual-Realization">
       <vRange>
         <fs type="text-phrase">
