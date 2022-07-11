@@ -2,7 +2,18 @@
   <fsDecl type="mathobj">
     <fsDescr>General mathobj structure (defined by its subtypes)</fsDescr>
   </fsDecl>
-  <fsDecl type="arbitrary-mathobj" baseTypes="mathobj"/>
+
+  <fsDecl type="mathobj-with-textual-realization" baseTypes="mathobj text-phrase">
+    <fDecl name="Text">
+      <!-- ... -->
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="arbitrary-mathobj" baseTypes="mathobj-with-textual-realization">
+    <!-- Variablencharakter, keine interne Struktur -->
+  </fsDecl>
+
+  <fsDecl type="integer" baseTypes="mathobj">
     <!-- ... -->
   </fsDecl>
 
