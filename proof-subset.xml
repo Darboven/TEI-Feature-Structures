@@ -42,11 +42,9 @@
     </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
-        <vRange>
-          <vLabel name="T">
-            <fs type="proposition-list"/>
-          </vLabel>
-        </vRange>
+        <vLabel name="T">
+          <fs type="proposition-list"/>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Conclusion">
