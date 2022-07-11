@@ -1,6 +1,6 @@
 <fsdDecl>
   <fsDecl type="proof-contradiction" baseTypes="proved-under-hypotheses">
-    <fDecl name="Initial-Linguistic-Marker">
+    <fDecl name="Textual-Realization">
       <vRange>
         <fs type="text-phrase">
           <f name="Text">
@@ -20,7 +20,6 @@
                   <f name="Head">
                     <fs type="text-phrase-with-semantics">
                       <f name="Semantics">
-                        <!-- ??? -->
                         <vLabel name="negP">
                           <fs type="negation">
                             <f name="Negation-Feature">

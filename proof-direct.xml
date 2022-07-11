@@ -1,7 +1,7 @@
 <fsdDecl>
   <fsDecl type="proof-direct" baseTypes="proved-under-hypotheses">
-    
-    <fDecl name="Initial-Linguistic-Marker">
+
+    <fDecl name="Textual-Realization">
       <vRange>
         <fs type="text-phrase">
           <f name="Text">
