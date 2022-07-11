@@ -11,7 +11,7 @@
         <fs type="proposition"/>
       </vRange>
     </fDecl>
-    <fDecl name="Textual-Realisation">
+    <fDecl name="Text">
       <vRange>
         <vAlt>
           <fs name="set-comprehension"/>
@@ -99,7 +99,7 @@
         <f name="Predicate">
           <vLabel name="Predicate"/>
         </f>
-        <f name="Textual-Realization">
+        <f name="Text">
           <vLabel name="TR"/>
         </f>
       </fs>
@@ -169,26 +169,6 @@
                         <vLabel name="Head-Mathobj"/>
                       </f>
                       <f name="Tail">
-                        <vLabel name="Tail-Mathobj-List"/>
-                      </f>
-                    </fs>
-                  </f>
-                  <f name="Head">
-                    <fs type="equality">
-                      <f name="LHS">
-                        <vLabel name="Variable"/>
-                      </f>
-                      <f name="LHS">
-                        <vLabel name="Head-Mathobj"/>
-                      </f>
-                    </fs>
-                  </f>
-                  <f name="Tail">
-                    <fs type="var-equals-object-proposition-list">
-                      <f name="Variable">
-                        <vLabel name="Variable"/>
-                      </f>
-                      <f name="Mathobj-List">
                         <vLabel name="Tail-Mathobj-List"/>
                       </f>
                     </fs>
