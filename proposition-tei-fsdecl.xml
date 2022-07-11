@@ -1,7 +1,6 @@
 <fsdDecl>
-  <fsdLink type="proposition-list"
-   target="list-tei-fsdecl#PLIST"/>
-  <fsDecl type="proposition" xml:id="PROP">
+
+  <fsDecl type="proposition" baseTypes="text-phrase">
     <fsDescr>General proposition structure (defined by its subtypes)</fsDescr>
   </fsDecl>
 
@@ -10,8 +9,8 @@
       <vRange>
         <fs type="proposition"/>
       </vRange>
-    </f>
-    <f name="Consequent">
+    </fDecl>
+    <fDecl name="Consequent">
       <vRange>
         <fs type="proposition"/>
       </vRange>
@@ -23,7 +22,7 @@
       <vRange>
         <fs type="proposition"/>
       </vRange>
-    </f>
+    </fDecl>
     <fDecl name="BI-Feature-2">
       <vRange>
         <fs type="proposition"/>
@@ -59,7 +58,7 @@
     <fsDescr>All-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
       <vRange>
-        <symbol value="string"/>
+        <fs type="arbitrary-mathobj"/>
         <!-- needs work -->
       </vRange>
     </fDecl>
@@ -74,7 +73,7 @@
     <fsDescr>Exists-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
       <vRange>
-        <symbol value="string"/>
+        <fs type="arbitrary-mathobj"/>
         <!-- needs work -->
       </vRange>
     </fDecl>
@@ -88,14 +87,6 @@
 
   <fsDecl type="atomic" baseTypes="proposition">
     <fsDescr>General atomic structure</fsDescr>
-  </fsDecl>
-
-  <fsDecl type="string" baseTypes="atomic">
-    <fDecl name="Content">
-      <vRange>
-        <symbol value="string"/>
-      </vRange>
-    </fDecl>
   </fsDecl>
 
   <fsDecl type="equality" baseTypes="atomic">
@@ -141,17 +132,33 @@
   </fsDecl>
 
   <fsDecl type="rational-element" baseTypes="atomic">
-    <fDecl name="Element">
+    <fDecl name="Argument">
       <vRange>
-        <fs type="mathobj"/>
+        <fs type="real-number"/>
       </vRange>
     </fDecl>
   </fsDecl>
 
   <fsDecl type="irrational-element" baseTypes="atomic">
-    <fDecl name="Element">
+    <fDecl name="Argument">
       <vRange>
-        <fs type="mathobj"/>
+        <fs type="real-number"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="even" baseTypes="atomic">
+    <fDecl name="Argument">
+      <vRange>
+        <fs type="integer"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="odd" baseTypes="atomic">
+    <fDecl name="Argument">
+      <vRange>
+        <fs type="integer"/>
       </vRange>
     </fDecl>
   </fsDecl>
