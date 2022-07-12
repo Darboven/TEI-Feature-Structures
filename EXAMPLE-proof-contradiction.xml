@@ -1,6 +1,6 @@
 <!-- 6.1 (p.139): The number {\sqrt {2}} is irrational. -->
 <fs type="proof-contradiction">
-  <f name="Initial-Linguistic-Marker">
+  <f name="Textual-Realization">
     <fs type="text-phrase">
       <f name="Text">
         <fs type="nonempty-text-phrase-list">
@@ -14,7 +14,7 @@
           <f name="Tail">
             <fs type="nonempty-text-phrase-list">
               <f name="Head">
-                <fs type="text-phrase-with-semantics">
+                <fs type="text-phrase">
                   <f name="Semantics">
                     <vLabel name="negP">
                       <fs type="negation">
