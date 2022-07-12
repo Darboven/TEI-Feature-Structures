@@ -20,7 +20,14 @@
                       <fs type="negation">
                         <f name="Negation-Feature">
                           <vLabel name="P">
-                            <!-- {\sqrt {2}} is irrational, fs type="proposition"-->
+                            <fs type="irrational-element">
+                              <f name="Argument">
+                                <fs type="real-number">
+                                  <numeric value="..."/>
+                                </fs>
+                                <!-- sqrt(2) -->
+                              </f>
+                            </fs>
                           </vLabel>
                         </f>
                       </fs>
@@ -84,6 +91,11 @@
               </f>
             </fs>
           </f>
+        </fs>
+      </f>
+      <f name="Proof">
+        <fs type="">
+
         </fs>
       </f>
     </fs>
