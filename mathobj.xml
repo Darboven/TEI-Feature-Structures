@@ -17,6 +17,18 @@
     <!-- ... -->
   </fsDecl>
 
+  <fsDecl type="integer-with-textual-realization" baseTypes="mathobj-with-textual-realization" xml:id="INTTRMAO">
+    <!-- ... -->
+  </fsDecl>
+
+  <fsDecl type="real-number" baseTypes="mathobj" xml:id="RNMAO">
+    <!-- ... -->
+  </fsDecl>
+
+  <fsDecl type="real-number-with-textual-realization" baseTypes="mathobj-with-textual-realization" xml:id="RNTRMAO">
+    <!-- ... -->
+  </fsDecl>
+
   <fsDecl type="equal-mathobj" xml:id="EQMAO">
     <fDecl name="">
       <vRange>
