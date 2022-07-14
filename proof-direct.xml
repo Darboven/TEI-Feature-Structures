@@ -20,13 +20,9 @@
               <f name="Tail">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
-                    <fs type="text-phrase-with-semantics">
-                      <f name="Semantics">
-                        <vLabel name="P">
-                          <fs type="proposition"/>
-                        </vLabel>
-                      </f>
-                    </fs>
+                    <vLabel name="P">
+                      <fs type="proposition"/>
+                    </vLabel>
                   </f>
                   <f name="Tail">
                     <fs type="empty-list"/>

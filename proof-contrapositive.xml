@@ -18,20 +18,15 @@
               <f name="Tail">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
-                    <fs type="text-phrase-with-semantics">
-                      <f name="Semantics">
-                        <!-- ??? -->
-                        <vLabel name="negQ">
-                          <fs type="negation">
-                            <f name="Negation-Feature">
-                              <vLabel name="Q">
-                                <fs type="proposition"/>
-                              </vLabel>
-                            </f>
-                          </fs>
-                        </vLabel>
-                      </f>
-                    </fs>
+                    <vLabel name="negQ">
+                      <fs type="negation">
+                        <f name="Negation-Feature">
+                          <vLabel name="Q">
+                            <fs type="proposition"/>
+                          </vLabel>
+                        </f>
+                      </fs>
+                    </vLabel>
                   </f>
                   <f name="Tail">
                     <fs type="empty-list"/>

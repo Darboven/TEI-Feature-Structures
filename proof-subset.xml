@@ -1,6 +1,6 @@
 <fsdDecl>
   <fsDecl type="proof-subset" baseTypes="proved-under-hypotheses" xml:id="PSUB">
-    <fDecl name="Initial-Linguistic-Marker">
+    <fDecl name="Textual-Realization">
       <vRange>
         <fs type="text-phrase">
           <f name="Text">
@@ -17,16 +17,12 @@
               <f name="Tail">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
-                    <fs type="text-phrase-with-semantics">
-                      <f name="Semantics">
-                        <fs type="element">
-                          <f name="Element">
-                            <vLabel name="x"/>
-                          </f>
-                          <f name="Set">
-                            <vLabel name="A"/>
-                          </f>
-                        </fs>
+                    <fs type="element">
+                      <f name="Element">
+                        <vLabel name="x"/>
+                      </f>
+                      <f name="Set">
+                        <vLabel name="A"/>
                       </f>
                     </fs>
                   </f>
