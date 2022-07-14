@@ -1,9 +1,11 @@
 <fsdDecl>
+
   <fsdLink type="comma-list" target="comma-list.xml#COML"/>
   <fsdLink type="comma-list-start" target="comma-list.xml#COMLS"/>
   <fsdLink type="comma-list-element" target="comma-list.xml#COMLEL"/>
   <fsdLink type="comma-list-comma" target="comma-list.xml#COMLC1"/>
   <fsdLink type="comma-list-end" target="comma-list.xml#COMLEND"/>
+
   <fsdLink type="list" target="list-tei-fsdecl.xml#LIST"/>
   <fsdLink type="empty-list" target="list-tei-fsdecl.xml#EMPL"/>
   <fsdLink type="nonempty-list" target="list-tei-fsdecl.xml#NEMPL"/>
@@ -11,23 +13,34 @@
   <fsdLink type="nonempty-proposition-list" target="list-tei-fsdecl.xml#NEMPPL"/>
   <!-- not all list fsdecl included -->
   <fsdLink type="equivalent-list-constraint" target="list-tei-fsdecl.xml#EQLC"/>
+
   <fsdLink type="mathobj-list" target="mathobj-list.xml#MAOL"/>
   <fsdLink type="empty-mathobj-list" target="mathobj-list.xml#EMPMAOL"/>
   <fsdLink type="nonempty-mathobj-list" target="mathobj-list.xml#NEMPMAOL"/>
   <fsdLink type="one-element-mathobj-list" target="mathobj-list.xml#1EMPMAOL"/>
   <fsdLink type="more-than-one-mathobj-list" target="mathobj-list.xml#MEMPMAOL"/>
+
   <fsdLink type="mathobj" target="mathobj.xml#MAO"/>
   <fsdLink type="mathobj-with-textual-realization" target="mathobj.xml#MAOTR"/>
   <fsdLink type="arbitrary-mathobj" target="mathobj.xml#ARMAO"/>
   <fsdLink type="integer" target="mathobj.xml#INTMAO"/>
+  <fsdLink type="real-number" target="mathobj.xml#RNMAO"/>
   <fsdLink type="equal-mathobj" target="mathobj.xml#EQMAO"/>
+
   <fsdLink type="modus-ponens" target="modusponens-tei-fsdecl#MP"/>
+
   <fsdLink type="proof-contradiction-conditional" target="proof-contradiction-conditional.xml#PCTRDC"/>
+
   <fsdLink type="proof-contradiction" target="proof-contradiction.xml#PCTRD"/>
+
   <fsdLink type="proof-contrapositive" target="proof-contrapositive.xml#PCTRP"/>
+
   <fsdLink type="proof-direct" target="proof-direct.xml#PDIR"/>
+
   <fsdLink type="proof-dummy" target="proof-dummy.xml#PDUM"/>
+
   <fsdLink type="proof-subset" target="proof-subset.xml#PSUB"/>
+
   <fsdLink type="proposition" target="proposition-tei-fsdecl.xml#PROP"/>
   <fsdLink type="implication" target="proposition-tei-fsdecl.xml#PROPIMPL"/>
   <fsdLink type="biimplication" target="proposition-tei-fsdecl.xml#PROPBIIMPL"/>
@@ -40,20 +53,26 @@
   <fsdLink type="equality" target="proposition-tei-fsdecl.xml#PROPEQUAL"/>
   <fsdLink type="subset" target="proposition-tei-fsdecl.xml#PROPSUB"/>
   <fsdLink type="element" target="proposition-tei-fsdecl.xml#PROPELEM"/>
-  <fsdLink type="rational-element" target="proposition-tei-fsdecl.xml#PROPRATELEM"/>
-  <fsdLink type="irrational-element" target="proposition-tei-fsdecl.xml#PROPIRRELEM"/>
+  <fsdLink type="rational" target="proposition-tei-fsdecl.xml#PROPRAT"/>
+  <fsdLink type="irrational" target="proposition-tei-fsdecl.xml#PROPIRR"/>
   <fsdLink type="even" target="proposition-tei-fsdecl.xml#PROPEVEN"/>
   <fsdLink type="odd" target="proposition-tei-fsdecl.xml#PROPODD"/>
+
   <fsdLink type="proved-under-hypotheses" target="proved-under-hypotheses.xml#PUH"/>
+
   <fsdLink type="set" target="set.xml#SET"/>
   <fsdLink type="set-comprehension" target="set.xml#SETCOMP"/>
   <fsdLink type="set-enumeration" target="set.xml#SETENUM"/>
+
   <fsdLink type="text-phrase" target="text-phrase.xml#TP"/>
   <fsdLink type="text-phrase-list" target="text-phrase.xml#TPL"/>
   <fsdLink type="nonempty-text-phrase-list" target="text-phrase.xml#NEMPTPL"/>
   <fsdLink type="variable-text-phrase" target="text-phrase.xml#VARTP"/>
+
   <fsdLink type="transitivity" target="transitivity-tei-fsdecl.xml#PTRANS"/>
+
   <fsdLink type="var-equals-object-proposition-list" target="var-equals-proposition-list.xml#VEOPROPL"/>
   <fsdLink type="empty-var-equals-object-proposition-list" target="var-equals-proposition-list.xml#EMPVEOPROPL"/>
   <fsdLink type="nonempty-var-equals-object-proposition-list" target="var-equals-proposition-list.xml#NEMPVEOPROPL"/>
+  
 </fsdDecl>
