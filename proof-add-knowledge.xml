@@ -5,17 +5,37 @@
     </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
-        
+        <vLabel name="T">
+          <fs type="proposition-list"/>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Conclusion">
       <vRange>
-
+        <vLabel name="P">
+          <fs type="proposition">
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Proof">
       <vRange>
-
+        <fs type="proved-under-hypotheses">
+          <f name="Hypotheses">
+            <fs type="nonempty-proposition-list">
+              <f name="Head">
+                <vLabel name="P"/>
+              </f>
+              <f name="Tail">
+                <vLabel name="T"/>
+                
+              </f>
+            </fs>
+          </f>
+          <!-- needed? -->
+          <f name="Conclusion">
+            <vLabel name="P"/>
+          </f>
+        </fs>
       </vRange>
     </fDecl>
   </fsDecl>
