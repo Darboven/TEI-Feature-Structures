@@ -1,0 +1,28 @@
+<fsdDecl>
+  <fsDecl type="proof-from-hypotheses" baseTypes="proved-under-hypotheses" xml:id="">
+    <fDecl name="Textual-Realization">
+      <!-- ... -->
+    </fDecl>
+    <fDecl name="Hypotheses">
+      <vRange>
+        <fs type="list-with-spec-element">
+          <f name="Element">
+            <vLabel name="A">
+              <fs type="proposition"/>
+            </vLabel>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <vLabel name="A"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+        <symbol value="proved-from-hypotheses"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
