@@ -1,0 +1,45 @@
+<fsdDecl>
+  <fsDecl type="proof-combining-subproofs" baseTypes="proved-under-hypotheses" xml:id="">
+    <fDecl name="Textual-Realization">
+      <!-- ... -->
+    </fDecl>
+    <fDecl name="Hypotheses">
+      <vRange>
+        <fs type="proposition-list"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+        <fs type="conjunction-list">
+          <f name="CON">
+            <fs type="nonempty-proposition-list">
+              <f name="Head">
+                <vLabel name="P">
+                  <fs type="proposition"/>
+                </vLabel>
+              </f>
+              <f name="Tail">
+                <fs type="nonempty-proposition-list">
+                  <f name="Head">
+                    <vLabel name="Q">
+                      <fs type="proposition"/>
+                    </vLabel>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-list"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+    <!-- ? -->
+    <fDecl name="Proof">
+      <vRange>
+
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
