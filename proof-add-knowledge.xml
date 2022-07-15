@@ -1,0 +1,22 @@
+<fsdDecl>
+  <fsDecl type="proof-add-knowledge" baseTypes="proved-under-hypotheses" xml:id="">
+    <fDecl name="Textual-Realization">
+      <!-- ... -->
+    </fDecl>
+    <fDecl name="Hypotheses">
+      <vRange>
+        
+      </vRange>
+    </fDecl>
+    <fDecl name="Conclusion">
+      <vRange>
+
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+
+      </vRange>
+    </fDecl>
+  </fsDecl>
+</fsdDecl>
