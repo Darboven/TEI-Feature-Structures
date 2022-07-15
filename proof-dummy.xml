@@ -10,6 +10,7 @@
                   <f name="Text">
                     <vAlt>
                       <string>from this it follows that </string>
+                      <string>then </string>
                       <string/>
                     </vAlt>
                   </f>
@@ -35,6 +36,11 @@
     <fDecl name="Conclusion">
       <vRange>
         <vLabel name="P"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Proof">
+      <vRange>
+        <symbol value="unanalyzed"/>
       </vRange>
     </fDecl>
   </fsDecl>
