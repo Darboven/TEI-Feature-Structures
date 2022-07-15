@@ -25,9 +25,6 @@
             <f name="Conclusion">
               <vLabel name="Q"/>
             </f>
-            <f name="Proof">
-              <!-- ... -->
-            </f>
           </fs>
           <fs type="proved-under-hypotheses">
             <f name="Hypotheses">
@@ -38,9 +35,6 @@
             </f>
             <f name="Conclusion">
               <vLabel name="R"/>
-            </f>
-            <f name="Proof">
-              <!-- ... -->
             </f>
           </fs>
         </vColl>
