@@ -14,29 +14,49 @@
           <f name="Tail">
             <fs type="nonempty-text-phrase-list">
               <f name="Head">
-                <fs type="text-phrase">
-                  <f name="Semantics">
-                    <vLabel name="negP">
-                      <fs type="negation">
-                        <f name="Negation-Feature">
-                          <vLabel name="P">
-                            <fs type="irrational-element">
-                              <f name="Argument">
-                                <fs type="real-number">
-                                  <numeric value="..."/>
-                                </fs>
-                                <!-- sqrt(2) -->
-                              </f>
-                            </fs>
-                          </vLabel>
-                        </f>
-                      </fs>
-                    </vLabel>
-                  </f>
-                </fs>
+                <vLabel name="negP">
+                  <fs type="negation">
+                    <!-- it is not true that || squareroot 2 || is irrational -->
+                    <f name="Text">
+                      <string>it is not true that \sqrt{2} is irrational</string>
+                    </f>
+                    <f name="Negation-Feature">
+                      <vLabel name="P">
+                        <fs type="irrational">
+                          <f name="Text">
+                            <string>\sqrt{2} is irrational</string>
+                          </f>
+                          <f name="Argument">
+                            <vLabel name="R">
+                              <fs type="real-number-with-textual-realization">
+                                <f name="Text">
+                                  <string>\sqrt{2}</string>
+                                </f>
+                              </fs>
+                            </vLabel>
+                          </f>
+                        </fs>
+                      </vLabel>
+                    </f>
+                  </fs>
+                </vLabel>
               </f>
               <f name="Tail">
-                <fs type="empty-list"/>
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <vLabel name="P"/>
+                  </f>
+                  <f name="Tail">
+                    <fs type="nonempty-text-phrase-list">
+                      <f name="Head">
+                        <vLabel name="R"/>
+                      </f>
+                      <f name="Tail">
+                        <fs type="empty-text-phrase-list"/>
+                      </f>
+                    </fs>
+                  </f>
+                </fs>
               </f>
             </fs>
           </f>
@@ -153,6 +173,15 @@
                 </fs>
               </f>
             </fs>
+          </f>
+          <f name="Hypotheses">
+
+          </f>
+          <f name="Conclusion">
+
+          </f>
+          <f name="Proof">
+            <symbol value="unanalyzed"/>
           </f>
         </fs>
       </f>
