@@ -131,7 +131,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="rational-element" baseTypes="atomic" xml:id="PROPRATELEM">
+  <fsDecl type="rational" baseTypes="atomic" xml:id="PROPRAT">
     <fDecl name="Argument">
       <vRange>
         <fs type="real-number"/>
@@ -139,10 +139,10 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="irrational-element" baseTypes="atomic" xml:id="PROPIRRELEM">
-    <fDecl name="Argument">
+  <fsDecl type="irrational" baseTypes="atomic negation" xml:id="PROPIRR">
+    <fDecl name="Negation-Feature">
       <vRange>
-        <fs type="real-number"/>
+        <fs type="rational"/>
       </vRange>
     </fDecl>
   </fsDecl>
@@ -155,10 +155,10 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="odd" baseTypes="atomic" xml:id="PROPODD">
-    <fDecl name="Argument">
+  <fsDecl type="odd" baseTypes="atomic negation" xml:id="PROPODD">
+    <fDecl name="Negation-Feature">
       <vRange>
-        <fs type="integer"/>
+        <fs type="even"/>
       </vRange>
     </fDecl>
   </fsDecl>
