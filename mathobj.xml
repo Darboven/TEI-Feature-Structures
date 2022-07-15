@@ -29,6 +29,33 @@
     <!-- ... -->
   </fsDecl>
 
+  <fsDecl type="fully-reduced-fraction" baseTypes="mathobj" xml:id="">
+    <fDecl name="Numerator">
+      <vRange>
+        <fs type="integer"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Denumerator">
+      <vRange>
+        <fs type="integer"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="fully-reduced-fraction-with-textual-realization" baseTypes="mathobj-with-textual-realization" xml:id="">
+    <fDecl name="Text"/>
+    <fDecl name="Numerator">
+      <vRange>
+        <fs type="integer-with-textual-realization"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Denumerator">
+      <vRange>
+        <fs type="integer-with-textual-realization"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
   <fsDecl type="equal-mathobj" xml:id="EQMAO">
     <fDecl name="">
       <vRange>
