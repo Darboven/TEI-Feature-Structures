@@ -7,8 +7,8 @@ root = tk.Tk()
 root.withdraw()
 
 file_path = filedialog.askopenfilename(filetypes=[("XML Files", "*.xml")])
-
 check_file = open(file_path, 'r')
+
 line_count = 0
 parse = []
 
@@ -30,10 +30,13 @@ TODO
 def file_grammar(t, line_nr):
     head, sep, tail = t.partition(' ')
     # print("splitting into:", head, sep, tail)
-    if tail.endswith('/'):  # checking tei grammar here
-        element_rules.allowed(t, line_nr)
+    if t.endswith('/'):  # checking tei grammar here
+        t_clean = t.replace('/', '')
+        print("t_clean: ", t_clean)
+        element_rules.allowed(t_clean, line_nr)
         if len(parse) >= 1:
-            grammar_rules.allowed(parse[-1], head, line_nr)
+            head_clean = head.replace('/', '')
+            grammar_rules.allowed(parse[-1], head_clean, line_nr)
         print("no need to worry about ", t, " closing itself")
     else:
         if head.startswith('/'):
