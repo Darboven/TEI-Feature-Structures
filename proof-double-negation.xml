@@ -5,31 +5,14 @@
     </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
-        <vLabel name="T">
-          <fs type="proposition-list"/>
-        </vLabel>
+        <vLabel name="T"/>
       </vRange>
     </fDecl>
     <fDecl name="Conclusion">
       <vRange>
-        <fs type="implication">
-          <f name="Antecedent">
-            <fs type="negation">
-              <f name="Negation-Feature">
-                <fs type="negation">
-                  <f name="Negation-Feature">
-                    <vLabel name="A">
-                      <fs type="proposition"/>
-                    </vLabel>
-                  </f>
-                </fs>
-              </f>
-            </fs>
-          </f>
-          <f name="Consequent">
-            <vLabel name="A"/>
-          </f>
-        </fs>
+        <vLabel name="A">
+          <fs type="proposition"/>
+        </vLabel>
       </vRange>
     </fDecl>
     <fDecl name="Proof">
@@ -39,7 +22,15 @@
             <vLabel name="T"/>
           </f>
           <f name="Conclusion">
-            <vLabel name="A"/>
+            <fs type="negation">
+              <f name="Negation-Feature">
+                <fs type="negation">
+                  <f name="Negation-Feature">
+                    <vLabel name="A"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
           </f>
         </fs>
       </vRange>
