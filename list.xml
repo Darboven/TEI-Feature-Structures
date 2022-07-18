@@ -29,6 +29,9 @@
     </fsDescr>
   </fsDecl>
 
+  <fsDecl type="empty-proposition-list" baseTypes="proposition-list empty-list">
+  </fsDecl>
+
   <fsDecl type="nonempty-proposition-list" baseTypes="proposition-list nonempty-list" xml:id="NEMPPL">
     <fsDescr>Non-empty list of propositions</fsDescr>
     <fDecl name="Head">
