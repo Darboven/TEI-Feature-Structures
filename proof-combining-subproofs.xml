@@ -5,7 +5,7 @@
     </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
-        <fs type="proposition-list"/>
+        <vLabel name="T"/>
       </vRange>
     </fDecl>
     <fDecl name="Conclusion">
@@ -38,7 +38,14 @@
     <!-- ? -->
     <fDecl name="Proof">
       <vRange>
+        <vColl>
+          <fs type="proved-under-hypotheses">
 
+          </fs>
+          <fs type="proved-under-hypotheses">
+
+          </fs>
+        </vColl>
       </vRange>
     </fDecl>
   </fsDecl>
