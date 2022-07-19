@@ -7,7 +7,7 @@
     </fsDescr>
   </fsDecl>
 
-  <fsDecl type="empty-list" baseTypes="list comma-list text-phrase-list" xml:id="EMPL">
+  <fsDecl type="empty-list" baseTypes="list" xml:id="EMPL">
     <fsDescr>Empty list</fsDescr>
   </fsDecl>
 
@@ -29,7 +29,7 @@
     </fsDescr>
   </fsDecl>
 
-  <fsDecl type="empty-proposition-list" baseTypes="proposition-list empty-list"/>
+  <fsDecl type="empty-proposition-list" baseTypes="proposition-list empty-list" xml:id="EMPPL"/>
 
   <fsDecl type="nonempty-proposition-list" baseTypes="proposition-list nonempty-list" xml:id="NEMPPL">
     <fsDescr>Non-empty list of propositions</fsDescr>
@@ -155,5 +155,6 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
 
 </fsdDecl>
