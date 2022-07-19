@@ -1,8 +1,9 @@
 <fsdDecl>
 
-  <fsDecl type="proposition" baseTypes="text-phrase" xml:id="PROP">
+  <fsDecl type="proposition" xml:id="PROP">
     <fsDescr>General proposition structure (defined by its subtypes)</fsDescr>
   </fsDecl>
+
 
   <fsDecl type="implication" baseTypes="proposition" xml:id="PROPIMPL">
     <fDecl name="Antecedent">
@@ -17,6 +18,11 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="implication-without-textual-realization" baseTypes="implication" xml:id="PROPIMPLWOTR"/>
+
+  <fsDecl type="implication-with-textual-realization" baseTypes="implication text-phrase" xml:id="PROPIMPLTR"/>
+
+
   <fsDecl type="biimplication" baseTypes="proposition" xml:id="PROPBIIMPL">
     <fDecl name="BI-Feature-1">
       <vRange>
@@ -30,6 +36,11 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="biimplication-without-textual-realization" baseTypes="biimplication" xml:id="PROPBIIMPLWOTR"/>
+
+  <fsDecl type="biimplication-with-textual-realization" baseTypes="biimplication text-phrase" xml:id="PROPBIIMPLTR"/>
+
+
   <fsDecl type="negation" baseTypes="proposition" xml:id="PROPNEG">
     <fDecl name="Negation-Feature">
       <vRange>
@@ -37,6 +48,11 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
+  <fsDecl type="negation-without-textual-realization" baseTypes="negation" xml:id="PROPNEGWOTR"/>
+
+  <fsDecl type="negation-with-textual-realization" baseTypes="negation text-phrase" xml:id="PROPNEGTR"/>
+
 
   <fsDecl type="conjunction-list" baseTypes="proposition" xml:id="PROPCONL">
     <fDecl name="CON">
@@ -46,6 +62,11 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="conjunction-list-without-textual-realization" baseTypes="conjunction-list" xml:id="PROPCONLWOTR"/>
+
+  <fsDecl type="conjunction-list-with-textual-realization" baseTypes="conjunction-list text-phrase" xml:id="PROPCONLTR"/>
+
+
   <fsDecl type="disjunction-list" baseTypes="proposition" xml:id="PROPDISL">
     <fDecl name="DIS">
       <vRange>
@@ -53,6 +74,11 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
+  <fsDecl type="disjunction-list-without-textual-realization" baseTypes="disjunction-list" xml:id="PROPDISLWOTR"/>
+
+  <fsDecl type="disjunction-list-with-textual-realization" baseTypes="disjunction-list text-phrase" xml:id="PROPDISLTR"/>
+
 
   <fsDecl type="all-quantification" baseTypes="proposition" xml:id="PROPALQ">
     <fsDescr>All-Quantification.</fsDescr>
@@ -69,6 +95,11 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="all-quantification-without-textual-realization" baseTypes="all-quantification" xml:id="PROPALQWOTR"/>
+
+  <fsDecl type="all-quantification-with-textual-realization" baseTypes="all-quantification text-phrase" xml:id="PROPALQTR"/>
+
+
   <fsDecl type="exists-quantification" baseTypes="proposition" xml:id="PROPEXQ">
     <fsDescr>Exists-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
@@ -83,6 +114,10 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
+  <fsDecl type="exists-quantification-without-textual-realization" baseTypes="exists-quantification" xml:id="PROPEXQWOTR"/>
+
+  <fsDecl type="exists-quantification-with-textual-realization" baseTypes="exists-quantification text-phrase" xml:id="PROPEXQTR"/>
 
 
   <fsDecl type="atomic" baseTypes="proposition" xml:id="PROPATOM">
@@ -102,7 +137,10 @@
     </fDecl>
   </fsDecl>
 
-  <!-- ... -->
+  <fsDecl type="equality-without-textual-realization" baseTypes="equality" xml:id="PROPEQUALWOTR"/>
+
+  <fsDecl type="equality-with-textual-realization" baseTypes="equality text-phrase" xml:id="PROPEQUALTR"/>
+
 
   <fsDecl type="subset" baseTypes="atomic" xml:id="PROPSUB">
     <fDecl name="Subset">
@@ -116,6 +154,11 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
+  <fsDecl type="subset-without-textual-realization" baseTypes="subset" xml:id="PROPSUBWOTR"/>
+
+  <fsDecl type="subset-with-textual-realization" baseTypes="subset text-phrase" xml:id="PROPSUBTR"/>
+
 
   <fsDecl type="element" baseTypes="atomic" xml:id="PROPELEM">
     <fDecl name="Element">
@@ -131,6 +174,11 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="element-without-textual-realization" baseTypes="element" xml:id="PROPELEMWOTR"/>
+
+  <fsDecl type="element-with-textual-realization" baseTypes="element text-phrase" xml:id="PROPELEMTR"/>
+
+
   <fsDecl type="rational" baseTypes="atomic" xml:id="PROPRAT">
     <fDecl name="Argument">
       <vRange>
@@ -138,6 +186,11 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
+  <fsDecl type="rational-without-textual-realization" baseTypes="rational" xml:id="PROPRATWOTR"/>
+
+  <fsDecl type="rational-with-textual-realization" baseTypes="rational text-phrase" xml:id="PROPRATTR"/>
+
 
   <fsDecl type="irrational" baseTypes="atomic negation" xml:id="PROPIRR">
     <fDecl name="Negation-Feature">
@@ -147,6 +200,11 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="irrational-without-textual-realization" baseTypes="irrational" xml:id="PROPIRRWOTR"/>
+
+  <fsDecl type="irrational-with-textual-realization" baseTypes="irrational text-phrase" xml:id="PROPIRRTR"/>
+
+
   <fsDecl type="even" baseTypes="atomic" xml:id="PROPEVEN">
     <fDecl name="Argument">
       <vRange>
@@ -155,6 +213,11 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="even-without-textual-realization" baseTypes="even" xml:id="PROPEVENWOTR"/>
+
+  <fsDecl type="even-with-textual-realization" baseTypes="even text-phrase" xml:id="PROPEVENTR"/>
+
+
   <fsDecl type="odd" baseTypes="atomic negation" xml:id="PROPODD">
     <fDecl name="Negation-Feature">
       <vRange>
@@ -162,5 +225,10 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
+  <fsDecl type="odd-without-textual-realization" baseTypes="odd" xml:id="PROPODDWOTR"/>
+
+  <fsDecl type="odd-with-textual-realization" baseTypes="odd text-phrase" xml:id="PROPODDTR"/>
+
 
 </fsdDecl>

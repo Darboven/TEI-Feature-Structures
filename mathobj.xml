@@ -3,33 +3,31 @@
     <fsDescr>General mathobj structure (defined by its subtypes)</fsDescr>
   </fsDecl>
 
-  <fsDecl type="mathobj-with-textual-realization" baseTypes="mathobj text-phrase" xml:id="MAOTR">
-    <fDecl name="Text">
-      <!-- ... -->
-    </fDecl>
-  </fsDecl>
 
-  <fsDecl type="arbitrary-mathobj" baseTypes="mathobj-with-textual-realization" xml:id="ARMAO">
+  <fsDecl type="arbitrary-mathobj" baseTypes="mathobj" xml:id="ARMAO">
     <!-- Variablencharakter, keine interne Struktur -->
   </fsDecl>
+
 
   <fsDecl type="integer" baseTypes="mathobj" xml:id="INTMAO">
     <!-- ... -->
   </fsDecl>
 
-  <fsDecl type="integer-with-textual-realization" baseTypes="mathobj-with-textual-realization" xml:id="INTTRMAO">
-    <!-- ... -->
-  </fsDecl>
+  <fsDecl type="integer-without-texual-realization" baseTypes="integer" xml:id="INTMAOWOTR"/>
+
+  <fsDecl type="integer-with-textual-realization" baseTypes="integer text-phrase" xml:id="INTMAOTR"/>
+
 
   <fsDecl type="real-number" baseTypes="mathobj" xml:id="RNMAO">
     <!-- ... -->
   </fsDecl>
 
-  <fsDecl type="real-number-with-textual-realization" baseTypes="mathobj-with-textual-realization" xml:id="RNTRMAO">
-    <!-- ... -->
-  </fsDecl>
+  <fsDecl type="real-number-without-textual-realization" baseTypes="real-number" xml:id="RNMAOWOTR"/>
 
-  <fsDecl type="fully-reduced-fraction" baseTypes="mathobj" xml:id="">
+  <fsDecl type="real-number-with-textual-realization" baseTypes="real-number text-phrase" xml:id="RNMAOTR"/>
+
+
+  <fsDecl type="fully-reduced-fraction" baseTypes="mathobj" xml:id="FRFMAO">
     <fDecl name="Numerator">
       <vRange>
         <fs type="integer"/>
@@ -42,22 +40,13 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="fully-reduced-fraction-with-textual-realization" baseTypes="mathobj-with-textual-realization" xml:id="">
-    <fDecl name="Text"/>
-    <fDecl name="Numerator">
-      <vRange>
-        <fs type="integer-with-textual-realization"/>
-      </vRange>
-    </fDecl>
-    <fDecl name="Denumerator">
-      <vRange>
-        <fs type="integer-with-textual-realization"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
+  <fsDecl type="fully-reduced-fraction-without-textual-realization" baseTypes="fully-reduced-fraction" xml:id="FRFMAOWOTR"/>
+
+  <fsDecl type="fully-reduced-fraction-with-textual-realization" baseTypes="fully-reduced-fraction text-phrase" xml:id="FRFMAOTR"/>
+
 
   <fsDecl type="equal-mathobj" xml:id="EQMAO">
-    <fDecl name="">
+    <fDecl name="Equal">
       <vRange>
         <fs type="function-application">
           <f name="Function">
@@ -78,5 +67,10 @@
       </vRange>
     </fDecl>
   </fsDecl>
+
+  <fsDecl type="equal-mathobj-without-textual-realization" baseTypes="equal-mathobj" xml:id="EQMAOWOTR"/>
+
+  <fsDecl type="equal-mathobj-with-textual-realization" baseTypes="equal-mathobj text-phrase" xml:id="EQMAOTR"/>
+
 
 </fsdDecl>

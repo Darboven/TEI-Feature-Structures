@@ -29,8 +29,7 @@
     </fsDescr>
   </fsDecl>
 
-  <fsDecl type="empty-proposition-list" baseTypes="proposition-list empty-list">
-  </fsDecl>
+  <fsDecl type="empty-proposition-list" baseTypes="proposition-list empty-list"/>
 
   <fsDecl type="nonempty-proposition-list" baseTypes="proposition-list nonempty-list" xml:id="NEMPPL">
     <fsDescr>Non-empty list of propositions</fsDescr>
@@ -47,7 +46,7 @@
   </fsDecl>
 
 
-  <fsDecl type="list-with-spec-element" baseTypes="nonempty-list">
+  <fsDecl type="list-with-spec-element" baseTypes="nonempty-list" xml:id="LWSE">
     <fsDescr>
       List that contains a specific element
       (defined by its subtypes list-with-spec-element-initially and
@@ -56,7 +55,7 @@
     <fDecl name="Element"/>
   </fsDecl>
 
-  <fsDecl type="list-with-spec-element-initially" baseTypes="list-with-spec-element">
+  <fsDecl type="list-with-spec-element-initially" baseTypes="list-with-spec-element" xml:id="LWSEI">
     <fsDescr>Part of the List with the specific Element</fsDescr>
     <fDecl name="Element">
       <vRange>
@@ -70,7 +69,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="list-with-spec-element-non-initially" baseTypes="list-with-spec-element">
+  <fsDecl type="list-with-spec-element-non-initially" baseTypes="list-with-spec-element" xml:id="LWSENI">
     <fDecl name="Element">
       <vRange>
         <vLabel name="element"/>
@@ -87,17 +86,22 @@
     </fDecl>
   </fsDecl>
 
-<!-- ? -->
 
-  <fsDecl type="sublist" baseTypes="list">
+  <fsDecl type="proposition-list-spec-element-initially" baseTypes="proposition-list list-with-spec-element-initially" xml:id="PLWSEI"/>
+
+  <fsDecl type="proposition-list-spec-element-non-initially" baseTypes="proposition-list list-with-spec-element-non-initially" xml:id="PLWSENI"/>
+
+
+
+  <fsDecl type="sublist" baseTypes="list" xml:id="SUBL">
     <fsDescr>List that is a sublist of a specific other list named Superlist (defined by its subtypes empty-sublist and nonempty-sublist)</fsDescr>
     <fDecl name="Superlist"/>
   </fsDecl>
 
-  <fsDecl type="empty-sublist" baseTypes="sublist empty-list">
+  <fsDecl type="empty-sublist" baseTypes="sublist empty-list" xml:id="EMPSUBL">
   </fsDecl>
 
-  <fsDecl type="nonempty-sublist" baseTypes="sublist nonempty-list">
+  <fsDecl type="nonempty-sublist" baseTypes="sublist nonempty-list" xml:id="NEMPSUBL">
     <fDecl name="SuperList">
       <vRange>
         <vLabel name="superlist">
