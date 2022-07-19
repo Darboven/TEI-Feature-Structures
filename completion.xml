@@ -6,13 +6,13 @@
   <fsdLink type="comma-list-comma" target="comma-list.xml#COMLC1"/>
   <fsdLink type="comma-list-end" target="comma-list.xml#COMLEND"/>
 
-  <fsdLink type="list" target="list-tei-fsdecl.xml#LIST"/>
-  <fsdLink type="empty-list" target="list-tei-fsdecl.xml#EMPL"/>
-  <fsdLink type="nonempty-list" target="list-tei-fsdecl.xml#NEMPL"/>
-  <fsdLink type="proposition-list" target="list-tei-fsdecl.xml#PLIST"/>
-  <fsdLink type="nonempty-proposition-list" target="list-tei-fsdecl.xml#NEMPPL"/>
+  <fsdLink type="list" target="list.xml#LIST"/>
+  <fsdLink type="empty-list" target="list.xml#EMPL"/>
+  <fsdLink type="nonempty-list" target="list.xml#NEMPL"/>
+  <fsdLink type="proposition-list" target="list.xml#PLIST"/>
+  <fsdLink type="nonempty-proposition-list" target="list.xml#NEMPPL"/>
   <!-- not all list fsdecl included -->
-  <fsdLink type="equivalent-list-constraint" target="list-tei-fsdecl.xml#EQLC"/>
+  <fsdLink type="equivalent-list-constraint" target="list.xml#EQLC"/>
 
   <fsdLink type="mathobj-list" target="mathobj-list.xml#MAOL"/>
   <fsdLink type="empty-mathobj-list" target="mathobj-list.xml#EMPMAOL"/>
@@ -21,11 +21,19 @@
   <fsdLink type="more-than-one-mathobj-list" target="mathobj-list.xml#MEMPMAOL"/>
 
   <fsdLink type="mathobj" target="mathobj.xml#MAO"/>
-  <fsdLink type="mathobj-with-textual-realization" target="mathobj.xml#MAOTR"/>
   <fsdLink type="arbitrary-mathobj" target="mathobj.xml#ARMAO"/>
   <fsdLink type="integer" target="mathobj.xml#INTMAO"/>
+  <fsdLink type="integer-without-textual-realization" target="mathobj.xml#INTMAOWOTR"/>
+  <fsdLink type="integer-with-textual-realization" target="mathobj.xml#INTMAOTR"/>
   <fsdLink type="real-number" target="mathobj.xml#RNMAO"/>
+  <fsdLink type="real-number-without-textual-realization" target="mathobj.xml#RNMAOWOTR"/>
+  <fsdLink type="real-number-with-textual-realization" target="mathobj.xml#RNMAOTR"/>
+  <fsdLink type="fully-reduced-fraction" target="mathobj.xml#FRFMAO"/>
+  <fsdLink type="fully-reduced-fraction-without-textual-realization" target="mathobj.xml#FRFMAOWOTR"/>
+  <fsdLink type="fully-reduced-fraction-with-textual-realization" target="mathobj.xml#FRFMAOTR"/>
   <fsdLink type="equal-mathobj" target="mathobj.xml#EQMAO"/>
+  <fsdLink type="equal-mathobj-without-textual-realization" target="mathobj.xml#EQMAOWOTR"/>
+  <fsdLink type="equal-mathobj-with-textual-realization" target="mathobj.xml#EQMAOTR"/>
 
   <fsdLink type="modus-ponens" target="modusponens-tei-fsdecl#MP"/>
 
@@ -41,22 +49,50 @@
 
   <fsdLink type="proof-subset" target="proof-subset.xml#PSUB"/>
 
-  <fsdLink type="proposition" target="proposition-tei-fsdecl.xml#PROP"/>
-  <fsdLink type="implication" target="proposition-tei-fsdecl.xml#PROPIMPL"/>
-  <fsdLink type="biimplication" target="proposition-tei-fsdecl.xml#PROPBIIMPL"/>
-  <fsdLink type="negation" target="proposition-tei-fsdecl.xml#PROPNEG"/>
-  <fsdLink type="conjunction-list" target="proposition-tei-fsdecl.xml#PROPCONL"/>
-  <fsdLink type="disjunction-list" target="proposition-tei-fsdecl.xml#PROPDISL"/>
-  <fsdLink type="all-quantification" target="proposition-tei-fsdecl.xml#PROPALQ"/>
-  <fsdLink type="exists-quantification" target="proposition-tei-fsdecl.xml#PROPEXQ"/>
-  <fsdLink type="atomic" target="proposition-tei-fsdecl.xml#PROPATOM"/>
-  <fsdLink type="equality" target="proposition-tei-fsdecl.xml#PROPEQUAL"/>
-  <fsdLink type="subset" target="proposition-tei-fsdecl.xml#PROPSUB"/>
-  <fsdLink type="element" target="proposition-tei-fsdecl.xml#PROPELEM"/>
-  <fsdLink type="rational" target="proposition-tei-fsdecl.xml#PROPRAT"/>
-  <fsdLink type="irrational" target="proposition-tei-fsdecl.xml#PROPIRR"/>
-  <fsdLink type="even" target="proposition-tei-fsdecl.xml#PROPEVEN"/>
-  <fsdLink type="odd" target="proposition-tei-fsdecl.xml#PROPODD"/>
+  <fsdLink type="proposition" target="proposition.xml#PROP"/>
+  <fsdLink type="implication" target="proposition.xml#PROPIMPL"/>
+  <fsdLink type="implication-without-textual-realization" target="proposition.xml#PROPIMPLWOTR"/>
+  <fsdLink type="implication-with-textual-realization" target="proposition.xml#PROPIMPLTR"/>
+  <fsdLink type="biimplication" target="proposition.xml#PROPBIIMPL"/>
+  <fsdLink type="biimplication-without-textual-realization" target="proposition.xml#PROPBIIMPLWOTR"/>
+  <fsdLink type="biimplication-with-textual-realization" target="proposition.xml#PROPBIIMPLTR"/>
+  <fsdLink type="negation" target="proposition.xml#PROPNEG"/>
+  <fsdLink type="negation-without-textual-realization" target="proposition.xml#PROPNEGWOTR"/>
+  <fsdLink type="negation-with-textual-realization" target="proposition.xml#PROPNEGTR"/>
+  <fsdLink type="conjunction-list" target="proposition.xml#PROPCONL"/>
+  <fsdLink type="concjunction-list-without-textual-realization" target="proposition.xml#PROPCONLWOTR"/>
+  <fsdLink type="conjunction-list-with-textual-realization" target="proposition.xml#PROPCONLTR"/>
+  <fsdLink type="disjunction-list" target="proposition.xml#PROPDISL"/>
+  <fsdLink type="disjunction-list-without-textual-realization" target="proposition.xml#PROPDISLWOTR"/>
+  <fsdLink type="disjunction-list-with-textual-realization" target="proposition.xml#PROPDISLTR"/>
+  <fsdLink type="all-quantification" target="proposition.xml#PROPALQ"/>
+  <fsdLink type="all-quantification-without-textual-realization" target="proposition.xml#PROPALQWOTR"/>
+  <fsdLink type="all-quantification-with-textual-realization" target="proposition.xml#PROPALQTR"/>
+  <fsdLink type="exists-quantification" target="proposition.xml#PROPEXQ"/>
+  <fsdLink type="exists-quantification-without-textual-realization" target="proposition.xml#PROPEXQWOTR"/>
+  <fsdLink type="exists-quantification-with-textual-realization" target="proposition.xml#PROPEXQTR"/>
+  <fsdLink type="atomic" target="proposition.xml#PROPATOM"/>
+  <fsdLink type="equality" target="proposition.xml#PROPEQUAL"/>
+  <fsdLink type="equality-without-textual-realization" target="proposition.xml#PROPEQUALWOTR"/>
+  <fsdLink type="equality-with-textual-realization" target="proposition.xml#PROPEQUALTR"/>
+  <fsdLink type="subset" target="proposition.xml#PROPSUB"/>
+  <fsdLink type="subset-without-textual-realization" target="proposition.xml#PROPSUBWOTR"/>
+  <fsdLink type="subset-with-textual-realization" target="proposition.xml#PROPSUBTR"/>
+  <fsdLink type="element" target="proposition.xml#PROPELEM"/>
+  <fsdLink type="element-without-textual-realization" target="proposition.xml#PROPELEMWOTR"/>
+  <fsdLink type="element-with-textual-realization" target="proposition.xml#PROPELEMTR"/>
+  <fsdLink type="rational" target="proposition.xml#PROPRAT"/>
+  <fsdLink type="rational-without-textual-realization" target="proposition.xml#PROPRATWOTR"/>
+  <fsdLink type="rational-with-textual-realization" target="proposition.xml#PROPRATTR"/>
+  <fsdLink type="irrational" target="proposition.xml#PROPIRR"/>
+  <fsdLink type="irrational-without-textual-realization" target="proposition.xml#PROPIRRWOTR"/>
+  <fsdLink type="irrational-with-textual-realization" target="proposition.xml#PROPIRRTR"/>
+  <fsdLink type="even" target="proposition.xml#PROPEVEN"/>
+  <fsdLink type="even-without-textual-realization" target="proposition.xml#PROPEVENWOTR"/>
+  <fsdLink type="even-with-textual-realization" target="proposition.xml#PROPEVENTR"/>
+  <fsdLink type="odd" target="proposition.xml#PROPODD"/>
+  <fsdLink type="odd-without-textual-realization" target="proposition.xml#PROPODDWOTR"/>
+  <fsdLink type="odd-with-textual-realization" target="proposition.xml#PROPODDTR"/>
 
   <fsdLink type="proved-under-hypotheses" target="proved-under-hypotheses.xml#PUH"/>
 
@@ -74,5 +110,5 @@
   <fsdLink type="var-equals-object-proposition-list" target="var-equals-proposition-list.xml#VEOPROPL"/>
   <fsdLink type="empty-var-equals-object-proposition-list" target="var-equals-proposition-list.xml#EMPVEOPROPL"/>
   <fsdLink type="nonempty-var-equals-object-proposition-list" target="var-equals-proposition-list.xml#NEMPVEOPROPL"/>
-  
+
 </fsdDecl>
