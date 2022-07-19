@@ -35,15 +35,25 @@
         </fs>
       </vRange>
     </fDecl>
-    <!-- ? -->
     <fDecl name="Proof">
       <vRange>
-        <vColl>
+        <vColl org="set">
           <fs type="proved-under-hypotheses">
-
+            <f name="Hypotheses">
+              <vLabel name="T"/>
+            </f>
+            <f name="Conclusion">
+              <vLabel name="P"/>
+            </f>
           </fs>
           <fs type="proved-under-hypotheses">
-
+            <fs type="proved-under-hypotheses">
+              <f name="Hypotheses">
+                <vLabel name="T"/>
+              </f>
+              <f name="Conclusion">
+                <vLabel name="Q"/>
+              </f>
           </fs>
         </vColl>
       </vRange>
