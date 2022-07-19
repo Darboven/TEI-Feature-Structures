@@ -103,6 +103,7 @@
   <fsdLink type="text-phrase" target="text-phrase.xml#TP"/>
   <fsdLink type="text-phrase-list" target="text-phrase.xml#TPL"/>
   <fsdLink type="nonempty-text-phrase-list" target="text-phrase.xml#NEMPTPL"/>
+  <fsdLink type="empty-text-phrase-list" target="text-phrase.xml#EMPTPL"/>
   <fsdLink type="variable-text-phrase" target="text-phrase.xml#VARTP"/>
 
   <fsdLink type="transitivity" target="transitivity-tei-fsdecl.xml#PTRANS"/>

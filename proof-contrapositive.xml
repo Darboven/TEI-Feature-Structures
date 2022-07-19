@@ -29,7 +29,7 @@
                     </vLabel>
                   </f>
                   <f name="Tail">
-                    <fs type="empty-list"/>
+                    <fs type="empty-text-phrase-list"/>
                   </f>
                 </fs>
               </f>

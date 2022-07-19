@@ -29,6 +29,9 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="empty-text-phrase-list" baseTypes="text-phrase-list empty-list" xml:id="EMPTPL"/>
+
+
   <fsDecl type="variable-text-phrase" baseTypes="text-phrase" xml:id="VARTP">
     <fDecl name="Text">
       <vRange>
