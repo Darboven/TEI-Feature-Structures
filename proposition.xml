@@ -119,12 +119,7 @@
 
   <fsDecl type="exists-quantification-with-textual-realization" baseTypes="exists-quantification text-phrase" xml:id="PROPEXQTR"/>
 
-
-  <fsDecl type="atomic" baseTypes="proposition" xml:id="PROPATOM">
-    <fsDescr>General atomic structure</fsDescr>
-  </fsDecl>
-
-  <fsDecl type="equality" baseTypes="atomic" xml:id="PROPEQUAL">
+  <fsDecl type="equality" baseTypes="proposition" xml:id="PROPEQUAL">
     <fDecl name="LHS">
       <vRange>
         <fs type="mathobj"/>
@@ -142,7 +137,7 @@
   <fsDecl type="equality-with-textual-realization" baseTypes="equality text-phrase" xml:id="PROPEQUALTR"/>
 
 
-  <fsDecl type="subset" baseTypes="atomic" xml:id="PROPSUB">
+  <fsDecl type="subset" baseTypes="proposition" xml:id="PROPSUB">
     <fDecl name="Subset">
       <vRange>
         <fs type="set"/>
@@ -160,7 +155,7 @@
   <fsDecl type="subset-with-textual-realization" baseTypes="subset text-phrase" xml:id="PROPSUBTR"/>
 
 
-  <fsDecl type="element" baseTypes="atomic" xml:id="PROPELEM">
+  <fsDecl type="element" baseTypes="proposition" xml:id="PROPELEM">
     <fDecl name="Element">
       <vRange>
         <fs type="mathobj"/>
@@ -179,7 +174,7 @@
   <fsDecl type="element-with-textual-realization" baseTypes="element text-phrase" xml:id="PROPELEMTR"/>
 
 
-  <fsDecl type="rational" baseTypes="atomic" xml:id="PROPRAT">
+  <fsDecl type="rational" baseTypes="proposition" xml:id="PROPRAT">
     <fDecl name="Argument">
       <vRange>
         <fs type="real-number"/>
@@ -192,7 +187,7 @@
   <fsDecl type="rational-with-textual-realization" baseTypes="rational text-phrase" xml:id="PROPRATTR"/>
 
 
-  <fsDecl type="irrational" baseTypes="atomic negation" xml:id="PROPIRR">
+  <fsDecl type="irrational" baseTypes="proposition negation" xml:id="PROPIRR">
     <fDecl name="Negation-Feature">
       <vRange>
         <fs type="rational"/>
@@ -205,7 +200,7 @@
   <fsDecl type="irrational-with-textual-realization" baseTypes="irrational text-phrase" xml:id="PROPIRRTR"/>
 
 
-  <fsDecl type="even" baseTypes="atomic" xml:id="PROPEVEN">
+  <fsDecl type="even" baseTypes="proposition" xml:id="PROPEVEN">
     <fDecl name="Argument">
       <vRange>
         <fs type="integer"/>
@@ -218,7 +213,7 @@
   <fsDecl type="even-with-textual-realization" baseTypes="even text-phrase" xml:id="PROPEVENTR"/>
 
 
-  <fsDecl type="odd" baseTypes="atomic negation" xml:id="PROPODD">
+  <fsDecl type="odd" baseTypes="proposition negation" xml:id="PROPODD">
     <fDecl name="Negation-Feature">
       <vRange>
         <fs type="even"/>
