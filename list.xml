@@ -46,6 +46,35 @@
   </fsDecl>
 
 
+  <fsDecl type="proof-list" baseTypes="list" xml:id=""/>
+
+  <fsDecl type="empty-proof-list" baseTypes="proof-list empty-list" xml:id=""/>
+
+  <fsDecl type="nonempty-proof-list" baseTypes="proof-list nonempty-list" xml:id="">
+    <fsDescr>Non-empty list of proofs</fsDescr>
+    <fDecl name="Proved-Feature">
+      <vRange>
+        <fs type="proposition"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Open-Feature">
+      <vRange>
+        <fs type="list"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Head">
+      <vRange>
+        <fs type="proved-under-hypotheses"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="proof-list"/>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
   <fsDecl type="list-with-spec-element" baseTypes="nonempty-list" xml:id="LWSE">
     <fsDescr>
       List that contains a specific element
