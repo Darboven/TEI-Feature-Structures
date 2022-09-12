@@ -37,7 +37,7 @@
     </fDecl>
     <fDecl name="Proof">
       <vRange>
-        <vColl org="set">
+        <vColl org="list">
           <fs type="proved-under-hypotheses">
             <f name="Hypotheses">
               <vLabel name="T"/>
@@ -47,13 +47,12 @@
             </f>
           </fs>
           <fs type="proved-under-hypotheses">
-            <fs type="proved-under-hypotheses">
-              <f name="Hypotheses">
-                <vLabel name="T"/>
-              </f>
-              <f name="Conclusion">
-                <vLabel name="Q"/>
-              </f>
+            <f name="Hypotheses">
+              <vLabel name="T"/>
+            </f>
+            <f name="Conclusion">
+              <vLabel name="Q"/>
+            </f>
           </fs>
         </vColl>
       </vRange>

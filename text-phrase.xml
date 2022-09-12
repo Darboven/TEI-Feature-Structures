@@ -4,7 +4,7 @@
     <fDecl name="Text">
       <vRange>
         <vAlt>
-          <symbol value="string"/>
+          <symbol value="string"/><!-- symbolizes any possible text -->
           <fs type="text-phrase-list"/>
         </vAlt>
       </vRange>
@@ -12,19 +12,7 @@
   </fsDecl>
 
 
-  <!-- NEW -->
-  <fsDecl type="text-phrase">
-  </fsDecl>
-
-  <fsDecl type="text-phrase-general" baseTypes="text-phrase">
-    <fDecl name="Text">
-      <vRange>
-        <!-- any string -->
-      </vRange>
-    </fDecl>
-  </fsDecl>
-  <!-- in nonempty-text-phrase-list: <vAlt> text-phrase-general | nonempty-text-phrase-list </vAlt> -->
-  <!-- NEW -->
+  <fsDecl type="text-phrase-leaf" baseTypes="text-phrase" ... />
 
 
   <fsDecl type="text-phrase-list" baseTypes="list" xml:id="TPL">
