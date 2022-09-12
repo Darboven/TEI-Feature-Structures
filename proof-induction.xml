@@ -1,0 +1,128 @@
+<fsdDecl>
+  <fsDecl type="proof-induction" baseTypes="proved-under-hypotheses" xml:id="PDIR">
+    <fsDescr>Proof by Induction for natural numbers</fsDescr>
+    <fDecl name="Textual-Realization">
+      <vRange>
+        <fs type="text-phrase">
+          <f name="Text">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase">
+                  <f name="Text">
+                    <vAlt>
+                      <string>we will prove this with mathematical induction </string>
+                      <string>the proof is induction on </string>
+                      <string>we will prove by induction that </string>
+                    </vAlt>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <!-- ... -->
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+
+    <fDecl name="Hypotheses">
+      <vRange>
+        <vLabel name="T">
+          <fs type="proposition-list"/>
+        </vLabel>
+      </vRange>
+    </fDecl>
+
+    <fDecl name="Conclusion">
+      <vRange>
+        <fs type="all-quantification">
+          <f name="Quantified-Variable">
+            <vLabel name="n"/>
+          </f>
+          <f name="Quantified-Proposition">
+            <vLabel name="s"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+
+    <fDecl name="Proof">
+      <vRange>
+        <fs type="induction">
+          <f name="Base-Case">
+            <fs type="proved-under-hypotheses">
+              <f name="Hypotheses">
+                <vLabel name="T"/>
+              </f>
+              <f name="Conclusion">
+                <fs type="implication">
+                  <f name="Antecedent">
+                    <fs type="equality">
+                      <f name="LHS">
+                        <vLabel name="n"/>
+                      </f>
+                      <f name="RHS">
+                        <!-- smallest provable proposition -->
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Consequent">
+                    <vLabel name="s"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+          <f name="Induction-Hypotheses">
+            <vLabel name="IH">
+              <fs type="implication">
+                <f name="Antecedent">
+                  <!--
+                  not suitable: mathobj vs proposition ?
+                  ugly fix: equality: n = n
+                  -->
+                </f>
+                <f name="Consequent">
+                  <vLabel name="s"/>
+                </f>
+              </fs>
+            </vLabel>
+          </f>
+          <f name="Induction-Step">
+            <fs type="proved-under-hypotheses">
+              <f name="Hypotheses">
+                <vLabel name="T"/>
+              </f>
+              <f name="Conclusion">
+                <fs type="implication">
+                  <f name="Antecedent">
+                    <vLabel name="IH"/>
+                  </f>
+                  <f name="Consequent">
+                    <fs type="implication">
+                      <f name="Antecedent">
+                        <fs type="equality">
+                          <f name="LHS">
+                            <vLabel name="n"/>
+                          </f>
+                          <f name="RHS">
+                            <!-- successor of n -->
+                          </f>
+                        </fs>
+                      </f>
+                      <f name="Consequent">
+                        <vLabel name="s"/>
+                      </f>
+                    </fs>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+
+  </fsDecl>
+</fsdDecl>
