@@ -119,6 +119,7 @@
 
   <fsDecl type="exists-quantification-with-textual-realization" baseTypes="exists-quantification text-phrase" xml:id="PROPEXQTR"/>
 
+
   <fsDecl type="equality" baseTypes="proposition" xml:id="PROPEQUAL">
     <fDecl name="LHS">
       <vRange>
@@ -224,6 +225,32 @@
   <fsDecl type="odd-without-textual-realization" baseTypes="odd" xml:id="PROPODDWOTR"/>
 
   <fsDecl type="odd-with-textual-realization" baseTypes="odd text-phrase" xml:id="PROPODDTR"/>
+
+
+  <fsDecl type="greater-equal" baseTypes="proposition" xml:id="PROPGREQ">
+    <fDecl name="Greater">
+      <vRange>
+        <vAlt>
+          <fs type="natural-number"/>
+          <fs type="integer"/>
+          <fs type="real-number"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+    <fDecl name="Lesser">
+      <vRange>
+        <vAlt>
+          <fs type="natural-number"/>
+          <fs type="integer"/>
+          <fs type="real-number"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="greater-equal-without-textual-realization" baseTypes="greater-equal" xml:id="PROPGREQWOTR"/>
+
+  <fsDecl type="greater-equal-with-textual-realization" baseTypes="greater-equal text-phrase" xml:id="PROPGREQTR"/>
 
 
 </fsdDecl>
