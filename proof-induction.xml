@@ -1,26 +1,221 @@
 <fsdDecl>
-  <fsDecl type="proof-induction" baseTypes="proved-under-hypotheses" xml:id="PDIR">
+
+  <fsDecl type="induction" xml:id="IND">
+    <fDecl name="Variable">
+      <vRange>
+        <vLabel name="n"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="First-Element">
+      <vRange>
+        <vLabel name="m"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Statement">
+      <vRange>
+        <vLabel name="s"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Hypotheses">
+      <vRange>
+        <vLabel name="T"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Base-Case">
+      <vRange>
+        <fs type="proved-under-hypotheses">
+          <f name="Textual-Realization">
+            <fs type="text-phrase">
+              <f name="Text">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <fs type="text-phrase">
+                      <f name="Text">
+                        <string>Base case: </string>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-text-phrase-list"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+          <f name="Hypotheses">
+            <vLabel name="T"/>
+          </f>
+          <f name="Conclusion">
+            <fs type="implication">
+              <f name="Antecedent">
+                <fs type="equality">
+                  <f name="LHS">
+                    <vLabel name="n"/>
+                  </f>
+                  <f name="RHS">
+                    <vLabel name="m"/>
+                  </f>
+                </fs>
+              </f>
+              <f name="Consequent">
+                <vLabel name="s"/>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Induction-Hypotheses">
+      <vRange>
+        <vLabel name="IH">
+          <fs type="implication">
+            <f name="Antecedent">
+              <fs type="equality">
+                <f name="LHS">
+                  <vLabel name="n"/>
+                </f>
+                <f name="RHS">
+                  <vLabel name="k"/>
+                </f>
+              </fs>
+            </f>
+            <f name="Consequent">
+              <vLabel name="s"/>
+            </f>
+          </fs>
+        </vLabel>
+      </vRange>
+    </fDecl>
+    <fDecl name="Induction-Step">
+      <vRange>
+        <fs type="proved-under-hypotheses">
+          <f name="Textual-Realization">
+            <fs type="text-phrase">
+              <f name="Text">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <fs type="text-phrase">
+                      <f name="Text">
+                        <string>Induction step: </string>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-text-phrase-list"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+          <f name="Hypotheses">
+            <fs type="proposition-list">
+              <f name="Head">
+                <vLabel name="IH"/>
+              </f>
+              <f name="Tail">
+                <vLabel name="T"/>
+              </f>
+            </fs>
+          </f>
+          <f name="Conclusion">
+            <fs type="implication">
+              <f name="Antecedent">
+                <vLabel name="IH"/>
+              </f>
+              <f name="Consequent">
+                <fs type="implication">
+                  <f name="Antecedent">
+                    <fs type="equality">
+                      <f name="LHS">
+                        <vLabel name="n"/>
+                      </f>
+                      <f name="RHS">
+                        <fs type="successor">
+                          <f name="Argument">
+                            <vLabel name="k"/>
+                          </f>
+                        </fs>
+                      </f>
+                    </fs>
+                  </f>
+                  <f name="Consequent">
+                    <vLabel name="s"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+
+  <fsDecl type="proof-induction" baseTypes="proved-under-hypotheses" xml:id="PIND">
     <fsDescr>Proof by Induction for natural numbers</fsDescr>
     <fDecl name="Textual-Realization">
       <vRange>
         <fs type="text-phrase">
           <f name="Text">
-            <fs type="nonempty-text-phrase-list">
-              <f name="Head">
-                <fs type="text-phrase">
-                  <f name="Text">
-                    <vAlt>
-                      <string>we will prove this with mathematical induction </string>
+            <vAlt>
+              <fs type="nonempty-text-phrase-list">
+                <f name="Head">
+                  <fs type="text-phrase">
+                    <f name="Text">
+                      <string>We will prove this with mathematical induction. </string>
+                    </f>
+                  </fs>
+                </f>
+                <f name="Tail">
+                  <fs type="empty-text-phrase-list"/>
+                </f>
+              </fs>
+              <fs type="nonempty-text-phrase-list">
+                <f name="Head">
+                  <fs type="text-phrase">
+                    <f name="Text">
                       <string>the proof is induction on </string>
+                    </f>
+                  </fs>
+                </f>
+                <f name="Tail">
+                  <fs type="nonempty-text-phrase-list">
+                    <f name="Head">
+                      <fs type="variable-text-phrase">
+                        <f name="Semantics">
+                          <vLabel name="n"/>
+                        </f>
+                      </fs>
+                    </f>
+                    <f name="Tail">
+                      <fs type="empty-text-phrase-list"/>
+                    </f>
+                  </fs>
+                </f>
+              </fs>
+              <fs type="nonempty-text-phrase-list">
+                <f name="Head">
+                  <fs type="text-phrase">
+                    <f name="Text">
                       <string>we will prove by induction that </string>
-                    </vAlt>
+                    </f>
+                  </fs>
+                </f>
+                <f name="Tail">
+                  <f name="Tail">
+                    <fs type="nonempty-text-phrase-list">
+                      <f name="Head">
+                        <vLabel name="s"/>
+                      </f>
+                      <f name="Tail">
+                        <fs type="empty-text-phrase-list"/>
+                      </f>
+                    </fs>
                   </f>
-                </fs>
-              </f>
-              <f name="Tail">
-                <!-- ... -->
-              </f>
-            </fs>
+                </f>
+              </fs>
+            </vAlt>
           </f>
         </fs>
       </vRange>
@@ -47,74 +242,43 @@
       </vRange>
     </fDecl>
 
-    <fDecl name="Proof">
+    <fDecl name="Proof"/>
+
+  </fsDecl>
+
+
+  <fsDecl name="proof-induction-natural" baseTypes="proof-induction" xml:id="PINDNAT">
+    <fDecl name="Conclusion">
       <vRange>
-        <fs type="induction">
-          <f name="Base-Case">
-            <fs type="proved-under-hypotheses">
-              <f name="Hypotheses">
-                <vLabel name="T"/>
-              </f>
-              <f name="Conclusion">
-                <fs type="implication">
-                  <f name="Antecedent">
-                    <fs type="equality">
-                      <f name="LHS">
-                        <vLabel name="n"/>
-                      </f>
-                      <f name="RHS">
-                        <!-- smallest provable proposition -->
-                      </f>
+        <fs type="conjunction-list">
+          <f name="CON">
+            <fs type="nonempty-proposition-list">
+              <f name="Head">
+                <fs type="equality">
+                  <f name="LHS">
+                    <vLabel name="m"/>
+                  </f>
+                  <f name="RHS">
+                    <fs type="natural-number">
+                      <numeric value="1"/>
                     </fs>
-                  </f>
-                  <f name="Consequent">
-                    <vLabel name="s"/>
-                  </f>
+                  </fs>
                 </fs>
               </f>
-            </fs>
-          </f>
-          <f name="Induction-Hypotheses">
-            <vLabel name="IH">
-              <fs type="implication">
-                <f name="Antecedent">
-                  <!--
-                  not suitable: mathobj vs proposition ?
-                  ugly fix: equality: n = n
-                  -->
-                </f>
-                <f name="Consequent">
-                  <vLabel name="s"/>
-                </f>
-              </fs>
-            </vLabel>
-          </f>
-          <f name="Induction-Step">
-            <fs type="proved-under-hypotheses">
-              <f name="Hypotheses">
-                <vLabel name="T"/>
-              </f>
-              <f name="Conclusion">
-                <fs type="implication">
-                  <f name="Antecedent">
-                    <vLabel name="IH"/>
-                  </f>
-                  <f name="Consequent">
-                    <fs type="implication">
-                      <f name="Antecedent">
-                        <fs type="equality">
-                          <f name="LHS">
-                            <vLabel name="n"/>
-                          </f>
-                          <f name="RHS">
-                            <!-- successor of n -->
-                          </f>
-                        </fs>
+              <f name="Tail">
+                <fs type="nonempty-proposition-list">
+                  <f name="Head">
+                    <fs type="all-quantification">
+                      <f name="Quantified-Variable">
+                        <vLabel name="n"/>
                       </f>
-                      <f name="Consequent">
+                      <f name="Quantified-Proposition">
                         <vLabel name="s"/>
                       </f>
                     </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-proposition-list"/>
                   </f>
                 </fs>
               </f>
@@ -123,6 +287,37 @@
         </fs>
       </vRange>
     </fDecl>
-
   </fsDecl>
+
+
+  <fsDecl name="proof-induction-range" baseTypes="proof-induction" xml:id="PINDRAN">
+    <fDecl name="Conclusion">
+      <vRange>
+        <fs type="implication">
+          <f name="Antecedent">
+            <fs type="greater-equal">
+              <f name="Greater">
+                <vLabel name="n"/>
+              </f>
+              <f name="Lesser">
+                <vLabel name="m"/>
+              </f>
+            </fs>
+          </f>
+          <f name="Consequent">
+            <fs type="all-quantification">
+              <f name="Quantified-Variable">
+                <vLabel name="n"/>
+              </f>
+              <f name="Quantified-Proposition">
+                <vLabel name="s"/>
+              </f>
+            </fs>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
 </fsdDecl>
