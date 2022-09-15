@@ -4,7 +4,12 @@
     <fDecl name="Text">
       <vRange>
         <vAlt>
-          <symbol value="string"/><!-- symbolizes any possible text -->
+          <vAlt>
+            <vNot>
+              <string/>
+            </vNot>
+            <string/>
+          </vAlt>
           <fs type="text-phrase-list"/>
         </vAlt>
       </vRange>
