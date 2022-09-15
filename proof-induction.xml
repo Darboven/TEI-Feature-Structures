@@ -24,19 +24,31 @@
     <fDecl name="Base-Case">
       <vRange>
         <fs type="proved-under-hypotheses">
-          <f name="Textual-Realization">
-            <fs type="text-phrase">
               <f name="Text">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
                     <fs type="text-phrase">
                       <f name="Text">
-                        <string>Base case: </string>
+                        <fs type="nonempty-text-phrase-list">
+                          <f name="Head">
+                            <fs type="text-phrase-leaf">
+                              <f name="Text">
+                                <vAlt>
+                                  <string>Base case: </string>
+                                  </string>
+                                </vAlt>
+                              </f>
+                            </fs>
+                          </f>
+                          <f name="Tail">
+                            <fs type="empty-text-phrase-list"/>
+                          </f>
+                        </fs>
                       </f>
                     </fs>
                   </f>
                   <f name="Tail">
-                    <fs type="empty-text-phrase-list"/>
+                    <vLabel name="bc"/>
                   </f>
                 </fs>
               </f>
@@ -62,10 +74,13 @@
               </f>
             </fs>
           </f>
+          <f name="Proof">
+            <vLabel name="bc"/>
+          </f>
         </fs>
       </vRange>
     </fDecl>
-    <fDecl name="Induction-Hypotheses">
+    <fDecl name="Induction-Hypothesis">
       <vRange>
         <vLabel name="IH">
           <fs type="implication">
@@ -89,16 +104,20 @@
     <fDecl name="Induction-Step">
       <vRange>
         <fs type="proved-under-hypotheses">
-          <f name="Textual-Realization">
-            <fs type="text-phrase">
-              <f name="Text">
+          <f name="Text">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase">
+                  <f name="Text">
+                    <string>Induction step: </string>
+                    <string/>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
-                    <fs type="text-phrase">
-                      <f name="Text">
-                        <string>Induction step: </string>
-                      </f>
-                    </fs>
+                    <vLabel name="is"/>
                   </f>
                   <f name="Tail">
                     <fs type="empty-text-phrase-list"/>
@@ -145,6 +164,9 @@
               </f>
             </fs>
           </f>
+          <f name="Proof">
+            <vLabel name="is"/>
+          </f>
         </fs>
       </vRange>
     </fDecl>
@@ -154,16 +176,35 @@
 
   <fsDecl type="proof-induction" baseTypes="proved-under-hypotheses" xml:id="PIND">
     <fsDescr>Proof by Induction for natural numbers</fsDescr>
-    <fDecl name="Textual-Realization">
+    <fDecl name="Text">
       <vRange>
-        <fs type="text-phrase">
-          <f name="Text">
-            <vAlt>
+        <vAlt>
+          <fs type="nonempty-text-phrase-list">
+            <f name="Head">
+              <fs type="text-phrase">
+                <f name="Text">
+                  <string>We will prove this with mathematical induction. </string>
+                </f>
+              </fs>
+            </f>
+            <f name="Tail">
+              <fs type="empty-text-phrase-list"/>
+            </f>
+          </fs>
+          <fs type="nonempty-text-phrase-list">
+            <f name="Head">
+              <fs type="text-phrase">
+                <f name="Text">
+                  <string>the proof is induction on </string>
+                </f>
+              </fs>
+            </f>
+            <f name="Tail">
               <fs type="nonempty-text-phrase-list">
                 <f name="Head">
-                  <fs type="text-phrase">
-                    <f name="Text">
-                      <string>We will prove this with mathematical induction. </string>
+                  <fs type="variable-text-phrase">
+                    <f name="Semantics">
+                      <vLabel name="n"/>
                     </f>
                   </fs>
                 </f>
@@ -171,53 +212,30 @@
                   <fs type="empty-text-phrase-list"/>
                 </f>
               </fs>
-              <fs type="nonempty-text-phrase-list">
-                <f name="Head">
-                  <fs type="text-phrase">
-                    <f name="Text">
-                      <string>the proof is induction on </string>
-                    </f>
-                  </fs>
-                </f>
-                <f name="Tail">
-                  <fs type="nonempty-text-phrase-list">
-                    <f name="Head">
-                      <fs type="variable-text-phrase">
-                        <f name="Semantics">
-                          <vLabel name="n"/>
-                        </f>
-                      </fs>
-                    </f>
-                    <f name="Tail">
-                      <fs type="empty-text-phrase-list"/>
-                    </f>
-                  </fs>
+            </f>
+          </fs>
+          <fs type="nonempty-text-phrase-list">
+            <f name="Head">
+              <fs type="text-phrase">
+                <f name="Text">
+                  <string>we will prove by induction that </string>
                 </f>
               </fs>
-              <fs type="nonempty-text-phrase-list">
-                <f name="Head">
-                  <fs type="text-phrase">
-                    <f name="Text">
-                      <string>we will prove by induction that </string>
-                    </f>
-                  </fs>
-                </f>
-                <f name="Tail">
-                  <f name="Tail">
-                    <fs type="nonempty-text-phrase-list">
-                      <f name="Head">
-                        <vLabel name="s"/>
-                      </f>
-                      <f name="Tail">
-                        <fs type="empty-text-phrase-list"/>
-                      </f>
-                    </fs>
+            </f>
+            <f name="Tail">
+              <f name="Tail">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <vLabel name="s"/>
                   </f>
-                </f>
-              </fs>
-            </vAlt>
-          </f>
-        </fs>
+                  <f name="Tail">
+                    <fs type="empty-text-phrase-list"/>
+                  </f>
+                </fs>
+              </f>
+            </f>
+          </fs>
+        </vAlt>
       </vRange>
     </fDecl>
 
@@ -229,6 +247,31 @@
       </vRange>
     </fDecl>
 
+    <fDecl name="Conclusion"/>
+
+    <fDecl name="Proof"/>
+      <vRange>
+        <fs type="induction">
+          <f name="Variable">
+            <vLabel name="n"/>
+          </f>
+          <f name="First-Element">
+            <vLabel name="m"/>
+          </f>
+          <f name="Statement">
+            <vLabel name="s"/>
+          </f>
+          <f name="Hypotheses">
+            <vLabel name="T"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+
+  </fsDecl>
+
+
+  <fsDecl name="proof-induction-natural" baseTypes="proof-induction" xml:id="PINDNAT">
     <fDecl name="Conclusion">
       <vRange>
         <fs type="all-quantification">
@@ -241,48 +284,11 @@
         </fs>
       </vRange>
     </fDecl>
-
-    <fDecl name="Proof"/>
-
-  </fsDecl>
-
-
-  <fsDecl name="proof-induction-natural" baseTypes="proof-induction" xml:id="PINDNAT">
-    <fDecl name="Conclusion">
+    <fDecl name="Proof">
       <vRange>
-        <fs type="conjunction-list">
-          <f name="CON">
-            <fs type="nonempty-proposition-list">
-              <f name="Head">
-                <fs type="equality">
-                  <f name="LHS">
-                    <vLabel name="m"/>
-                  </f>
-                  <f name="RHS">
-                    <fs type="natural-number">
-                      <numeric value="1"/>
-                    </fs>
-                  </fs>
-                </fs>
-              </f>
-              <f name="Tail">
-                <fs type="nonempty-proposition-list">
-                  <f name="Head">
-                    <fs type="all-quantification">
-                      <f name="Quantified-Variable">
-                        <vLabel name="n"/>
-                      </f>
-                      <f name="Quantified-Proposition">
-                        <vLabel name="s"/>
-                      </f>
-                    </fs>
-                  </f>
-                  <f name="Tail">
-                    <fs type="empty-proposition-list"/>
-                  </f>
-                </fs>
-              </f>
-            </fs>
+        <fs type="induction">
+          <f name="First-Element">
+            <numeric value="1"/>
           </f>
         </fs>
       </vRange>
@@ -293,23 +299,23 @@
   <fsDecl name="proof-induction-range" baseTypes="proof-induction" xml:id="PINDRAN">
     <fDecl name="Conclusion">
       <vRange>
-        <fs type="implication">
-          <f name="Antecedent">
-            <fs type="greater-equal">
-              <f name="Greater">
-                <vLabel name="n"/>
-              </f>
-              <f name="Lesser">
-                <vLabel name="m"/>
-              </f>
-            </fs>
+        <fs type="all-quantification">
+          <f name="Quantified-Variable">
+            <vLabel name="n"/>
           </f>
-          <f name="Consequent">
-            <fs type="all-quantification">
-              <f name="Quantified-Variable">
-                <vLabel name="n"/>
+          <f name="Quantified-Proposition">
+            <fs type="implication">
+              <f name="Antecedent">
+                <fs type="greater-equal">
+                  <f name="Greater">
+                    <vLabel name="n"/>
+                  </f>
+                  <f name="Lesser">
+                    <vLabel name="m"/>
+                  </f>
+                </fs>
               </f>
-              <f name="Quantified-Proposition">
+              <f name="Consequent">
                 <vLabel name="s"/>
               </f>
             </fs>

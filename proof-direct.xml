@@ -1,31 +1,43 @@
 <fsdDecl>
   <fsDecl type="proof-direct" baseTypes="proved-under-hypotheses" xml:id="PDIR">
 
-    <fDecl name="Textual-Realization">
+    <fDecl name="Text">
       <vRange>
-        <fs type="text-phrase">
-          <f name="Text">
-            <fs type="nonempty-text-phrase-list">
-              <f name="Head">
-                <fs type="text-phrase">
-                  <f name="Text">
-                    <vAlt>
-                      <string>suppose </string>
-                      <string>assume </string>
-                      <string>assume that </string>
-                    </vAlt>
-                  </f>
-                </fs>
-              </f>
-              <f name="Tail">
+        <fs type="nonempty-text-phrase-list">
+          <f name="Head">
+            <fs type="text-phrase">
+              <f name="Text">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
-                    <vLabel name="P">
-                      <fs type="proposition"/>
-                    </vLabel>
+                    <fs type="text-phrase-leaf">
+                      <f name="Text">
+                        <vAlt>
+                          <string/>
+                          <string>suppose </string>
+                          <string>assume </string>
+                          <string>assume that </string>
+                        </vAlt>
+                      </f>
+                    </fs>
                   </f>
                   <f name="Tail">
-                    <fs type="empty-text-phrase-list"/>
+                    <fs type="nonempty-text-phrase-list">
+                      <f name="Head">
+                        <vLabel name="P">
+                          <fs type="proposition"/>
+                        </vLabel>
+                      </f>
+                      <f name="Tail">
+                        <fs type="nonempty-text-phrase-list">
+                          <f name="Head">
+                            <vLabel name="proof"/>
+                          </f>
+                          <f name="Tail">
+                            <fs type="empty-text-phrase-list"/>
+                          </f>
+                        </fs>
+                      </f>
+                    </fs>
                   </f>
                 </fs>
               </f>
@@ -60,21 +72,23 @@
 
     <fDecl name="Proof">
       <vRange>
-        <fs type="proved-under-hypotheses">
-          <f name="Hypotheses">
-            <fs type="list">
-              <f name="Head">
-                <vLabel name="P"/>
-              </f>
-              <f name="Tail">
-                <vLabel name="T"/>
-              </f>
-            </fs>
-          </f>
-          <f name="Conclusion">
-            <vLabel name="Q"/>
-          </f>
-        </fs>
+        <vLabel name="proof">
+          <fs type="proved-under-hypotheses">
+            <f name="Hypotheses">
+              <fs type="list">
+                <f name="Head">
+                  <vLabel name="P"/>
+                </f>
+                <f name="Tail">
+                  <vLabel name="T"/>
+                </f>
+              </fs>
+            </f>
+            <f name="Conclusion">
+              <vLabel name="Q"/>
+            </f>
+          </fs>
+        </vLabel>
       </vRange>
     </fDecl>
 

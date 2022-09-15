@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="proved-under-hypotheses" xml:id="PUH">
+  <fsDecl type="proved-under-hypotheses" baseTypes="text-phrase" xml:id="PUH">
     <fsDescr>Most general proof.</fsDescr>
     <fDecl name="Hypotheses">
       <vRange>
