@@ -1,11 +1,11 @@
 <fsdDecl>
   <fsDecl type="proof-add-knowledge" baseTypes="proved-under-hypotheses" xml:id="">
-    <fDecl name="Textual-Realization">
+    <fDecl name="Text">
       <!-- ... -->
     </fDecl>
     <fDecl name="Hypotheses">
       <vRange>
-        <vLabel name="T"/>         
+        <vLabel name="T"/>
       </vRange>
     </fDecl>
     <fDecl name="Conclusion">

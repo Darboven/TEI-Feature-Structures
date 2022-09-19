@@ -5,7 +5,7 @@
       <vRange>
         <fs type="nonempty-text-phrase-list">
           <f name="Head">
-            <fs type="text-phrase">
+            <fs type="text-phrase-leaf">
               <f name="Text">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
@@ -28,18 +28,21 @@
                         </vLabel>
                       </f>
                       <f name="Tail">
-                        <fs type="nonempty-text-phrase-list">
-                          <f name="Head">
-                            <vLabel name="proof"/>
-                          </f>
-                          <f name="Tail">
-                            <fs type="empty-text-phrase-list"/>
-                          </f>
-                        </fs>
+                        <fs type="empty-text-phrase-list"/>
                       </f>
                     </fs>
                   </f>
                 </fs>
+              </f>
+            </fs>
+          </f>
+          <f name="Tail">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <vLabel name="bew"/>
+              </f>
+              <f name="Tail">
+                <fs type="empty-text-phrase-list"/>
               </f>
             </fs>
           </f>
@@ -72,7 +75,7 @@
 
     <fDecl name="Proof">
       <vRange>
-        <vLabel name="proof">
+        <vLabel name="bew">
           <fs type="proved-under-hypotheses">
             <f name="Hypotheses">
               <fs type="list">

@@ -1,6 +1,6 @@
 <fsdDecl>
   <fsDecl type="double-negation" baseTypes="proved-under-hypotheses" xml:id="">
-    <fDecl name="Textual-Realization">
+    <fDecl name="Text">
       <!-- ... -->
     </fDecl>
     <fDecl name="Hypotheses">

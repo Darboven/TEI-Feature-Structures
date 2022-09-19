@@ -24,31 +24,36 @@
     <fDecl name="Base-Case">
       <vRange>
         <fs type="proved-under-hypotheses">
-              <f name="Text">
-                <fs type="nonempty-text-phrase-list">
-                  <f name="Head">
-                    <fs type="text-phrase">
-                      <f name="Text">
-                        <fs type="nonempty-text-phrase-list">
-                          <f name="Head">
-                            <fs type="text-phrase-leaf">
-                              <f name="Text">
-                                <vAlt>
-                                  <string>Base case: </string>
-                                  </string>
-                                </vAlt>
-                              </f>
-                            </fs>
-                          </f>
-                          <f name="Tail">
-                            <fs type="empty-text-phrase-list"/>
+          <f name="Text">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase-leaf">
+                  <f name="Text">
+                    <fs type="nonempty-text-phrase-list">
+                      <f name="Head">
+                        <fs type="text-phrase-leaf">
+                          <f name="Text">
+                            <vAlt>
+                              <string>Base case: </string>
+                              </string>
+                            </vAlt>
                           </f>
                         </fs>
                       </f>
+                      <f name="Tail">
+                        <fs type="empty-text-phrase-list"/>
+                      </f>
                     </fs>
                   </f>
-                  <f name="Tail">
+                </fs>
+              </f>
+              <f name="Tail">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
                     <vLabel name="bc"/>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-text-phrase-list"/>
                   </f>
                 </fs>
               </f>
@@ -107,10 +112,23 @@
           <f name="Text">
             <fs type="nonempty-text-phrase-list">
               <f name="Head">
-                <fs type="text-phrase">
+                <fs type="text-phrase-leaf">
                   <f name="Text">
-                    <string>Induction step: </string>
-                    <string/>
+                    <fs type="nonempty-text-phrase-list">
+                      <f name="Head">
+                        <fs type="text-phrase-leaf">
+                          <f name="Text">
+                            <vAlt>
+                              <string>Induction step: </string>
+                              <string/>
+                            </vAlt>
+                          </f>
+                        </fs>
+                      </f>
+                      <f name="Tail">
+                        <fs type="empty-text-phrase-list"/>
+                      </f>
+                    </fs>
                   </f>
                 </fs>
               </f>

@@ -4,6 +4,7 @@
     <fDecl name="Text">
       <vRange>
         <vAlt>
+          <!-- any string is accepted -->
           <vAlt>
             <vNot>
               <string/>

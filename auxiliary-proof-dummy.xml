@@ -1,32 +1,28 @@
 <fsdDecl>
   <fsDecl type="unanalyzed-proof" baseTypes="proved-under-hypotheses" xml:id="PDUM">
-    <fDecl name="Textual-Realization">
+    <fDecl name="Text">
       <vRange>
-        <fs type="text-phrase">
-          <f name="Text">
+        <fs type="nonempty-text-phrase-list">
+          <f name="Head">
+            <fs type="text-phrase">
+              <f name="Text">
+                <vAlt>
+                  <string>from this it follows that </string>
+                  <string>then </string>
+                  <string/>
+                </vAlt>
+              </f>
+            </fs>
+          </f>
+          <f name="Tail">
             <fs type="nonempty-text-phrase-list">
               <f name="Head">
-                <fs type="text-phrase">
-                  <f name="Text">
-                    <vAlt>
-                      <string>from this it follows that </string>
-                      <string>then </string>
-                      <string/>
-                    </vAlt>
-                  </f>
-                </fs>
+                <vLabel name="P">
+                  <fs type="proposition"/>
+                </vLabel>
               </f>
               <f name="Tail">
-                <fs type="nonempty-text-phrase-list">
-                  <f name="Head">
-                    <vLabel name="P">
-                      <fs type="proposition"/>
-                    </vLabel>
-                  </f>
-                  <f name="Tail">
-                    <fs type="empty-text-phrase-list"/>
-                  </f>
-                </fs>
+                <fs type="empty-text-phrase-list"/>
               </f>
             </fs>
           </f>

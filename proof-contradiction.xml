@@ -1,43 +1,55 @@
 <fsdDecl>
   <fsDecl type="proof-contradiction" baseTypes="proved-under-hypotheses" xml:id="PCTRD">
-    <fDecl name="Textual-Realization">
+    <fDecl name="Text">
       <vRange>
-        <fs type="text-phrase">
-          <f name="Text">
-            <fs type="nonempty-text-phrase-list">
-              <f name="Head">
-                <fs type="text-phrase">
-                  <f name="Text">
-                    <vAlt>
-                      <string>suppose for the sake of contradiction that </string>
-                      <string>for the sake of contradiction, suppose </string>
-                    </vAlt>
+        <fs type="nonempty-text-phrase-list">
+          <f name="Head">
+            <fs type="text-phrase-leaf">
+              <f name="Text">
+                <fs type="nonemty-text-phrase-list">
+                  <f name="Head">
+                    <fs type="text-phrase-leaf">
+                      <vAlt>
+                        <string>suppose for the sake of contradiction that </string>
+                        <string>for the sake of contradiction, suppose </string>
+                      </vAlt>
+                    </fs>
+                  </f>
+                  <f name="Tail">
+                    <fs type="nonempty-text-phrase-list">
+                      <f name="Head">
+                        <vLabel name="negP">
+                          <fs type="negation">
+                            <f name="Negation-Feature">
+                              <vLabel name="P">
+                                <fs type="proposition"/>
+                              </vLabel>
+                            </f>
+                          </fs>
+                        </vLabel>
+                      </f>
+                      <f name="Tail">
+                        <fs type="empty-text-phrase-list"/>
+                      </f>
+                    </fs>
                   </f>
                 </fs>
               </f>
+            </fs>
+          <f name="Tail">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <vLabel name="bew"/>
+              </f>
               <f name="Tail">
-                <fs type="nonempty-text-phrase-list">
-                  <f name="Head">
-                    <vLabel name="negP">
-                      <fs type="negation">
-                        <f name="Negation-Feature">
-                          <vLabel name="P">
-                            <fs type="proposition"/>
-                          </vLabel>
-                        </f>
-                      </fs>
-                    </vLabel>
-                  </f>
-                  <f name="Tail">
-                    <fs type="empty-text-phrase-list"/>
-                  </f>
-                </fs>
+                <fs type="empty-text-phrase-list"/>
               </f>
             </fs>
           </f>
         </fs>
       </vRange>
     </fDecl>
+
     <fDecl name="Hypotheses">
       <vRange>
         <vLabel name="T">
@@ -45,50 +57,54 @@
         </vLabel>
       </vRange>
     </fDecl>
+
     <fDecl name="Conclusion">
       <vRange>
         <vLabel name="P"/>
       </vRange>
     </fDecl>
+
     <fDecl name="Proof">
       <vRange>
-        <fs type="proved-under-hypotheses">
-          <f name="Hypotheses">
-            <fs type="list">
-              <f name="Head">
-                <vLabel name="negP"/>
-              </f>
-              <f name="Tail">
-                <vLabel name="T"/>
-              </f>
-            </fs>
-          </f>
-          <f name="Conclusion">
-            <fs type="conjunction-lists">
-              <f name="CON">
-                <fs type="list">
-                  <f name="Head">
-                    <vLabel name="C"/>
-                  </f>
-                  <f name="Tail">
-                    <fs type="list">
-                      <f name="Head">
-                        <fs type="negation">
-                          <f name="Negation-Feature">
-                            <vLabel name="C"/>
-                          </f>
-                        </fs>
-                      </f>
-                      <f name="Tail">
-                        <fs type="empty-list"/>
-                      </f>
-                    </fs>
-                  </f>
-                </fs>
-              </f>
-            </fs>
-          </f>
-        </fs>
+        <vLabel name="bew">
+          <fs type="proved-under-hypotheses">
+            <f name="Hypotheses">
+              <fs type="list">
+                <f name="Head">
+                  <vLabel name="negP"/>
+                </f>
+                <f name="Tail">
+                  <vLabel name="T"/>
+                </f>
+              </fs>
+            </f>
+            <f name="Conclusion">
+              <fs type="conjunction-lists">
+                <f name="CON">
+                  <fs type="list">
+                    <f name="Head">
+                      <vLabel name="C"/>
+                    </f>
+                    <f name="Tail">
+                      <fs type="list">
+                        <f name="Head">
+                          <fs type="negation">
+                            <f name="Negation-Feature">
+                              <vLabel name="C"/>
+                            </f>
+                          </fs>
+                        </f>
+                        <f name="Tail">
+                          <fs type="empty-list"/>
+                        </f>
+                      </fs>
+                    </f>
+                  </fs>
+                </f>
+              </fs>
+            </f>
+          </fs>
+        </vLabel>
       </vRange>
     </fDecl>
   </fsDecl>
