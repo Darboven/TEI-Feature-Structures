@@ -1,31 +1,44 @@
 <fsdDecl>
   <fsDecl type="proof-using-cases" xml:id="PUC">
 
-    <fDecl name="Textual-Realization">
+    <fDecl name="Text">
       <vRange>
-        <fs type="text-phrase-leaf">
-          <f name="Text">
-            <fs type="nonempty-text-phrase-list">
-              <f name="Head">
-                <fs type="text-phrase-leaf">
-                  <f name="Text">
-                    <vAlt>
-                      <string>suppose </string>
-                      <string>in conditional form, the proposition is as follows </string>
-                    </vAlt>
-                  </f>
-                </fs>
-              </f>
-              <f name="Tail">
+        <fs type="nonempty-text-phrase-list">
+          <f name="Head">
+            <fs type="text-phrase-leaf">
+              <f name="Text">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
-                    <vLabel name="P"/>
+                    <fs type="text-phrase-leaf">
+                      <f name="Text">
+                        <vAlt>
+                          <string>suppose </string>
+                          <string>in conditional form, the proposition is as follows </string>
+                        </vAlt>
+                      </f>
+                    </fs>
                   </f>
                   <f name="Tail">
-                    <fs type="empty-text-phrase-list"/>
+                    <fs type="nonempty-text-phrase-list">
+                      <f name="Head">
+                        <vLabel name="P"/>
+                      </f>
+                      <f name="Tail">
+                        <fs type="empty-text-phrase-list"/>
+                      </f>
+                    </fs>
                   </f>
                 </fs>
               </f>
+            </fs>
+          </f>
+          <f name="Tail">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <vLabel name="bew"/>
+              </f>
+              <f name="Tail">
+                <fs type="empty-text-phrase-list"/>
               </f>
             </fs>
           </f>
@@ -35,56 +48,50 @@
 
     <fDecl name="Hypotheses">
       <vRange>
-        <vLabel name="T"/>
+        <fs type="nonempty-proposition-list">
+          <f name="Head">
+            <fs type="disjunciton-list">
+              <f name="DIS">
+                <fs type="proposition-list-with-spec-element-non-initially">
+                  <f name="Element">
+                    <vLabel name="Pn"/>
+                    <!-- last Element -->
+                  </f>
+                  <f name="Head">
+                    <vLabel name="P1"/>
+                  </f>
+                  <f name="Tail">
+                    <fs type="proposition-list-with-spec-element">
+                      <f name="Element">
+                        <vLabel name="Pn"/>
+                      </f>
+                    </fs>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+          <f name="Tail">
+            <vLabel name="T"/>
+          </f>
+        </fs>
       </vRange>
     </fDecl>
 
     <fDecl name="Conclusion">
       <vRange>
-        <vLabel name="P">
-          <fs name="implication">
-            <f name="Antecedent">
-              <fs type="disjunction-list">
-                <f name="DIS">
-                  <vLabel name="Ps">
-                    <fs type="nonempty-proposition-list">
-                      <f name="Head">
-                        <vLabel name="P1"/>
-                      </f>
-                      <f name="Tail">
-                        <vLabel name="Pr">
-                          <fs type="nonempty-proposition-list">
-                            <f name="Head">
-                              <vLabel name="P2"/>
-                            </f>
-                            <f name="Tail">
-                              <fs type="proposition-list"/>
-                              <!-- P2, P3, ... -->
-                            </f>
-                          </fs>
-                        </vLabel>
-                      </f>
-                    </fs>
-                  </vLabel>
-                </f>
-              </fs>
-            </f>
-            <f name="Consequent">
-              <vLabel name="Q"/>
-            </f>
-          </fs>
-        </vLabel>
+        <vLabel name="Q"/>
       </vRange>
     </fDecl>
 
     <fDecl name="Proof">
       <vRange>
-        <fs type="proof-list"> <!-- nonempty -->
+        <fs type="proof-list-with-spec-element-non-initially">
+          <f name="Element">
+            <vLabel name="Pn"/><!-- last element to prove -->
+          </f>
           <f name="Proved-Feature">
             <vLabel name="Q"/>
-          </f>
-          <f name="Open-Feature">
-            <vLabel name="Ps"/>
           </f>
           <f name="Head">
             <fs type="proved-under-hypotheses">
@@ -104,32 +111,12 @@
             </fs>
           </f>
           <f name="Tail">
-            <fs type="proof-list">
+            <fs type="proof-list-with-spec-element">
+              <f name="Element">
+                <vLabel name="Pn"/>
+              </f>
               <f name="Proved-Feature">
                 <vLabel name="Q"/>
-              </f>
-              <f name="Open-Feature">
-                <vLabel name="Pr"/>
-              </f>
-              <f name="Head">
-                <fs type="proved-under-hypotheses">
-                  <f name="Hypotheses">
-                    <vLabel name="T"/>
-                  </f>
-                  <f name="Conclusion">
-                    <fs type="implication">
-                      <f name="Antecedent">
-                        <vLabel name="P2"/>
-                      </f>
-                      <f name="Consequent">
-                        <vLabel name="Q"/>
-                      </f>
-                    </fs>
-                  </f>
-                </fs>
-              </f>
-              <f name="Tail">
-                <fs type="proof-list"/>
               </f>
             </fs>
           </f>
