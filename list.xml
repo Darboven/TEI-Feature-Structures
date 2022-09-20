@@ -117,14 +117,14 @@
   </fsDecl>
 
 
-  <fsDecl type="proposition-list-spec-element" baseTypes="nonempty-proposition-list list-with-spec-element" xml:id="PROPLWSE"/>
+  <fsDecl type="proposition-list-spec-element" baseTypes="proposition-list list-with-spec-element" xml:id="PROPLWSE"/>
 
   <fsDecl type="proposition-list-spec-element-initially" baseTypes="proposition-list-spec-element list-with-spec-element-initially" xml:id="PROPLWSEI"/>
 
   <fsDecl type="proposition-list-spec-element-non-initially" baseTypes="proposition-list-with-spec-element list-with-spec-element-non-initially" xml:id="PROPLWSENI"/>
 
 
-  <fsDecl type="proof-list-spec-element" baseTypes="nonempty-proof-list list-with-spec-element" xml:id="PLWSE"/>
+  <fsDecl type="proof-list-spec-element" baseTypes="proof-list list-with-spec-element" xml:id="PLWSE"/>
 
   <fsDecl type="proof-list-spec-element-initially" baseTypes="proof-list-spec-element list-with-spec-element-initially" xml:id="PLWSEI"/>
 
