@@ -22,16 +22,16 @@
   </fsDecl>
 
 
-  <fsDecl type="proposition-list" baseTypes="list" xml:id="PLIST">
+  <fsDecl type="proposition-list" baseTypes="list proposition" xml:id="PLIST">
     <fsDescr>
       List of proposition
       (defined by its subtype nonempty-proposition-list)
     </fsDescr>
   </fsDecl>
 
-  <fsDecl type="empty-proposition-list" baseTypes="proposition-list empty-list" xml:id="EMPPL"/>
+  <fsDecl type="empty-proposition-list" baseTypes="proposition-list empty-list" xml:id="EMPPROPL"/>
 
-  <fsDecl type="nonempty-proposition-list" baseTypes="proposition-list nonempty-list" xml:id="NEMPPL">
+  <fsDecl type="nonempty-proposition-list" baseTypes="proposition-list nonempty-list" xml:id="NEMPPROPL">
     <fsDescr>Non-empty list of propositions</fsDescr>
     <fDecl name="Head">
       <vRange>
@@ -55,11 +55,6 @@
     <fDecl name="Proved-Feature">
       <vRange>
         <fs type="proposition"/>
-      </vRange>
-    </fDecl>
-    <fDecl name="Open-Feature">
-      <vRange>
-        <fs type="list"/>
       </vRange>
     </fDecl>
     <fDecl name="Head">
@@ -96,6 +91,11 @@
         <vLabel name="element"/>
       </vRange>
     </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="empty-list"/>
+      </vRange>
+    </fDecl>
   </fsDecl>
 
   <fsDecl type="list-with-spec-element-non-initially" baseTypes="list-with-spec-element" xml:id="LWSENI">
@@ -104,6 +104,7 @@
         <vLabel name="element"/>
       </vRange>
     </fDecl>
+    <fDecl name="Head"/>
     <fDecl name="Tail">
       <vRange>
         <fs type="list-with-spec-element">
@@ -116,10 +117,18 @@
   </fsDecl>
 
 
-  <fsDecl type="proposition-list-spec-element-initially" baseTypes="proposition-list list-with-spec-element-initially" xml:id="PLWSEI"/>
+  <fsDecl type="proposition-list-spec-element" baseTypes="nonempty-proposition-list list-with-spec-element" xml:id="PROPLWSE"/>
 
-  <fsDecl type="proposition-list-spec-element-non-initially" baseTypes="proposition-list list-with-spec-element-non-initially" xml:id="PLWSENI"/>
+  <fsDecl type="proposition-list-spec-element-initially" baseTypes="proposition-list-spec-element list-with-spec-element-initially" xml:id="PROPLWSEI"/>
 
+  <fsDecl type="proposition-list-spec-element-non-initially" baseTypes="proposition-list-with-spec-element list-with-spec-element-non-initially" xml:id="PROPLWSENI"/>
+
+
+  <fsDecl type="proof-list-spec-element" baseTypes="nonempty-proof-list list-with-spec-element" xml:id="PLWSE"/>
+
+  <fsDecl type="proof-list-spec-element-initially" baseTypes="proof-list-spec-element list-with-spec-element-initially" xml:id="PLWSEI"/>
+
+  <fsDecl type="proof-list-spec-element-non-initially" baseTypes="proof-list-with-spec-element list-with-spec-element-non-initially" xml:id="PLWSENI"/>
 
 
   <fsDecl type="sublist" baseTypes="list" xml:id="SUBL">
