@@ -47,7 +47,7 @@
                 <f name="Tail">
                   <fs type="nonempty-text-phrase-list">
                     <f name="Head">
-                      <fs type="text-phrase">
+                      <fs type="text-phrase-leaf">
                         <f name="Text">
                           <vAlt>
                             <string>:</string>
@@ -70,14 +70,14 @@
                         <f name="Tail">
                           <fs type="nonempty-text-phrase-list">
                             <f name="Head">
-                              <fs type="text-phrase">
+                              <fs type="text-phrase-leaf">
                                 <f name="Text">
                                   <string>}</string>
                                 </f>
                               </fs>
                             </f>
                             <f name="Tail">
-                              <fs type="empty-list"/>
+                              <fs type="empty-text-phrase-list"/>
                             </f>
                           </fs>
                         </f>
@@ -114,7 +114,7 @@
         <vLabel name="TR">
           <fs type="nonempty-text-phrase-list">
             <f name="Head">
-              <fs type="text-phrase">
+              <fs type="text-phrase-leaf">
                 <f name="Text">
                   <string>{</string>
                 </f>
@@ -123,24 +123,19 @@
             <f name="Tail">
               <fs type="nonempty-text-phrase-list">
                 <f name="Head">
-                  <fs type="comma-list">
-                    <f name="Text">
-                    </f>
-                    <f name="Semantics">
-                    </f>
-                  </fs>
+                  <fs type="comma-list-start"/>
                 </f>
                 <f name="Tail">
                   <fs type="nonempty-text-phrase-list">
                     <f name="Head">
-                      <fs type="text-phrase">
+                      <fs type="text-phrase-leaf">
                         <f name="Text">
                           <string>}</string>
                         </f>
                       </fs>
                     </f>
                     <f name="Tail">
-                      <fs type="empty-list"/>
+                      <fs type="empty-text-phrase-list"/>
                     </f>
                   </fs>
                 </f>
@@ -177,7 +172,7 @@
               </f>
             </fs>
           </f>
-          <f name="Textual-Realization">
+          <f name="Text">
             <vLabel name="TR"/>
           </f>
         </fs>

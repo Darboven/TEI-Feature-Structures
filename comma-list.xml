@@ -3,10 +3,17 @@
     <fsDescr>General comma-list structure</fsDescr>
   </fsDecl>
 
-  <fsDecl type="comma-list-start" baseTypes="comma-list" xml:id="COMLS">
+  <fsDecl type="comma-list-start" baseTypes="comma-list text-phrase" xml:id="COMLS">
+    <fDecl name="Text">
+      <vRange>
+        <vLabel name="ts">
+          <string>{</string>
+        </vLabel>
+      </vRange>
+    </fDecl>
     <fDecl name="Head">
       <vRange>
-        <string>{</string>
+        <vLabel name="ts"/>
       </vRange>
     </fDecl>
     <fDecl name="Tail">
