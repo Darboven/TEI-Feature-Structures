@@ -309,7 +309,7 @@
         <fs type="all-quantification">
           <f name="Quantified-Variable">
             <vLabel name="n"/>
-              <fs type="natural number"/>
+              <fs type="natural-number"/>
             </vLabel>
           </f>
           <f name="Quantified-Proposition">

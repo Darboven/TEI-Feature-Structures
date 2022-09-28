@@ -4,7 +4,7 @@
       <vRange>
         <fs type="nonempty-text-phrase-list">
           <f name="Head">
-            <fs type="text-phrase">
+            <fs type="text-phrase-leaf">
               <f name="Text">
                 <vAlt>
                   <string>from this it follows that </string>

@@ -69,7 +69,7 @@
         <vLabel name="bew">
           <fs type="proved-under-hypotheses">
             <f name="Hypotheses">
-              <fs type="list">
+              <fs type="nonempty-proposition-list">
                 <f name="Head">
                   <vLabel name="negP"/>
                 </f>
