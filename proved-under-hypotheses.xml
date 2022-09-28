@@ -16,3 +16,5 @@
     </fDecl>
   </fsDecl>
 </fsdDecl>
+
+<fsDecl type="proved-under-hypotheses-leaf" baseTypes="proved-under-hypotheses" xml:id="PUHL"/>
