@@ -20,7 +20,7 @@
                   <f name="Tail">
                     <fs type="nonempty-text-phrase-list">
                       <f name="Head">
-                        <fs type="conjunction-list-with-textual-realization">
+                        <fs type="conjunction-list">
                           <f name="CON">
                             <fs type="proposition-list">
                               <f name="Head">
