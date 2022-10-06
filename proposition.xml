@@ -64,10 +64,7 @@
     <fsDescr>All-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
       <vRange>
-        <vAlt>
-          <fs type="arbitrary-mathobj"/>
-          <fs type="integer"/>
-          <fs type="natural-number"/>
+        <fs type="arbitrary-mathobj"/>
       </vRange>
     </fDecl>
     <fDecl name="Quantified-Proposition">
