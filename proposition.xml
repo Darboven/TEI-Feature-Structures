@@ -41,6 +41,8 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="negation-leaf" baseTypes="negation" xml:id="..."/>
+
 
   <fsDecl type="conjunction-list" baseTypes="proposition" xml:id="PROPCONL">
     <fDecl name="CON">
@@ -122,8 +124,7 @@
   <fsDecl type="element" baseTypes="proposition" xml:id="PROPELEM">
     <fDecl name="Element">
       <vRange>
-        <fs type="mathobj"/>
-        <!-- most general ontological frame -->
+        <fs type="arbitrary-mathobj"/>
       </vRange>
     </fDecl>
     <fDecl name="Set">
@@ -170,23 +171,27 @@
   </fsDecl>
 
 
+  <fsDecl type="successor" baseTypes="proposition" xml:id="PROPSUC">
+    <fDecl name="Argument">
+      <vRange>
+        <vAlt>
+          <fs type="integer"/>
+          <fs type="natural-number"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
   <fsDecl type="greater-equal" baseTypes="proposition" xml:id="PROPGREQ">
     <fDecl name="Greater">
       <vRange>
-        <vAlt>
-          <fs type="natural-number"/>
-          <fs type="integer"/>
-          <fs type="real-number"/>
-        </vAlt>
+        <fs type="mathobj"/>
       </vRange>
     </fDecl>
     <fDecl name="Lesser">
       <vRange>
-        <vAlt>
-          <fs type="natural-number"/>
-          <fs type="integer"/>
-          <fs type="real-number"/>
-        </vAlt>
+        <fs type="mathobj"/>
       </vRange>
     </fDecl>
   </fsDecl>
