@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="set" baseTypes="mathobj" xml:id="SET"><!-- mathobj needs to be defined -->
+  <fsDecl type="set" baseTypes="mathobj text-phrase" xml:id="SET"><!-- mathobj needs to be defined -->
     <fsDescr>General set structure (defined by its subtypes)</fsDescr>
     <fDecl name="Variable">
       <vRange>
@@ -21,13 +21,13 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="set-comprehension" baseTypes="text-phrase-with-semantics" xml:id="SETCOMP">
+  <fsDecl type="set-comprehension" baseTypes="text-phrase" xml:id="SETCOMP">
     <fDecl name="Text">
       <vRange>
         <vLabel name="TR">
           <fs type="nonempty-text-phrase-list">
             <f name="Head">
-              <fs type="text-phrase">
+              <fs type="text-phrase-leaf">
                 <f name="Text">
                   <string>{</string>
                 </f>
@@ -59,8 +59,8 @@
                     <f name="Tail">
                       <fs type="nonempty-text-phrase-list">
                         <f name="Head">
-                          <fs type="text-phrase-with-semantics">
-                            <f name="Semantics">
+                          <fs type="text-phrase-leaf">
+                            <f name="Text">
                               <vLabel name="Predicate">
                                 <fs type="proposition"/>
                               </vLabel>
@@ -107,39 +107,17 @@
   </fsDecl>
 
 
-  <fsDecl type="set-enumeration" baseTypes="text-phrase-with-semantics" xml:id="SETENUM">
+  <fsDecl type="set-enumeration" baseTypes="text-phrase" xml:id="SETENUM">
     <!-- !!! -->
     <fDecl name="Text">
       <vRange>
         <vLabel name="TR">
           <fs type="nonempty-text-phrase-list">
             <f name="Head">
-              <fs type="text-phrase-leaf">
-                <f name="Text">
-                  <string>{</string>
-                </f>
-              </fs>
+              <fs type="comma-list-start"/>
             </f>
             <f name="Tail">
-              <fs type="nonempty-text-phrase-list">
-                <f name="Head">
-                  <fs type="comma-list-start"/>
-                </f>
-                <f name="Tail">
-                  <fs type="nonempty-text-phrase-list">
-                    <f name="Head">
-                      <fs type="text-phrase-leaf">
-                        <f name="Text">
-                          <string>}</string>
-                        </f>
-                      </fs>
-                    </f>
-                    <f name="Tail">
-                      <fs type="empty-text-phrase-list"/>
-                    </f>
-                  </fs>
-                </f>
-              </fs>
+              <fs type="empty-text-phrase-list"/>
             </f>
           </fs>
         </vLabel>
@@ -159,14 +137,7 @@
                     <vLabel name="Variable"/>
                   </f>
                   <f name="Mathobj-List">
-                    <fs type="mathobj-list">
-                      <f name="Head">
-                        <vLabel name="Head-Mathobj"/>
-                      </f>
-                      <f name="Tail">
-                        <vLabel name="Tail-Mathobj-List"/>
-                      </f>
-                    </fs>
+                    <fs type="mathobj-list"/>
                   </f>
                 </fs>
               </f>
