@@ -45,6 +45,12 @@
     </fDecl>
   </fsDecl>
 
+  <fsDecl type="proposition-list-leaf" baseTypes="proposition-list" xml:id=""/>
+
+  <fsDecl type="empty-proposition-list-leaf" baseTypes="empty-proposition-list" xml:id=""/>
+
+  <fsDecl type="nonempty-proposition-list" baseTypes="nonempty-proposition-list" xml:id=""/>
+
 
   <fsDecl type="proof-list" baseTypes="list" xml:id=""/>
 
@@ -93,7 +99,10 @@
     </fDecl>
     <fDecl name="Tail">
       <vRange>
-        <fs type="empty-list"/>
+        <vAlt>
+          <fs type="empty-list"/>
+          <fs type="list"/>
+        </vAlt>
       </vRange>
     </fDecl>
   </fsDecl>
@@ -128,7 +137,7 @@
 
   <fsDecl type="proof-list-spec-element-initially" baseTypes="proof-list-spec-element list-with-spec-element-initially" xml:id="PLWSEI"/>
 
-  <fsDecl type="proof-list-spec-element-non-initially" baseTypes="proof-list-with-spec-element list-with-spec-element-non-initially" xml:id="PLWSENI"/>
+  <fsDecl type="proof-list-spec-element-non-initially" baseTypes="proof-list-spec-element list-with-spec-element-non-initially" xml:id="PLWSENI"/>
 
 
   <fsDecl type="sublist" baseTypes="list" xml:id="SUBL">
@@ -194,5 +203,9 @@
     </fDecl>
   </fsDecl>
 
+
+  <fsDecl type="first-elem-list" baseTypes="list" xml:id="">
+
+  </fsDecl>
 
 </fsdDecl>
