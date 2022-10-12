@@ -239,7 +239,9 @@
                       <f name="Tail">
                         <fs type="nonempty-text-phrase-list">
                           <f name="Head">
-                            <vLabel name="s"/>
+                            <vLabel name="s">
+                              <fs type="proposition"/>
+                            </vLabel>
                           </f>
                           <f name="Tail">
                             <fs type="empty-text-phrase-list"/>
@@ -286,6 +288,9 @@
     <fDecl name="Proof"/>
       <vRange>
         <fs type="induction">
+          <f name="Variable">
+            <vLabel name="n"/>
+          </f>
           <f name="Hypotheses">
             <vLabel name="T"/>
           </f>
@@ -367,15 +372,17 @@
     </fDecl>
     <fDecl name="Proof">
       <vRange>
-        <f name="Variable">
-          <vLabel name="n"/>
-        </f>
-        <f name="First-Element">
-          <vLabel name="m"/>
-        </f>
-        <f name="Statement">
-          <vLabel name="s"/>
-        </f>
+        <fs type="induction">
+          <f name="Variable">
+            <vLabel name="n"/>
+          </f>
+          <f name="First-Element">
+            <vLabel name="m"/>
+          </f>
+          <f name="Statement">
+            <vLabel name="s"/>
+          </f>
+        </fs>
       </vRange>
     </fDecl>
   </fsDecl>
