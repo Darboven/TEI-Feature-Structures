@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="combining-subproofs" baseTypes="proved-under-hypotheses" xml:id="">
+  <fsDecl type="and-introduction" baseTypes="proved-under-hypotheses" xml:id="">
     <fDecl name="Text">
       <!-- ... -->
     </fDecl>
