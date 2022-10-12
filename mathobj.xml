@@ -81,4 +81,20 @@
 
   <fsDecl type="equal-mathobj-with-textual-realization" baseTypes="equal-mathobj text-phrase" xml:id="EQMAOTR"/>
 
+
+  <fsDecl type="successor" baseTypes="mathobj" xml:id="SUCCMAO">
+    <fDecl name="Argument">
+      <vRange>
+        <vAlt>
+          <fs type="integer"/>
+          <fs type="natural-number"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+  <fsDecl type="successor-without-textual-realization" baseTypes="successor" xml:id=""/>
+
+  <fsDecl type="successor-with-textual-realization" baseTypes="successor text-phrase" xml:id=""/>
+
 </fsdDecl>
