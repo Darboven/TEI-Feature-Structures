@@ -11,17 +11,21 @@
         <fs type="proposition"/>
       </vRange>
     </fDecl>
-    <fDecl name="Text">
-      <vRange>
-        <vAlt>
-          <fs name="set-comprehension"/>
-          <fs name="set-enumeration"/>
-        </vAlt>
-      </vRange>
-    </fDecl>
   </fsDecl>
 
-  <fsDecl type="set-comprehension" baseTypes="text-phrase" xml:id="SETCOMP">
+  <fsDecl type="set-comprehension" baseTypes="text-phrase set" xml:id="SETCOMP">
+    <fDecl name="Variable">
+      <vRange>
+        <vLabel name="var"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Predicate">
+      <vRange>
+        <vLabel name="pred">
+          <fs type="proposition"/>
+        </vLabel>
+      </vRange>
+    </fDecl>
     <fDecl name="Text">
       <vRange>
         <vLabel name="TR">
@@ -38,7 +42,7 @@
                 <f name="Head">
                   <fs type="variable-text-phrase">
                     <f name="Semantics">
-                      <vLabel name="Variable">
+                      <vLabel name="var">
                         <fs type="mathobj"/>
                       </vLabel>
                     </f>
@@ -61,9 +65,7 @@
                         <f name="Head">
                           <fs type="text-phrase-leaf">
                             <f name="Text">
-                              <vLabel name="Predicate">
-                                <fs type="proposition"/>
-                              </vLabel>
+                              <vLabel name="pred"/>
                             </f>
                           </fs>
                         </f>
@@ -91,60 +93,62 @@
         </vLabel>
       </vRange>
     </fDecl>
-    <fDecl name="Semantics">
-      <fs type="set">
-        <f name="Variable">
-          <vLabel name="Variable"/>
-        </f>
-        <f name="Predicate">
-          <vLabel name="Predicate"/>
-        </f>
-        <f name="Text">
-          <vLabel name="TR"/>
-        </f>
-      </fs>
-    </fDecl>
   </fsDecl>
 
-
-  <fsDecl type="set-enumeration" baseTypes="text-phrase" xml:id="SETENUM">
-    <!-- !!! -->
-    <fDecl name="Text">
+  <fsDecl type="set-enumeration" baseTypes="text-phrase set" xml:id="SETENUM">
+    <fDecl name="Variable">
       <vRange>
-        <vLabel name="TR">
-          <fs type="nonempty-text-phrase-list">
-            <f name="Head">
-              <fs type="comma-list-start"/>
-            </f>
-            <f name="Tail">
-              <fs type="empty-text-phrase-list"/>
-            </f>
-          </fs>
-        </vLabel>
+        <vLabel name="var"/>
       </vRange>
     </fDecl>
-    <fDecl name="Semantics">
+    <fDecl name="Predicate">
       <vRange>
-        <fs type="set">
-          <f name="Variable">
-            <vLabel name="Variable"/>
+        <fs type="disjunction-list">
+          <f name="DIS">
+            <fs type="var-equals-proposition-list">
+              <f name="Variable">
+                <vLabel name="var"/>
+              </f>
+  	          <f name="Mathobj-List">
+  	          	<vlabel name="Mathobj-List">
+              		<fs type="mathobj-list"/>
+              	</vLabel>
+  	          </f>
+            </fs>
           </f>
-          <f name="Predicate">
-            <fs type="disjunction-list">
-              <f name="DIS">
-                <fs type="var-equals-proposition-list">
-                  <f name="Variable">
-                    <vLabel name="Variable"/>
+        </fs>
+      </vRange>
+    </fDecl>
+    <fDecl name="Text">
+      <vRange>
+        <fs type="nonempty-text-phrase-list">
+          <f name="Head">
+            <fs type="text-phrase-leaf">
+              <f name="Text">
+                <string>{</string>
+              </f>
+            </fs>
+          </f>
+          <f name="Tail">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <vLabel name="Mathobj-List"/>
+              </f>
+              <f name="Tail">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <fs type="text-phrase-leaf">
+                      <f name="Text">
+                        <string>}</string>
+                      </f>
+                    </fs>
                   </f>
-                  <f name="Mathobj-List">
-                    <fs type="mathobj-list"/>
+                  <f name="Tail">
+                    <fs type="empty-text-phrase-list"/>
                   </f>
                 </fs>
               </f>
             </fs>
-          </f>
-          <f name="Text">
-            <vLabel name="TR"/>
           </f>
         </fs>
       </vRange>
