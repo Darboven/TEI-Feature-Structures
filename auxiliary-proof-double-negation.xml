@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="double-negation" baseTypes="proved-under-hypotheses" xml:id="">
+  <fsDecl type="double-negation-elimination" baseTypes="proved-under-hypotheses" xml:id="">
     <fDecl name="Text">
       <!-- ... -->
     </fDecl>
