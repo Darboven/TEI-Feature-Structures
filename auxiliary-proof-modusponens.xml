@@ -2,15 +2,13 @@
   <fsDecl type="modus-ponens" baseTypes="proved-under-hypotheses" xml:id="MP">
     <fDecl name="Hypotheses">
       <vRange>
-        <fs type="proposition-list-with-spec-element">
+        <fs type="proposition-list-with-two-spec-element">
           <f name="Element">
             <vLabel name="A">
               <fs type="proposition"/>
             </vLabel>
           </f>
-        </fs>
-        <fs type="proposition-list-with-spec-element">
-          <f name="Element">
+          <f name="Second-Element">
             <fs type="implication">
               <f name="Antecedent">
                 <vLabel name="A"/>

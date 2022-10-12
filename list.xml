@@ -133,11 +133,56 @@
   <fsDecl type="proposition-list-spec-element-non-initially" baseTypes="proposition-list-with-spec-element list-with-spec-element-non-initially" xml:id="PROPLWSENI"/>
 
 
-  <fsDecl type="proof-list-spec-element" baseTypes="proof-list list-with-spec-element" xml:id="PLWSE"/>
+  <fsDecl type="list-with-two-spec-element" baseTypes="list-with-spec-element" xml:id="LW2SE">
+    <fDecl name="Second-Element"/>
+  </fsDecl>
 
-  <fsDecl type="proof-list-spec-element-initially" baseTypes="proof-list-spec-element list-with-spec-element-initially" xml:id="PLWSEI"/>
+  <fsDecl type="list-with-two-spec-element-initially" baseTypes="list-with-two-spec-element" xml:id="LW2SEI">
+    <fsDescr>Part of the List with the specific Element</fsDescr>
+    <fDecl name="Second-Element">
+      <vRange>
+        <vLabel name="element"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Head">
+      <vRange>
+        <vLabel name="element"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Tail">
+      <vRange>
+        <vAlt>
+          <fs type="empty-list"/>
+          <fs type="list"/>
+        </vAlt>
+      </vRange>
+    </fDecl>
+  </fsDecl>
 
-  <fsDecl type="proof-list-spec-element-non-initially" baseTypes="proof-list-spec-element list-with-spec-element-non-initially" xml:id="PLWSENI"/>
+  <fsDecl type="list-with-two-spec-element-non-initially" baseTypes="list-with-two-spec-element" xml:id="LW2SENI">
+    <fDecl name="Second-Element">
+      <vRange>
+        <vLabel name="element"/>
+      </vRange>
+    </fDecl>
+    <fDecl name="Head"/>
+    <fDecl name="Tail">
+      <vRange>
+        <fs type="list-with-two-spec-element">
+          <f name="Second-Element">
+            <vLabel name="element"/>
+          </f>
+        </fs>
+      </vRange>
+    </fDecl>
+  </fsDecl>
+
+
+  <fsDecl type="proposition-list-two-spec-element" baseTypes="proposition-list list-with-two-spec-element" xml:id="PROPLW2SE"/>
+
+  <fsDecl type="proposition-list-two-spec-element-initially" baseTypes="proposition-list-spec-element list-with-two-spec-element-initially" xml:id="PROPLW2SEI"/>
+
+  <fsDecl type="proposition-list-two-spec-element-non-initially" baseTypes="proposition-list-with-two-spec-element list-with-two-spec-element-non-initially" xml:id="PROPLW2SENI"/>
 
 
   <fsDecl type="sublist" baseTypes="list" xml:id="SUBL">
