@@ -19,7 +19,7 @@
     <fDecl name="Head">
       <vRange>
         <vLabel name="Head">
-          <fs type="mathobj-with-textual-realization">
+          <fs type="mathobj-with-textual-realisation">
             <f name="Text">
               <vLabel name="Head-TR"/>
             </f>
@@ -32,7 +32,7 @@
         <fs type="empty-mathobj-list"/>
       </vRange>
     </fDecl>
-    <fDecl name="Textual-Realization">
+    <fDecl name="Text">
       <vRange>
         <vLabel name="Head-TR"/>
       </vRange>
@@ -43,7 +43,7 @@
     <fsDescr>Non-empty list of mathematical objects</fsDescr>
     <fDecl name="Head">
       <vRange>
-        <vLabel name="Head">
+        <vLabel name="head">
           <fs type="mathobj-with-textual-realization">
             <f name="Text">
               <vLabel name="Head-TR"/>
@@ -54,7 +54,7 @@
     </fDecl>
     <fDecl name="Tail">
       <vRange>
-        <vLabel name="Tail">
+        <vLabel name="tail">
           <fs type="nonempty-mathobj-list">
             <f name="Text">
               <vLabel name="Tail-TR"/>
@@ -65,47 +65,32 @@
     </fDecl>
     <fDecl name="Text">
       <vRange>
-        <vLabel name="TR">
-          <fs type="nonempty-text-phrase-list">
-            <f name="Head">
-              <vLabel name="Head-TR"/>
-            </f>
-            <f name="Tail">
-              <fs type="nonempty-text-phrase-list">
-                <f name="Head">
-                  <fs type="text-phrase">
-                    <f name="Text">
-                      <string>,</string>
-                    </f>
-                  </fs>
-                </f>
-                <f name="Tail">
-                  <fs type="nonempty-text-phrase-list">
-                    <f name="Head">
-                      <vLabel name="Tail-TR"/>
-                    </f>
-                    <f name="Tail">
-                      <fs type="empty-list"/>
-                    </f>
-                  </fs>
-                </f>
-              </fs>
-            </f>
-          </fs>
-        </f>
-        <f name="Semantics">
-          <fs type="mathobj-list">
-            <f name="Head">
-              <vLabel name="Head"/>
-            </f>
-            <f name="Tail">
-              <vLabel name="Tail"/>
-            </f>
-            <f name="Textual-Realization">
-              <vLabel name="TR"/>
-            </f>
-          </fs>
-        </vLabel>
+        <fs type="nonempty-text-phrase-list">
+          <f name="Head">
+            <vLabel name="Head-TR"/>
+          </f>
+          <f name="Tail">
+            <fs type="nonempty-text-phrase-list">
+              <f name="Head">
+                <fs type="text-phrase-leaf">
+                  <f name="Text">
+                    <string>,</string>
+                  </f>
+                </fs>
+              </f>
+              <f name="Tail">
+                <fs type="nonempty-text-phrase-list">
+                  <f name="Head">
+                    <vLabel name="Tail-TR"/>
+                  </f>
+                  <f name="Tail">
+                    <fs type="empty-list"/>
+                  </f>
+                </fs>
+              </f>
+            </fs>
+          </f>
+        </fs>
       </vRange>
     </fDecl>
   </fsDecl>
