@@ -12,7 +12,7 @@
                       <f name="Text">
                         <vAlt>
                           <string>suppose for the sake of contradiction that </string>
-                          <string/>
+                          <string>suppose </string>
                         </vAlt>
                       </f>
                     </fs>
@@ -20,36 +20,41 @@
                   <f name="Tail">
                     <fs type="nonempty-text-phrase-list">
                       <f name="Head">
-                        <fs type="conjunction-list">
-                          <f name="CON">
-                            <fs type="proposition-list">
+                        <vLabel name="P">
+                          <fs type="proposition"/>
+                        </vLabel>
+                      </f>
+                      <f name="Tail">
+                        <fs type="nonempty-text-phrase-list">
+                          <f name="Head">
+                            <fs type="text-phrase-leaf">
+                              <f name="Text">
+                                <vAlt>
+                                  <string>, then </string>
+                                  <string> and </string>
+                                </vAlt>
+                              </f>
+                            </fs>
+                          </f>
+                          <f name="Tail">
+                            <fs type="nonempty-text-phrase-list">
                               <f name="Head">
-                                <vLabel name="P">
-                                  <fs type="proposition"/>
+                                <vLabel name="nQ">
+                                  <fs type="negation">
+                                    <f name="Negation-Feature">
+                                      <vLabel name="Q">
+                                        <fs type="proposition"/>
+                                      </vLabel>
+                                    </f>
+                                  </fs>
                                 </vLabel>
                               </f>
                               <f name="Tail">
-                                <fs type="nonempty-text-phrase-list">
-                                  <f name="Head">
-                                    <fs type="negation">
-                                      <f name="Negation-Feature">
-                                        <vLabel name="Q">
-                                          <fs type="proposition"/>
-                                        </vLabel>
-                                      </f>
-                                    </fs>
-                                  </f>
-                                  <f name="Tail">
-                                    <fs type="empty-text-phrase-list"/>
-                                  </f>
-                                </fs>
+                                <fs type="empty-text-phrase-list"/>
                               </f>
                             </fs>
                           </f>
                         </fs>
-                      </f>
-                      <f name="Tail">
-                        <fs type="empty-text-phrase-list"/>
                       </f>
                     </fs>
                   </f>
@@ -100,11 +105,7 @@
                 <f name="Tail">
                   <fs type="proposition-list">
                     <f name="Head">
-                      <fs type="negation">
-                        <f name="Negation-Feature">
-                          <vLabel name="Q"/>
-                        </f>
-                      </fs>
+                      <vLabel name="nQ"/>
                     </f>
                     <f name="Tail">
                       <vLabel name="T"/>
