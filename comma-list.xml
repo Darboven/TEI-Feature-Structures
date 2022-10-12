@@ -19,14 +19,14 @@
     <fDecl name="Tail">
       <vRange>
         <vAlt>
-          <fs type="comma-list-element"/>
+          <fs type="comma-list-value"/>
           <fs type="comma-list-end"/><!-- for empty set -->
         </vAlt>
       </vRange>
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="comma-list-element" baseTypes="comma-list" xml:id="COMLEL">
+  <fsDecl type="comma-list-value" baseTypes="comma-list" xml:id="COMLEL">
     <fDecl name="Head">
       <vRange>
         <fs type="mathobj"/>
@@ -50,7 +50,7 @@
     </fDecl>
     <fDecl name="Tail">
       <vRange>
-        <fs type="comma-list-element"/>
+        <fs type="comma-list-value"/>
       </vRange>
     </fDecl>
   </fsDecl>
