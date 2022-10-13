@@ -124,7 +124,7 @@
   <fsDecl type="element" baseTypes="proposition" xml:id="PROPELEM">
     <fDecl name="Element">
       <vRange>
-        <fs type="arbitrary-mathobj"/>
+        <fs type="mathobj"/>
       </vRange>
     </fDecl>
     <fDecl name="Set">
@@ -166,18 +166,6 @@
     <fDecl name="Negation-Feature">
       <vRange>
         <fs type="even"/>
-      </vRange>
-    </fDecl>
-  </fsDecl>
-
-
-  <fsDecl type="successor" baseTypes="proposition" xml:id="PROPSUC">
-    <fDecl name="Argument">
-      <vRange>
-        <vAlt>
-          <fs type="integer"/>
-          <fs type="natural-number"/>
-        </vAlt>
       </vRange>
     </fDecl>
   </fsDecl>
