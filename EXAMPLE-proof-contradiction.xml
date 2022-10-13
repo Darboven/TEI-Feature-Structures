@@ -1,65 +1,60 @@
 <!-- 6.1 (p.139): The number {\sqrt {2}} is irrational. -->
 <fs type="proof-contradiction">
-  <f name="Textual-Realization">
-    <fs type="text-phrase">
-      <f name="Text">
-        <fs type="nonempty-text-phrase-list">
-          <f name="Head">
-            <fs type="text-phrase">
-              <f name="Text">
-                <string>suppose for the sake of contradiction that </string>
-              </f>
-            </fs>
-          </f>
-          <f name="Tail">
+
+
+  <f name="Text">
+    <fs type="nonempty-text-phrase-list">
+      <f name="Head">
+        <fs type="text-phrase-leaf">
+          <f name="Text">
             <fs type="nonempty-text-phrase-list">
               <f name="Head">
-                <vLabel name="negP">
-                  <fs type="negation-with-textual-realization">
-                    <!-- it is not true that || squareroot 2 || is irrational -->
-                    <f name="Text">
-                      <string>it is not true that \sqrt{2} is irrational</string>
-                    </f>
-                    <f name="Negation-Feature">
-                      <vLabel name="P">
-                        <fs type="irrational-with-textual-realization">
-                          <f name="Text">
-                            <string>\sqrt{2} is irrational</string>
-                          </f>
-                          <f name="Negation-Feature">
-                            <fs type="rational-without-textual-realization">
-                              <f name="Argument">
-                                <vLabel name="R">
-                                  <fs type="real-number-with-textual-realization">
-                                    <f name="Text">
-                                      <string>\sqrt{2}</string>
-                                    </f>
-                                    <!-- features of real number here -->
-                                  </fs>
-                                </vLabel>
-                              </f>
-                            </fs>
-                          </f>
-                        </fs>
-                      </vLabel>
-                    </f>
-                  </fs>
-                </vLabel>
+                <fs type="text-phrase-leaf">
+                  <f name="Text">
+                    <string>suppose for the sake of contradiction that </string>
+                  </f>
+                </fs>
               </f>
               <f name="Tail">
                 <fs type="nonempty-text-phrase-list">
                   <f name="Head">
-                    <vLabel name="P"/>
+                    <vLabel name="negP">
+                      <fs type="negation">
+                        <!-- it is not true that || squareroot 2 || is irrational -->
+                        <f name="Text">
+                          <string>it is not true that </string>
+                        </f>
+                        <f name="Negation-Feature">
+                          <vLabel name="P">
+                            <fs type="irrational">
+                              <f name="Text">
+                                <string>is irrational </string>
+                              </f>
+                              <f name="Negation-Feature">
+                                <fs type="rational">
+                                  <f name="Text">
+                                    <string/>
+                                  </f>
+                                  <f name="Argument">
+                                    <vLabel name="R">
+                                      <fs type="real-number-with-textual-realisation">
+                                        <f name="Text">
+                                          <string>\sqrt{2} </string>
+                                        </f>
+                                        <!-- features of real number here -->
+                                      </fs>
+                                    </vLabel>
+                                  </f>
+                                </fs>
+                              </f>
+                            </fs>
+                          </vLabel>
+                        </f>
+                      </fs>
+                    </vLabel>
                   </f>
                   <f name="Tail">
-                    <fs type="nonempty-text-phrase-list">
-                      <f name="Head">
-                        <vLabel name="R"/>
-                      </f>
-                      <f name="Tail">
-                        <fs type="empty-text-phrase-list"/>
-                      </f>
-                    </fs>
+                    <fs type="empty-text-phrase-list"/>
                   </f>
                 </fs>
               </f>
@@ -67,147 +62,232 @@
           </f>
         </fs>
       </f>
+      <f name="Tail">
+        <fs type="nonempty-text-phrase-list">
+          <f name="Head">
+            <vLabel name="tr"/>
+          </f>
+          <f name="Tail">
+            <fs type="empty-text-phrase-list"/>
+          </f>
+      </f>
     </fs>
   </f>
 
+
   <f name="Hypotheses">
     <vLabel name="T">
-      <fs type="empty-list"/>
-      <!-- evtl. Informationen über: rationale Zahlen, ... -->
+      <fs type="empty-proposition-list"/>
+      <!-- at the start of this proof, we do not have any hypotheses -->
     </vLabel>
   </f>
+
 
   <f name="Conclusion">
     <vLabel name="P"/>
   </f>
 
+
   <f name="Proof">
-    <fs type="proved-under-hypotheses">
-      <f name="Hypotheses">
-        <fs type="proposition-list">
-          <f name="Head">
-            <vLabel name="negP"/>
-          </f>
-          <f name="Tail">
-            <vLabel name="T"/>
-          </f>
-        </fs>
-      </f>
-      <f name="Conclusion">
-        <fs type="conjunction-list-without-textual-realization">
-          <f name="CON">
-            <fs type="proposition-list">
+    <vLabel name="tr">
+      <fs type="proved-add-knowledge">
+        <f name="Text">
+          <string>Proof. </string>
+        </f>
+        <f name="Hypotheses">
+          <vLabel name="T1">
+            <fs type="nonempty-proposition-list">
+              <f name="Text">
+                <string/>
+              </f>
               <f name="Head">
-                <vLabel name="C"/>
+                <vLabel name="negP"/>
               </f>
               <f name="Tail">
-                <fs type="proposition-list">
+                <vLabel name="T"/>
+              </f>
+            </fs>
+          </vLabel>
+        </f>
+        <f name="Conclusion">
+          <vLabel name="P1">
+            <fs type="conjunction-list">
+              <f name="Text">
+                <string/>
+              </f>
+              <f name="CON">
+                <fs type="nonempty-proposition-list">
+                  <f name="Text">
+                    <string/>
+                  </f>
                   <f name="Head">
-                    <fs type="negation-without-textual-realization">
-                      <f name="Negation-Feature">
-                        <vLabel name="C"/>
-                      </f>
-                    </fs>
+                    <vLabel name="C">
+                      <fs type="even">
+                        <f name="Text">
+                          <string/>
+                        </f>
+                        <f name="Argument">
+                          <vLabel name="b">
+                            <fs type="integer-without-textual-realisation"/>
+                          </vLabel>
+                        </f>
+                      </fs>
+                    </vLabel>
                   </f>
                   <f name="Tail">
-                    <fs type="empty-proposition-list"/>
+                    <fs type="nonempty-proposition-list">
+                      <f name="Text">
+                        <string/>
+                      </f>
+                      <f name="Head">
+                        <fs type="negation">
+                          <f name="Text">
+                            <string/>
+                          </f>
+                          <f name="Negation-Feature">
+                            <vLabel name="C"/>
+                          </f>
+                        </fs>
+                      </f>
+                      <f name="Tail">
+                        <fs type="empty-proposition-list"/>
+                      </f>
+                    </fs>
                   </f>
                 </fs>
               </f>
             </fs>
-          </f>
-        </fs>
-      </f>
-      <f name="Proof">
-        <fs type="unanalyzed-proof">
-          <f name="Texual-Realization">
-            <fs type="text-phrase">
-              <f name="Text">
-                <fs type="nonempty-text-phrase-list">
+          </vLabel>
+        </f>
+        <f name="Proof">
+          <fs type="proved-under-hypotheses-leaf">
+            <f name="Text">
+              <string/>
+            </f>
+            <f name="Hypotheses">
+              <vLabel name="T2">
+                <fs type="nonempty-proposition-list">
+                  <f name="Text">
+                    <string/>
+                  </f>
                   <f name="Head">
-                    <fs type="text-phrase">
+                    <fs type="equality">
                       <f name="Text">
-                        <vAlt>
-                          <string>then </string>
-                        </vAlt>
+                        <string/>
+                      </f>
+                      <f name="LHS">
+                        <vLabel name="R"/>
+                      </f>
+                      <f name="RHS">
+                        <fs type="fully-reduced-fraction">
+                          <f name="Numerator">
+                            <vLabel name="a"/>
+                          </f>
+                          <f name="Denumerator">
+                            <vLabel name="b">
+                              <fs type="integer-without-textual-realisation"/>
+                            </vLabel>
+                          </f>
+                        </fs>
                       </f>
                     </fs>
                   </f>
                   <f name="Tail">
-                    <fs type="nonempty-text-phrase-list">
-                      <f name="Head">
-                        <vLabel name="E1">
-                          <fs type="conjunction-list-without-textual-realization">
-                            <f name="CON">
+                    <vLabel name="T1"/>
+                  </f>
+                </fs>
+              </vLabel>
+            </f>
+            <f name="Conclusion">
+              <vLabel name="P1"/>
+            </f>
+            <f name="Proof">
+              <fs type="proof-unanalysed">
+                <f name="Text">
+                  <fs type="nonempty-text-phrase-list">
+                    <f name="Head">
+                      <fs type="text-phrase-leaf">
+                        <f name="Text">
+                          <string/>
+                        </f>
+                      </fs>
+                    </f>
+                    <f name="Tail">
+                      <fs type="nonempty-text-phrase-list">
+                        <f name="Head">
+                          <vLabel name="P2">
+                        </f>
+                        <f name="Tail">
+                          <fs type="empty-text-phrase-list"/>
+                        </f>
+                      </fs>
+                    </f>
+                  </fs>
+                </f>
+                <f name="Hypotheses">
+                  <vLabel name="T2"/>
+                </f>
+                <f name="Conclusion">
+                  <fs type="negation">
+                    <f name="Text">
+                      <string/>
+                    </f>
+                    <f name="Negation-Feature">
+                      <fs type="conjunction-list">
+                        <f name="Text">
+                          <string/>
+                        </f>
+                        <f name="CON">
+                          <fs type="nonempty-proposition-list">
+                            <f name="Text">
+                              <string/>
+                            </f>
+                            <f name="Head">
+                              <fs type="even">
+                                <f name="Text">
+                                  <string/>
+                                </f>
+                                <f name="Argument">
+                                  <vLabel name="a"/>
+                                </f>
+                              </fs>
+                            </f>
+                            <f name="Tail">
                               <fs type="nonempty-proposition-list">
+                                <f name="Text">
+                                  <string/>
+                                </f>
                                 <f name="Head">
-                                  <fs type="odd-without-textual-realization">
-                                    <f name="Negation-Feature">
-                                      <fs type="even-without-textual-realization">
-                                        <f name="Argument">
-                                          <vLabel name="A">
-                                            <fs type="integer-with-textual-realization">
-                                              <f name="Text">
-                                                <string></string>
-                                              </f>
-                                              <!-- features of integer here -->
-                                            </fs>
-                                          </vLabel>
-                                        </f>
-                                      </fs>
+                                  <fs type="even">
+                                    <f name="Text">
+                                      <string/>
+                                    </f>
+                                    <f name="Argument">
+                                      <vLabel name="b"/>
                                     </f>
                                   </fs>
                                 </f>
                                 <f name="Tail">
-                                  <fs type="proposition-list">
-                                    <f name="Head">
-                                      <fs type="odd-without-textual-realization">
-                                        <f name="Negation-Feature">
-                                          <fs type="even-without-textual-realization">
-                                            <f name="Argument">
-                                              <vLabel name="B">
-                                                <fs type="integer-with-textual-realization">
-                                                  <f name="Text">
-                                                    <string></string>
-                                                  </f>
-                                                  <!-- features of integer here -->
-                                                </fs>
-                                              </vLabel>
-                                            </f>
-                                          </fs>
-                                        </f>
-                                      </fs>
-                                    </f>
-                                    <f name="Tail">
-                                      <fs type="empty-proposition-list"/>
-                                    </f>
-                                  </fs>
+                                  <fs type="empty-proposition-list"/>
                                 </f>
                               </fs>
                             </f>
                           </fs>
-                        </vLabel>
-                      </f>
-                      <f name="Tail">
-                        <fs type="empty-text-phrase-list"/>
-                      </f>
-                    </fs>
-                  </f>
-                </fs>
-              </f>
-            </fs>
-          </f>
-          <f name="Hypotheses">
-
-          </f>
-          <f name="Conclusion">
-
-          </f>
-          <f name="Proof">
-            <symbol value="unanalyzed"/>
-          </f>
-        </fs>
-      </f>
-    </fs>
+                        </f>
+                      </fs>
+                    </f>
+                  </fs>
+                </f>
+                <f name="Proof">
+                  <symbol value="unanalysed"/>
+                </f>
+              </fs>
+            </f>
+          </fs>
+        </f>
+      </fs>
+    </vLabel>
   </f>
-</fsDecl>
+
+
+</fs>
