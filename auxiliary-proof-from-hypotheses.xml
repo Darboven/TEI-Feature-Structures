@@ -1,4 +1,4 @@
-...<fsdDecl>
+<fsdDecl>
   <fsDecl type="from-hypotheses" baseTypes="proved-under-hypotheses" xml:id="APFH">
     <fDecl name="Hypotheses">
       <vRange>
