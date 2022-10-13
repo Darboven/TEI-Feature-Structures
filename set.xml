@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="set" baseTypes="mathobj text-phrase" xml:id="SET"><!-- mathobj needs to be defined -->
+  <fsDecl type="set" baseTypes="mathobj text-phrase" xml:id="SET">
     <fsDescr>General set structure (defined by its subtypes)</fsDescr>
     <fDecl name="Variable">
       <vRange>
