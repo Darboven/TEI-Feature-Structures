@@ -13,7 +13,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="set-comprehension" baseTypes="text-phrase set" xml:id="SETCOMP">
+  <fsDecl type="set-comprehension" baseTypes="text-phrase mathobj set" xml:id="SETCOMP">
     <fDecl name="Variable">
       <vRange>
         <vLabel name="var"/>
@@ -95,7 +95,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="set-enumeration" baseTypes="text-phrase set" xml:id="SETENUM">
+  <fsDecl type="set-enumeration" baseTypes="text-phrase mathobj set" xml:id="SETENUM">
     <fDecl name="Variable">
       <vRange>
         <vLabel name="var"/>
