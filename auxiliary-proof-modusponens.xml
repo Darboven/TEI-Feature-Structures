@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="modus-ponens" baseTypes="proved-under-hypotheses" xml:id="MP">
+  <fsDecl type="modus-ponens" baseTypes="proved-under-hypotheses" xml:id="APMP">
     <fDecl name="Hypotheses">
       <vRange>
         <fs type="proposition-list-with-two-spec-element">

@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="proof-add-knowledge" baseTypes="proved-under-hypotheses" xml:id="">
+  <fsDecl type="proof-add-knowledge" baseTypes="proved-under-hypotheses" xml:id="APAK">
     <fDecl name="Text">
       <!-- ... -->
     </fDecl>

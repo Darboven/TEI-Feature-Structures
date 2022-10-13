@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="transitivity" baseTypes="proved-under-hypotheses" xml:id="PTRANS">
+  <fsDecl type="transitivity" baseTypes="proved-under-hypotheses" xml:id="APTRANS">
     <fsDescr>Allows to transitively concatenate and proof propositions.</fsDescr>
     <fDecl name="Hypotheses">
       <vRange>

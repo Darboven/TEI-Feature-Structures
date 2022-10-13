@@ -1,5 +1,5 @@
 ...<fsdDecl>
-  <fsDecl type="from-hypotheses" baseTypes="proved-under-hypotheses" xml:id="">
+  <fsDecl type="from-hypotheses" baseTypes="proved-under-hypotheses" xml:id="APFH">
     <fDecl name="Hypotheses">
       <vRange>
         <fs type="list-with-spec-element">

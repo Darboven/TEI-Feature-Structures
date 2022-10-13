@@ -41,7 +41,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="negation-leaf" baseTypes="negation" xml:id="..."/>
+  <fsDecl type="negation-leaf" baseTypes="negation" xml:id="PROPNEGL"/>
 
 
   <fsDecl type="conjunction-list" baseTypes="proposition" xml:id="PROPCONL">

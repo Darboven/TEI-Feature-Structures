@@ -18,7 +18,7 @@
   </fsDecl>
 
 
-  <fsDecl type="text-phrase-leaf" baseTypes="text-phrase" ... />
+  <fsDecl type="text-phrase-leaf" baseTypes="text-phrase" xml:id="TPLEAF" />
 
 
   <fsDecl type="text-phrase-list" baseTypes="list" xml:id="TPL">

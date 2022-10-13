@@ -13,27 +13,27 @@
     <!-- ... -->
   </fsDecl>
 
-  <fsDecl type="natural-number-without-texual-realization" baseTypes="natural-number" xml:id="NATMAOWOTR"/>
+  <fsDecl type="natural-number-without-texual-realisation" baseTypes="natural-number" xml:id="NATMAOWOTR"/>
 
-  <fsDecl type="natural-number-with-textual-realization" baseTypes="natural-number text-phrase" xml:id="NATMAOTR"/>
+  <fsDecl type="natural-number-with-textual-realisation" baseTypes="natural-number text-phrase" xml:id="NATMAOTR"/>
 
 
   <fsDecl type="integer" baseTypes="mathobj" xml:id="INTMAO">
     <!-- ... -->
   </fsDecl>
 
-  <fsDecl type="integer-without-texual-realization" baseTypes="integer" xml:id="INTMAOWOTR"/>
+  <fsDecl type="integer-without-texual-realisation" baseTypes="integer" xml:id="INTMAOWOTR"/>
 
-  <fsDecl type="integer-with-textual-realization" baseTypes="integer text-phrase" xml:id="INTMAOTR"/>
+  <fsDecl type="integer-with-textual-realisation" baseTypes="integer text-phrase" xml:id="INTMAOTR"/>
 
 
   <fsDecl type="real-number" baseTypes="mathobj" xml:id="RNMAO">
     <!-- ... -->
   </fsDecl>
 
-  <fsDecl type="real-number-without-textual-realization" baseTypes="real-number" xml:id="RNMAOWOTR"/>
+  <fsDecl type="real-number-without-textual-realisation" baseTypes="real-number" xml:id="RNMAOWOTR"/>
 
-  <fsDecl type="real-number-with-textual-realization" baseTypes="real-number text-phrase" xml:id="RNMAOTR"/>
+  <fsDecl type="real-number-with-textual-realisation" baseTypes="real-number text-phrase" xml:id="RNMAOTR"/>
 
 
   <fsDecl type="fully-reduced-fraction" baseTypes="mathobj" xml:id="FRFMAO">
@@ -49,9 +49,9 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="fully-reduced-fraction-without-textual-realization" baseTypes="fully-reduced-fraction" xml:id="FRFMAOWOTR"/>
+  <fsDecl type="fully-reduced-fraction-without-textual-realisation" baseTypes="fully-reduced-fraction" xml:id="FRFMAOWOTR"/>
 
-  <fsDecl type="fully-reduced-fraction-with-textual-realization" baseTypes="fully-reduced-fraction text-phrase" xml:id="FRFMAOTR"/>
+  <fsDecl type="fully-reduced-fraction-with-textual-realisation" baseTypes="fully-reduced-fraction text-phrase" xml:id="FRFMAOTR"/>
 
 
   <fsDecl type="equal-mathobj" xml:id="EQMAO">
@@ -77,9 +77,9 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="equal-mathobj-without-textual-realization" baseTypes="equal-mathobj" xml:id="EQMAOWOTR"/>
+  <fsDecl type="equal-mathobj-without-textual-realisation" baseTypes="equal-mathobj" xml:id="EQMAOWOTR"/>
 
-  <fsDecl type="equal-mathobj-with-textual-realization" baseTypes="equal-mathobj text-phrase" xml:id="EQMAOTR"/>
+  <fsDecl type="equal-mathobj-with-textual-realisation" baseTypes="equal-mathobj text-phrase" xml:id="EQMAOTR"/>
 
 
   <fsDecl type="successor" baseTypes="mathobj" xml:id="SUCCMAO">
@@ -93,8 +93,8 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="successor-without-textual-realization" baseTypes="successor" xml:id=""/>
+  <fsDecl type="successor-without-textual-realisation" baseTypes="successor" xml:id="SUCCMAOWOTR"/>
 
-  <fsDecl type="successor-with-textual-realization" baseTypes="successor text-phrase" xml:id=""/>
+  <fsDecl type="successor-with-textual-realisation" baseTypes="successor text-phrase" xml:id="SUCCMAOTR"/>
 
 </fsdDecl>

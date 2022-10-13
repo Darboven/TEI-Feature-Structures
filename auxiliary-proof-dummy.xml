@@ -1,5 +1,5 @@
 <fsdDecl>
-  <fsDecl type="unanalysed-proof" baseTypes="proved-under-hypotheses" xml:id="PDUM">
+  <fsDecl type="unanalysed-proof" baseTypes="proved-under-hypotheses" xml:id="APUP">
     <fDecl name="Text">
       <vRange>
         <fs type="nonempty-text-phrase-list">

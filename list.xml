@@ -1,4 +1,4 @@
-<fsdDecl>
+  <fsdDecl>
 
   <fsDecl type="list" xml:id="LIST">
     <fsDescr>
@@ -22,7 +22,7 @@
   </fsDecl>
 
 
-  <fsDecl type="proposition-list" baseTypes="list proposition" xml:id="PLIST">
+  <fsDecl type="proposition-list" baseTypes="list proposition" xml:id="PROPLIST">
     <fsDescr>
       List of proposition
       (defined by its subtype nonempty-proposition-list)
@@ -45,11 +45,11 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="proposition-list-leaf" baseTypes="proposition-list" xml:id=""/>
+  <fsDecl type="proposition-list-leaf" baseTypes="proposition-list" xml:id="PROPLISTL"/>
 
-  <fsDecl type="empty-proposition-list-leaf" baseTypes="empty-proposition-list" xml:id=""/>
+  <fsDecl type="empty-proposition-list-leaf" baseTypes="empty-proposition-list" xml:id="EMPPROPLL"/>
 
-  <fsDecl type="nonempty-proposition-list-leaf" baseTypes="nonempty-proposition-list" xml:id=""/>
+  <fsDecl type="nonempty-proposition-list-leaf" baseTypes="nonempty-proposition-list" xml:id="NEMPPROPLL"/>
 
 
   <fsDecl type="list-with-spec-element" baseTypes="nonempty-list" xml:id="LWSE">
@@ -198,7 +198,7 @@
   </fsDecl>
 
 
-  <fsDecl type="proof-list" baseTypes="list" xml:id="">
+  <fsDecl type="proof-list" baseTypes="list" xml:id="PRFL">
     <fDecl name="Hypotheses">
       <vRange>
         <fs type="proposition-list"/>
@@ -217,7 +217,7 @@
   </fsDecl>
 
 
-  <fsDecl type="empty-proof-list" baseTypes="proof-list empty-list" xml:id="">
+  <fsDecl type="empty-proof-list" baseTypes="proof-list empty-list" xml:id="EMPPRFL">
     <fDecl name="Hypotheses">
       <vRange>
         <fs type="proposition-list"/>
@@ -235,7 +235,7 @@
     </fDecl>
   </fsDecl>
 
-  <fsDecl type="nonempty-proof-list" baseTypes="proof-list nonempty-list" xml:id="">
+  <fsDecl type="nonempty-proof-list" baseTypes="proof-list nonempty-list" xml:id="NEMPPRFL">
     <fDecl name="Hypotheses">
       <vRange>
         <vLabel name="T">
