@@ -43,15 +43,10 @@
 
 
   <fsDecl type="variable-text-phrase" baseTypes="text-phrase" xml:id="VARTP">
-    <fDecl name="Text">
-      <vRange>
-        <vAlt>
-          <symbol value="string"/>
-        </vAlt>
-      </vRange>
-    </fDecl>
     <fDecl name="Semantics">
-      <fs type="mathobj"/>
+      <vRange>
+        <fs type="mathobj"/>
+      </vRange>
     </fDecl>
   </fsDecl>
 
