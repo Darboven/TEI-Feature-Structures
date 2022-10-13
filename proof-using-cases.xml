@@ -48,77 +48,42 @@
 
     <fDecl name="Hypotheses">
       <vRange>
-        <fs type="nonempty-proposition-list">
-          <f name="Head">
-            <fs type="disjunciton-list">
-              <f name="DIS">
-                <fs type="proposition-list-with-spec-element-non-initially">
-                  <f name="Element">
-                    <vLabel name="Pn"/>
-                    <!-- last Element -->
-                  </f>
-                  <f name="Head">
-                    <vLabel name="P1"/>
-                  </f>
-                  <f name="Tail">
-                    <fs type="proposition-list-with-spec-element">
-                      <f name="Element">
-                        <vLabel name="Pn"/>
-                      </f>
-                    </fs>
-                  </f>
-                </fs>
-              </f>
-            </fs>
-          </f>
-          <f name="Tail">
-            <vLabel name="T"/>
-          </f>
-        </fs>
+        <vLabel name="T"/>
       </vRange>
     </fDecl>
 
     <fDecl name="Conclusion">
       <vRange>
-        <vLabel name="Q"/>
+        <fs type="implication">
+          <f name="Antecedent">
+            <vLabel name="P">
+              <fs type="disjunction-list">
+                <f name="DIS">
+                  <vLabel name="tbp">
+                    <fs type="propostion-list"/>
+                  </vLabel>
+                </f>
+              </fs>
+            </vLabel>
+          </f>
+          <f name="Consequent">
+            <vLabel name="Q"/>
+          </f>
+        </fs>
       </vRange>
     </fDecl>
 
     <fDecl name="Proof">
       <vRange>
-        <fs type="proof-list-with-spec-element-non-initially">
-          <f name="Element">
-            <vLabel name="Pn"/><!-- last element to prove -->
+        <fs type="proof-list">
+          <f name="Hypotheses">
+            <vLabel name="T"/>
           </f>
-          <f name="Proved-Feature">
+          <f name="Conclusion">
             <vLabel name="Q"/>
           </f>
-          <f name="Head">
-            <fs type="proved-under-hypotheses">
-              <f name="Hypotheses">
-                <vLabel name="T"/>
-              </f>
-              <f name="Conclusion">
-                <fs type="implication">
-                  <f name="Antecedent">
-                    <vLabel name="P1"/>
-                  </f>
-                  <f name="Consequent">
-                    <vLabel name="Q"/>
-                  </f>
-                </fs>
-              </f>
-            </fs>
-          </f>
-          <f name="Tail">
-            <fs type="proof-list-with-spec-element">
-              <f name="Element">
-                <vLabel name="Pn"/>
-              </f>
-              <f name="Proved-Feature">
-                <vLabel name="Q"/>
-              </f>
-            </fs>
+          <f name="To-Prove-List">
+            <vLabel name="tbp"/>
           </f>
         </fs>
       </vRange>
