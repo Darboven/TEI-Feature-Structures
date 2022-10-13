@@ -110,10 +110,10 @@
                 <vLabel name="var"/>
               </f>
               <f name="Mathobj-List">
-  	            <vlabel name="Mathobj-List">
-              	  <fs type="mathobj-list"/>
+                <vlabel name="Mathobj-List">
+                  <fs type="mathobj-list"/>
               	</vLabel>
-  	          </f>
+              </f>
             </fs>
           </f>
         </fs>
