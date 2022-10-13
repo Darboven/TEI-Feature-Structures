@@ -1,9 +1,6 @@
 <fsdDecl>
 
-  <fsDecl type="var-equals-object-proposition-list" baseTypes="proposition-list" xml:id="VEOPROPL">
-    <fsDescr></fsDescr>
-  </fsDecl>
-
+  <fsDecl type="var-equals-object-proposition-list" baseTypes="proposition-list" xml:id="VEOPROPL"/>
 
   <fsDecl type="empty-var-equals-object-proposition-list" baseTypes="var-equals-object-proposition-list empty-list" xml:id="EMPVEOPROPL">
     <fsDescr></fsDescr>
@@ -14,7 +11,6 @@
       </vRange>
     </fDecl>
   </fsDecl>
-
 
   <fsDecl type="nonempty-var-equals-object-proposition-list" baseTypes="var-equals-object-proposition-list" xml:id="NEMPVEOPROPL">
     <fsDescr></fsDescr>
