@@ -63,7 +63,7 @@
 
 
   <fsDecl type="all-quantification" baseTypes="proposition" xml:id="PROPALQ">
-    <fsDescr>All-Quantification.</fsDescr>
+    <fsDescr>Universal-Quantification.</fsDescr>
     <fDecl name="Quantified-Variable">
       <vRange>
         <fs type="arbitrary-mathobj"/>
@@ -82,7 +82,6 @@
     <fDecl name="Quantified-Variable">
       <vRange>
         <fs type="arbitrary-mathobj"/>
-        <!-- needs work -->
       </vRange>
     </fDecl>
     <fDecl name="Quantified-Proposition">
